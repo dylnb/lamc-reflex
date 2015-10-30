@@ -1,0 +1,3391 @@
+
+==================== FINAL INTERFACE ====================
+2015-10-29 23:56:39.514769 UTC
+
+interface main@main:Main 7102
+  interface hash: b7efb829ddc5f57fa5555a1d46fb7c40
+  ABI hash: 7f2a6e807d0f59df3662468811feaeee
+  export-list hash: 71f22d49da3e673f653753af55b32ea6
+  orphan hash: 85ffbfb22794e12591c40e28f0729733
+  flag hash: 5866b43124d96a385735f63547bce98e
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.!
+  Main.cooked
+  Main.lam
+  Main.let_
+  Main.main
+  Main.nf
+  Main.pp
+  Main.pretty
+  Main.prettyPrec
+  Main.prettyWith
+  Main.true
+  Main.whnf
+  Main.Exp{Main.:@ Main.Lam Main.Let Main.V}
+module dependencies:
+package dependencies: StateVar-1.1.0.1@State_6K4a3UqSdqh6lGAm1wlr9s
+                      array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ base-4.8.1.0*
+                      base-orphans-0.4.4@baseo_E55c3OEBLyu45sND7mOuE9
+                      bifunctors-5@bifun_6cWzSBWZD9ID5wcfOFIydn
+                      binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd
+                      bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva
+                      bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH
+                      bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh
+                      cereal-0.4.1.1@cerea_LMaR4P6lFvNJtmY00msKYH
+                      comonad-4.2.7.2@comon_EsayKmuIGPJJdbMoBEcxRq
+                      containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      contravariant-1.3.3@contr_1HGRfJ7yos72LK91k3YDgI
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o
+                      distributive-0.4.4@distr_IiTFZxvjHzA0FvKz3AU35Q
+                      free-4.12.1@free_2EJeoNML59VIyuzJGfHGjD ghc-prim-0.4.0.0
+                      hashable-1.2.3.3@hasha_2GTZqecVp8NJZrNuKzGxfy
+                      hashable-extras-0.2.2@hasha_9lOVH88b48ZLAqTz1S5Of9
+                      integer-gmp-1.0.0.0 mtl-2.2.1@mtl_KMpng31YRYc5JfMWFZ3FCU
+                      prelude-extras-0.4.0.2@prelu_57eavILAbKD5CaKv31zEDY*
+                      profunctors-5.1.1@profu_IRUD0QFY0OF0nZWAglFFc5
+                      semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO
+                      semigroupoids-5.0.0.4@semig_IPk36dXHATB4yo2y5KnSeX
+                      stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr
+                      tagged-0.8.1@tagge_6Tf46oJAk552xT73wGffBW
+                      text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh
+                      time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH
+                      transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X
+                      unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+         binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString.Builder
+         hashable-1.2.3.3@hasha_2GTZqecVp8NJZrNuKzGxfy:Data.Hashable.Generic
+         stm-2.4.4@stm_C1kFMnPqFjvDhFjgMZGUpr:Control.Monad.STM
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Lazy
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Show
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Format.Parse
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X:Control.Monad.Trans.Error
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Var
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.Get
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.Signed
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.VarInt
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntMap.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntSet.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Sequence
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+                         semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO:Data.List.NonEmpty
+                         semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO:Data.Semigroup
+                         tagged-0.8.1@tagge_6Tf46oJAk552xT73wGffBW:Data.Tagged
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Lazy
+                         unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a:Data.HashMap.Base
+                         unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a:Data.HashSet
+import  -/  base-4.8.1.0:Control.Applicative a283901553892ce761385d18e455c2ce
+import  -/  base-4.8.1.0:Control.Monad dfea142d91349c4861427789d50d5b80
+import  -/  base-4.8.1.0:Data.Foldable 2e5acb797cfda6b3b7fabd7052abe290
+import  -/  base-4.8.1.0:Data.Functor 5c701b0af1708f0192a25dfe14ce6274
+import  -/  base-4.8.1.0:Data.List 2a4f5f92892d432e7113f64cd9dcca53
+import  -/  base-4.8.1.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.1.0:Data.OldList 21f46c368c20a00483b41333e53a55cb
+import  -/  base-4.8.1.0:Data.Traversable 89769555cf5e62f4edd3d085405c2caa
+import  -/  base-4.8.1.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.List f31ed8784b3e05f1397195751f7d74ea
+import  -/  base-4.8.1.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.1.0:GHC.Read cfaa50b414b9b02ef6fe4fe5600d9b95
+import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  base-4.8.1.0:System.Exit 667ccf9b7fe125c4036efb58a244974a
+import  -/  base-4.8.1.0:System.IO 29a6f3d7c8ad8a4e6200d8bbb6e70aae
+import  -/  base-4.8.1.0:Text.ParserCombinators.ReadPrec 1844ee1249db84f72bd233d7a9bbd968
+import  -/  base-4.8.1.0:Text.Read.Lex 1ec4c08d49d1d5264b910cc76b6c6fde
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound 27948c3946c584a558a120b58a71cfbd
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Class ff195fc5e9355d2cac7060357316a4f6
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Scope 88a2159c4b1f5b479ccde978e658c7dc
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Term 2fbccf474e93d9040ce17051b9e06300
+import  -/  comonad-4.2.7.2@comon_EsayKmuIGPJJdbMoBEcxRq:Control.Comonad f0fdf88abe807bcdf90a4ea2377f0d0c
+import  -/  free-4.12.1@free_2EJeoNML59VIyuzJGfHGjD:Control.Comonad.Cofree c75d0e75b71777ade08ee79afa8d3c55
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  prelude-extras-0.4.0.2@prelu_57eavILAbKD5CaKv31zEDY:Prelude.Extras c8824f723e39f0c22546facb2843e192
+import  -/  transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X:Control.Monad.Trans.Class ced5621141aaa24ab095912d5a649dcc
+fixities infixl 9 :@, infixr 0 !
+07a75dfed14f23966b2d7923603722d0
+  (!) :: GHC.Classes.Eq a => a -> Main.Exp a -> Main.Exp a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U><L,1*U>m3,
+     Unfolding: InlineRule (0, True, True) Main.lam -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $cfoldr :: (a -> b -> b) -> b -> Main.Exp a -> b
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5 @ b f :: a5 -> b -> b z :: b t1 :: Main.Exp a5 ->
+                 (Main.$cfoldr_$cfoldMap
+                    @ a5
+                    @ (Data.Monoid.Endo b)
+                    (Data.Monoid.$fMonoidEndo @ b)
+                    f `cast` (<a5>_R ->_R Sym (Data.Monoid.NTCo:Endo[0] <b>_R))
+                    t1)
+                   `cast`
+                 (Data.Monoid.NTCo:Endo[0] <b>_R)
+                   z) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $cfoldr_$cfoldMap ::
+    GHC.Base.Monoid m => (a -> m) -> Main.Exp a -> m
+  {- Arity: 1, Strictness: <L,U(U,U,A)> -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fApplicativeExp :: GHC.Base.Applicative Main.Exp
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Exp
+                  Main.$fFunctorExp
+                  Main.V
+                  Main.$fApplicativeExp_$c<*>
+                  Main.$fApplicativeExp_$c*>
+                  Main.$fApplicativeExp_$c<* -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fApplicativeExp_$c*> :: Main.Exp a -> Main.Exp b -> Main.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 @ b eta :: Main.Exp a5 eta1 :: Main.Exp b ->
+                 Main.$fApplicativeExp_$c<*>
+                   @ b
+                   @ b
+                   (Main.$fApplicativeExp_$ctraverse
+                      @ a5
+                      @ Data.Traversable.Id
+                      @ (b -> b)
+                      Data.Traversable.$fApplicativeId
+                      (\ x :: a5 eta2 :: b -> eta2)
+                        `cast`
+                      (<a5>_R ->_R Sym (Data.Traversable.NTCo:Id[0] <b -> b>_R))
+                      eta)
+                     `cast`
+                   (Data.Traversable.NTCo:Id[0] <Main.Exp (b -> b)>_R)
+                   eta1) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fApplicativeExp_$c<* :: Main.Exp a -> Main.Exp b -> Main.Exp a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 @ b eta :: Main.Exp a5 eta1 :: Main.Exp b ->
+                 Main.$fApplicativeExp_$c<*>
+                   @ b
+                   @ a5
+                   (Main.$fApplicativeExp_$ctraverse
+                      @ a5
+                      @ Data.Traversable.Id
+                      @ (b -> a5)
+                      Data.Traversable.$fApplicativeId
+                      (\ x :: a5 ds :: b -> x)
+                        `cast`
+                      (<a5>_R ->_R Sym (Data.Traversable.NTCo:Id[0] <b -> a5>_R))
+                      eta)
+                     `cast`
+                   (Data.Traversable.NTCo:Id[0] <Main.Exp (b -> a5)>_R)
+                   eta1) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fApplicativeExp_$c<*> ::
+    Main.Exp (a -> b) -> Main.Exp a -> Main.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ @ a5
+                   @ b
+                   m1 :: Main.Exp (a5 -> b)
+                   m2 :: Main.Exp a5 ->
+                 Main.lam_$c>>=
+                   @ (a5 -> b)
+                   @ b
+                   m1
+                   (\ x1 :: a5 -> b ->
+                    Main.lam_$c>>= @ a5 @ b m2 (\ x2 :: a5 -> Main.V @ b (x1 x2)))) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fApplicativeExp_$ctraverse ::
+    GHC.Base.Applicative f =>
+    (a -> f b) -> Main.Exp a -> f (Main.Exp b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,U(U(U,U),C(U),C(C1(U)),A,A)><L,C(U)><S,1*U> -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fEq1Exp :: Prelude.Extras.Eq1 Main.Exp
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Main.$fEq1Exp_$c==#
+                  `cast`
+                (Sym (Prelude.Extras.NTCo:Eq1[0] <Main.Exp>_N)) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fEq1Exp_$c== ::
+    GHC.Classes.Eq a => Main.Exp a -> Main.Exp a -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)> -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fEq1Exp_$c==# ::
+    GHC.Classes.Eq a => Main.Exp a -> Main.Exp a -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>,
+     Unfolding: InlineRule (0, True, True) Main.$fEq1Exp_$c== -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fEq1Exp_$s$c== ::
+    Main.Exp [GHC.Types.Char]
+    -> Main.Exp [GHC.Types.Char] -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fEqExp :: GHC.Classes.Eq a => GHC.Classes.Eq (Main.Exp a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a5 $dEq :: GHC.Classes.Eq a5.
+                  @ (Main.Exp a5)
+                  (Main.$fEq1Exp_$c== @ a5 $dEq)
+                  (Main.$fEqExp_$c/= @ a5 $dEq) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fEqExp_$c/= ::
+    GHC.Classes.Eq a => Main.Exp a -> Main.Exp a -> GHC.Types.Bool
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A)><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq a5
+                   a6 :: Main.Exp a5
+                   b :: Main.Exp a5 ->
+                 case Main.$fEq1Exp_$c== @ a5 $dEq a6 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp :: Data.Foldable.Foldable Main.Exp
+  DFunId[0]
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Exp
+                  Main.$fFoldableExp_$cfold
+                  Main.$cfoldr_$cfoldMap
+                  Main.$cfoldr
+                  Main.$fFoldableExp_$cfoldr'
+                  Main.$fFoldableExp_$cfoldl
+                  Main.$fFoldableExp_$cfoldl'
+                  Main.$fFoldableExp_$cfoldr1
+                  Main.$fFoldableExp_$cfoldl1
+                  Main.$fFoldableExp_$ctoList
+                  Main.$fFoldableExp_$cnull
+                  Main.$fFoldableExp_$clength
+                  Main.$fFoldableExp_$celem
+                  Main.$fFoldableExp_$cmaximum
+                  Main.$fFoldableExp_$cminimum
+                  Main.$fFoldableExp_$csum
+                  Main.$fFoldableExp_$cproduct -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp1 ::
+    GHC.Num.Num a3 => Main.Exp a3 -> Data.Monoid.Product a3
+  {- Arity: 1, Strictness: <L,U(A,A,U,A,A,A,C(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 $dNum :: GHC.Num.Num a5 ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Product a5)
+                   (Data.Monoid.$fMonoidProduct @ a5 $dNum)
+                   (\ tpl :: a5 -> tpl)
+                     `cast`
+                   (<a5>_R ->_R Sym (Data.Monoid.NTCo:Product[0] <a5>_R))) -}
+72607ca1f0c78d306e6090dcf9ab86e6
+  $fFoldableExp10 :: a3
+  {- Strictness: b -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp11 ::
+    (a3 -> Data.Monoid.Dual (Data.Monoid.Endo (GHC.Base.Maybe a3)))
+    -> Main.Exp a3
+    -> Data.Monoid.Dual (Data.Monoid.Endo (GHC.Base.Maybe a3))
+  {- Unfolding: (\ @ a5 ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Dual (Data.Monoid.Endo (GHC.Base.Maybe a5)))
+                   (Main.$fFoldableExp12 @ (GHC.Base.Maybe a5))) -}
+e72f46cf5f72196cfabcdc3fc27af96a
+  $fFoldableExp12 ::
+    GHC.Base.Monoid (Data.Monoid.Dual (Data.Monoid.Endo b))
+  {- Unfolding: (\ @ b ->
+                 Data.Monoid.$fMonoidDual
+                   @ (Data.Monoid.Endo b)
+                   (Data.Monoid.$fMonoidEndo @ b)) -}
+ce45d32bef8cde47ccae88a907dc0fd5
+  $fFoldableExp13 :: a3
+  {- Strictness: b -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp14 ::
+    (a3 -> Data.Monoid.Endo (GHC.Base.Maybe a3))
+    -> Main.Exp a3 -> Data.Monoid.Endo (GHC.Base.Maybe a3)
+  {- Unfolding: (\ @ a5 ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Endo (GHC.Base.Maybe a5))
+                   (Data.Monoid.$fMonoidEndo @ (GHC.Base.Maybe a5))) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp15 ::
+    (a3 -> Data.Monoid.Endo (b -> b))
+    -> Main.Exp a3 -> Data.Monoid.Endo (b -> b)
+  {- Unfolding: (\ @ b @ a5 ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Endo (b -> b))
+                   (Data.Monoid.$fMonoidEndo @ (b -> b))) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp16 ::
+    (a3 -> Data.Monoid.Dual (Data.Monoid.Endo (b -> b)))
+    -> Main.Exp a3 -> Data.Monoid.Dual (Data.Monoid.Endo (b -> b))
+  {- Unfolding: (\ @ a5 @ b ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Dual (Data.Monoid.Endo (b -> b)))
+                   (Main.$fFoldableExp12 @ (b -> b))) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp2 ::
+    GHC.Num.Num a3 => Main.Exp a3 -> Data.Monoid.Sum a3
+  {- Arity: 1, Strictness: <L,U(U,A,A,A,A,A,C(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 $dNum :: GHC.Num.Num a5 ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Sum a5)
+                   (Data.Monoid.$fMonoidSum @ a5 $dNum)
+                   (\ tpl :: a5 -> tpl)
+                     `cast`
+                   (<a5>_R ->_R Sym (Data.Monoid.NTCo:Sum[0] <a5>_R))) -}
+1a1fc41ce115540ac662f4b6c2f17391
+  $fFoldableExp3 :: a3
+  {- Strictness: b -}
+03012865d8d42a17405dbcee6e0d4c1e
+  $fFoldableExp4 :: a3
+  {- Strictness: b -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp5 ::
+    GHC.Classes.Eq a3 => a3 -> Main.Exp a3 -> Data.Monoid.Any
+  {- Arity: 2, Strictness: <L,1*U(1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 $dEq :: GHC.Classes.Eq a5 eta :: a5 ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ Data.Monoid.Any
+                   Data.Monoid.$fMonoidAny
+                   (GHC.Classes.== @ a5 $dEq eta)
+                     `cast`
+                   (<a5>_R ->_R Sym (Data.Monoid.NTCo:Any[0]))) -}
+2caaf2e2525c2773747777383196f7b9
+  $fFoldableExp6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+989ae2da36c0e8293ed0a9a8efbf45f3
+  $fFoldableExp7 ::
+    a3
+    -> (GHC.Types.Int -> GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+  {- Arity: 3, HasNoCafRefs,
+     Unfolding: (\ @ a5
+                   x :: a5
+                   k :: GHC.Types.Int -> GHC.Types.Int
+                   z :: GHC.Types.Int ->
+                 case z of wild { GHC.Types.I# x1 ->
+                 k (GHC.Types.I# (GHC.Prim.+# x1 1)) }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp8 ::
+    (a3 -> Data.Monoid.Endo (GHC.Types.Int -> GHC.Types.Int))
+    -> Main.Exp a3 -> Data.Monoid.Endo (GHC.Types.Int -> GHC.Types.Int)
+  {- Unfolding: (\ @ a5 ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Endo (GHC.Types.Int -> GHC.Types.Int))
+                   (Data.Monoid.$fMonoidEndo @ (GHC.Types.Int -> GHC.Types.Int))) -}
+39affe6a10a790ef8993f886c81b1945
+  $fFoldableExp9 :: a3 -> GHC.Types.Bool -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a5 ds :: a5 ds1 :: GHC.Types.Bool -> GHC.Types.False) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$celem ::
+    GHC.Classes.Eq a => a -> Main.Exp a -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <L,1*U(1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fFoldableExp5
+                  `cast`
+                (forall a5.
+                 <GHC.Classes.Eq a5>_R
+                 ->_R <a5>_R
+                 ->_R <Main.Exp a5>_R
+                 ->_R Data.Monoid.NTCo:Any[0]) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cfold :: GHC.Base.Monoid m => Main.Exp m -> m
+  {- Arity: 1, Strictness: <L,U(U,U,A)> -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cfoldl :: (b -> a -> b) -> b -> Main.Exp a -> b
+  {- Arity: 3, Strictness: <L,C(C1(U))><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b @ a5 f :: b -> a5 -> b z :: b t1 :: Main.Exp a5 ->
+                 (Main.$cfoldr_$cfoldMap
+                    @ a5
+                    @ (Data.Monoid.Dual (Data.Monoid.Endo b))
+                    (Main.$fFoldableExp12 @ b)
+                    (\ x :: a5 eta :: b -> f eta x)
+                      `cast`
+                    (<a5>_R
+                     ->_R Sym (Data.Monoid.NTCo:Dual[0]
+                                   (Data.Monoid.NTCo:Endo[0] <b>_R)))
+                    t1)
+                   `cast`
+                 (Data.Monoid.NTCo:Dual[0] (Data.Monoid.NTCo:Endo[0] <b>_R))
+                   z) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cfoldl' :: (b -> a -> b) -> b -> Main.Exp a -> b
+  {- Arity: 3, Strictness: <L,C(C1(U))><L,U><L,U>,
+     Unfolding: (\ @ b
+                   @ a5
+                   f :: b -> a5 -> b
+                   z0 :: b
+                   xs :: Main.Exp a5 ->
+                 (Main.$fFoldableExp15
+                    @ b
+                    @ a5
+                    (\ x :: a5 k :: b -> b z :: b ->
+                     case f z x of vx { DEFAULT -> k vx })
+                      `cast`
+                    (<a5>_R ->_R Sym (Data.Monoid.NTCo:Endo[0] <b -> b>_R))
+                    xs)
+                   `cast`
+                 (Data.Monoid.NTCo:Endo[0] <b -> b>_R)
+                   (GHC.Base.id @ b)
+                   z0) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cfoldl1 :: (a -> a -> a) -> Main.Exp a -> a
+  {- Arity: 2, Strictness: <L,C(C1(U))><L,U>,
+     Unfolding: (\ @ a5 f :: a5 -> a5 -> a5 xs :: Main.Exp a5 ->
+                 case (Main.$fFoldableExp11
+                         @ a5
+                         (\ x :: a5 eta :: GHC.Base.Maybe a5 ->
+                          GHC.Base.Just
+                            @ a5
+                            (case eta of wild {
+                               GHC.Base.Nothing -> x GHC.Base.Just x1 -> f x1 x }))
+                           `cast`
+                         (<a5>_R
+                          ->_R Sym (Data.Monoid.NTCo:Dual[0]
+                                        (Data.Monoid.NTCo:Endo[0] <GHC.Base.Maybe a5>_R)))
+                         xs)
+                        `cast`
+                      (Data.Monoid.NTCo:Dual[0]
+                           (Data.Monoid.NTCo:Endo[0] <GHC.Base.Maybe a5>_R))
+                        (GHC.Base.Nothing @ a5) of wild {
+                   GHC.Base.Nothing -> Main.$fFoldableExp10 @ a5
+                   GHC.Base.Just v -> v }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cfoldr' :: (a -> b -> b) -> b -> Main.Exp a -> b
+  {- Arity: 3, Strictness: <L,C(C1(U))><L,U><L,U>,
+     Unfolding: (\ @ a5
+                   @ b
+                   f :: a5 -> b -> b
+                   z0 :: b
+                   xs :: Main.Exp a5 ->
+                 (Main.$fFoldableExp16
+                    @ a5
+                    @ b
+                    (\ x :: a5 eta :: b -> b z :: b ->
+                     case f x z of vx { DEFAULT -> eta vx })
+                      `cast`
+                    (<a5>_R
+                     ->_R Sym (Data.Monoid.NTCo:Dual[0]
+                                   (Data.Monoid.NTCo:Endo[0] <b -> b>_R)))
+                    xs)
+                   `cast`
+                 (Data.Monoid.NTCo:Dual[0] (Data.Monoid.NTCo:Endo[0] <b -> b>_R))
+                   (GHC.Base.id @ b)
+                   z0) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cfoldr1 :: (a -> a -> a) -> Main.Exp a -> a
+  {- Arity: 2, Strictness: <L,C(C1(U))><L,U>,
+     Unfolding: (\ @ a5 f :: a5 -> a5 -> a5 xs :: Main.Exp a5 ->
+                 case (Main.$fFoldableExp14
+                         @ a5
+                         (\ x :: a5 m :: GHC.Base.Maybe a5 ->
+                          GHC.Base.Just
+                            @ a5
+                            (case m of wild {
+                               GHC.Base.Nothing -> x GHC.Base.Just y -> f x y }))
+                           `cast`
+                         (<a5>_R ->_R Sym (Data.Monoid.NTCo:Endo[0] <GHC.Base.Maybe a5>_R))
+                         xs)
+                        `cast`
+                      (Data.Monoid.NTCo:Endo[0] <GHC.Base.Maybe a5>_R)
+                        (GHC.Base.Nothing @ a5) of wild {
+                   GHC.Base.Nothing -> Main.$fFoldableExp13 @ a5
+                   GHC.Base.Just v -> v }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$clength :: Main.Exp a -> GHC.Types.Int
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ @ a5 xs :: Main.Exp a5 ->
+                 (Main.$fFoldableExp8
+                    @ a5
+                    (Main.$fFoldableExp7 @ a5)
+                      `cast`
+                    (<a5>_R
+                     ->_R Sym (Data.Monoid.NTCo:Endo[0]
+                                   <GHC.Types.Int -> GHC.Types.Int>_R))
+                    xs)
+                   `cast`
+                 (Data.Monoid.NTCo:Endo[0] <GHC.Types.Int -> GHC.Types.Int>_R)
+                   (GHC.Base.id @ GHC.Types.Int)
+                   Main.$fFoldableExp6) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cmaximum :: GHC.Classes.Ord a => Main.Exp a -> a
+  {- Arity: 1, Strictness: <L,U(A,A,A,A,A,C(C1(U)),A,A)>,
+     Unfolding: (\ @ a5 $dOrd :: GHC.Classes.Ord a5 ->
+                 let {
+                   g :: Main.Exp a5 -> Data.Foldable.Max a5
+                   = Main.$cfoldr_$cfoldMap
+                       @ a5
+                       @ (Data.Foldable.Max a5)
+                       (Data.Foldable.$fMonoidMax @ a5 $dOrd)
+                       (GHC.Base.Just @ a5)
+                         `cast`
+                       (<a5>_R ->_R Sym (Data.Foldable.NTCo:Max[0]) <a5>_N)
+                 } in
+                 \ x :: Main.Exp a5 ->
+                 case (g x) `cast` (Data.Foldable.NTCo:Max[0] <a5>_N) of wild {
+                   GHC.Base.Nothing -> Main.$fFoldableExp4 @ a5
+                   GHC.Base.Just v -> v }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cminimum :: GHC.Classes.Ord a => Main.Exp a -> a
+  {- Arity: 1, Strictness: <L,U(A,A,A,C(C1(U)),A,A,A,A)>,
+     Unfolding: (\ @ a5 $dOrd :: GHC.Classes.Ord a5 ->
+                 let {
+                   g :: Main.Exp a5 -> Data.Foldable.Min a5
+                   = Main.$cfoldr_$cfoldMap
+                       @ a5
+                       @ (Data.Foldable.Min a5)
+                       (Data.Foldable.$fMonoidMin @ a5 $dOrd)
+                       (GHC.Base.Just @ a5)
+                         `cast`
+                       (<a5>_R ->_R Sym (Data.Foldable.NTCo:Min[0]) <a5>_N)
+                 } in
+                 \ x :: Main.Exp a5 ->
+                 case (g x) `cast` (Data.Foldable.NTCo:Min[0] <a5>_N) of wild {
+                   GHC.Base.Nothing -> Main.$fFoldableExp3 @ a5
+                   GHC.Base.Just v -> v }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cnull :: Main.Exp a -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 t1 :: Main.Exp a5 ->
+                 (Main.$cfoldr_$cfoldMap
+                    @ a5
+                    @ (Data.Monoid.Endo GHC.Types.Bool)
+                    (Data.Monoid.$fMonoidEndo @ GHC.Types.Bool)
+                    (Main.$fFoldableExp9 @ a5)
+                      `cast`
+                    (<a5>_R ->_R Sym (Data.Monoid.NTCo:Endo[0] <GHC.Types.Bool>_R))
+                    t1)
+                   `cast`
+                 (Data.Monoid.NTCo:Endo[0] <GHC.Types.Bool>_R)
+                   GHC.Types.True) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$cproduct :: GHC.Num.Num a => Main.Exp a -> a
+  {- Arity: 1, Strictness: <L,U(A,A,U,A,A,A,C(U))>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fFoldableExp1
+                  `cast`
+                (forall a5.
+                 <GHC.Num.Num a5>_R
+                 ->_R <Main.Exp a5>_R
+                 ->_R Data.Monoid.NTCo:Product[0] <a5>_R) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$csum :: GHC.Num.Num a => Main.Exp a -> a
+  {- Arity: 1, Strictness: <L,U(U,A,A,A,A,A,C(U))>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fFoldableExp2
+                  `cast`
+                (forall a5.
+                 <GHC.Num.Num a5>_R
+                 ->_R <Main.Exp a5>_R
+                 ->_R Data.Monoid.NTCo:Sum[0] <a5>_R) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFoldableExp_$ctoList :: Main.Exp a -> [a]
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a5 t1 :: Main.Exp a5 ->
+                 GHC.Base.build
+                   @ a5
+                   (\ @ b c :: a5 -> b -> b[OneShot] n1 :: b[OneShot] ->
+                    Main.$cfoldr @ a5 @ b c n1 t1)) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFunctorExp :: GHC.Base.Functor Main.Exp
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Exp Main.$fFunctorExp_$cfmap Main.$fFunctorExp_$c<$ -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFunctorExp1 ::
+    a -> Main.Exp b -> Data.Traversable.Id (Main.Exp a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 @ b eta :: a5 eta1 :: Main.Exp b ->
+                 Main.$fApplicativeExp_$ctraverse
+                   @ b
+                   @ Data.Traversable.Id
+                   @ a5
+                   Data.Traversable.$fApplicativeId
+                   (\ x :: b -> eta)
+                     `cast`
+                   (<b>_R ->_R Sym (Data.Traversable.NTCo:Id[0] <a5>_R))
+                   eta1) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFunctorExp_$c<$ :: a -> Main.Exp b -> Main.Exp a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fFunctorExp1
+                  `cast`
+                (forall a5 b.
+                 <a5>_R
+                 ->_R <Main.Exp b>_R
+                 ->_R Data.Traversable.NTCo:Id[0] <Main.Exp a5>_R) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFunctorExp_$cfmap :: (a -> b) -> Main.Exp a -> Main.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fFunctorExp_$sfmapDefault -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fFunctorExp_$sfmapDefault :: (a -> b) -> Main.Exp a -> Main.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a5 @ b f :: a5 -> b eta :: Main.Exp a5 ->
+                 Data.Traversable.getId
+                   @ (Main.Exp b)
+                   (Main.$fApplicativeExp_$ctraverse
+                      @ a5
+                      @ Data.Traversable.Id
+                      @ b
+                      Data.Traversable.$fApplicativeId
+                      (\ x :: a5 -> f x)
+                        `cast`
+                      (<a5>_R ->_R Sym (Data.Traversable.NTCo:Id[0] <b>_R))
+                      eta)) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fMonadExp :: GHC.Base.Monad Main.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Exp
+                  Main.$fApplicativeExp
+                  Main.lam_$c>>=
+                  Main.$fMonadExp_$c>>
+                  Main.V
+                  Main.$fMonadExp_$s$dmfail -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fMonadExp_$c>> :: Main.Exp a -> Main.Exp b -> Main.Exp b
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a5 @ b m1 :: Main.Exp a5 k :: Main.Exp b ->
+                 Main.lam_$c>>= @ a5 @ b m1 (\ ds :: a5 -> k)) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fMonadExp_$s$dmfail :: GHC.Base.String -> Main.Exp a
+  {- Arity: 1, Strictness: <B,U>b,
+     Unfolding: InlineRule (-1, True, True)
+                (\ @ a5 eta :: [GHC.Types.Char] ->
+                 GHC.Err.error @ (Main.Exp a5) eta) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrd1Exp :: Prelude.Extras.Ord1 Main.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Exp
+                  Main.$fEq1Exp_$c==#
+                    `cast`
+                  (Sym (Prelude.Extras.NTCo:Eq1[0] <Main.Exp>_N))
+                  Main.$fOrd1Exp_$ccompare1 -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrd1Exp_$ccompare ::
+    (GHC.Classes.Eq (Main.Exp a), GHC.Classes.Ord a) =>
+    Main.Exp a -> Main.Exp a -> GHC.Types.Ordering
+  {- Arity: 2,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a5
+                   w :: GHC.Classes.Eq (Main.Exp a5)
+                   w1 :: GHC.Classes.Ord a5 ->
+                 Main.$w$ccompare @ a5 w1) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrd1Exp_$ccompare1 ::
+    GHC.Classes.Ord a => Main.Exp a -> Main.Exp a -> GHC.Types.Ordering
+  {- Arity: 1,
+     Strictness: <L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 $dOrd :: GHC.Classes.Ord a5 ->
+                 Main.$fOrd1Exp_$ccompare
+                   @ a5
+                   (Main.$fEqExp @ a5 (GHC.Classes.$p1Ord @ a5 $dOrd))
+                   $dOrd) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrdExp ::
+    (GHC.Classes.Eq (Main.Exp a), GHC.Classes.Ord a) =>
+    GHC.Classes.Ord (Main.Exp a)
+  DFunId[1]
+  {- Arity: 2,
+     Strictness: <L,U><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a5
+                      $dEq :: GHC.Classes.Eq (Main.Exp a5)
+                      $dOrd :: GHC.Classes.Ord a5.
+                  @ (Main.Exp a5)
+                  $dEq
+                  (Main.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd)
+                  (Main.$fOrdExp_$c< @ a5 $dEq $dOrd)
+                  (Main.$fOrdExp_$c<= @ a5 $dEq $dOrd)
+                  (Main.$fOrdExp_$c> @ a5 $dEq $dOrd)
+                  (Main.$fOrdExp_$c>= @ a5 $dEq $dOrd)
+                  (Main.$fOrdExp_$cmax @ a5 $dEq $dOrd)
+                  (Main.$fOrdExp_$cmin @ a5 $dEq $dOrd) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrdExp_$c< ::
+    (GHC.Classes.Eq (Main.Exp a), GHC.Classes.Ord a) =>
+    Main.Exp a -> Main.Exp a -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (Main.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: Main.Exp a5
+                   y :: Main.Exp a5 ->
+                 case Main.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrdExp_$c<= ::
+    (GHC.Classes.Eq (Main.Exp a), GHC.Classes.Ord a) =>
+    Main.Exp a -> Main.Exp a -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (Main.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: Main.Exp a5
+                   y :: Main.Exp a5 ->
+                 case Main.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrdExp_$c> ::
+    (GHC.Classes.Eq (Main.Exp a), GHC.Classes.Ord a) =>
+    Main.Exp a -> Main.Exp a -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (Main.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: Main.Exp a5
+                   y :: Main.Exp a5 ->
+                 case Main.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrdExp_$c>= ::
+    (GHC.Classes.Eq (Main.Exp a), GHC.Classes.Ord a) =>
+    Main.Exp a -> Main.Exp a -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (Main.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: Main.Exp a5
+                   y :: Main.Exp a5 ->
+                 case Main.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrdExp_$cmax ::
+    (GHC.Classes.Eq (Main.Exp a), GHC.Classes.Ord a) =>
+    Main.Exp a -> Main.Exp a -> Main.Exp a
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (Main.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: Main.Exp a5
+                   y :: Main.Exp a5 ->
+                 case Main.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> y GHC.Types.GT -> x }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fOrdExp_$cmin ::
+    (GHC.Classes.Eq (Main.Exp a), GHC.Classes.Ord a) =>
+    Main.Exp a -> Main.Exp a -> Main.Exp a
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (Main.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: Main.Exp a5
+                   y :: Main.Exp a5 ->
+                 case Main.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> x GHC.Types.GT -> y }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fRead1Exp :: Prelude.Extras.Read1 Main.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Exp
+                  Main.$fRead1Exp_$creadsPrec1
+                  Main.$fRead1Exp_$creadList1 -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fRead1Exp1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (Main.Exp a)
+  {- Arity: 2, Strictness: <L,U(U,U,U,U)><L,U> -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fRead1Exp_$creadList1 ::
+    GHC.Read.Read a => Text.ParserCombinators.ReadP.ReadS [Main.Exp a]
+  {- Arity: 1, Strictness: <L,U> -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fRead1Exp_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS (Main.Exp a)
+  {- Arity: 2, Strictness: <L,U(U,U,U,U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 $dRead :: GHC.Read.Read a5 eta :: GHC.Types.Int ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (Main.Exp a5)
+                   ((Main.$fRead1Exp1 @ a5 $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.NTCo:ReadP[0] <Main.Exp a5>_R)
+                      @ (Main.Exp a5)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ (Main.Exp a5)))) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fRead1Exp_$creadsPrec1 ::
+    GHC.Read.Read a =>
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS (Main.Exp a)
+  {- Arity: 2, Strictness: <L,U(U,U,U,U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fRead1Exp_$creadsPrec -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fReadExp :: GHC.Read.Read a => GHC.Read.Read (Main.Exp a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(U,U,U,U)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a5 $dRead :: GHC.Read.Read a5.
+                  @ (Main.Exp a5)
+                  (Main.$fRead1Exp_$creadsPrec @ a5 $dRead)
+                  (Main.$fReadExp_$creadList @ a5 $dRead)
+                  (Main.$fReadExp_$creadPrec @ a5 $dRead)
+                  (Main.$fReadExp_$creadListPrec @ a5 $dRead) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fReadExp1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([Main.Exp a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(U,U,U,U)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   $dRead :: GHC.Read.Read a5
+                   eta :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta1 :: [Main.Exp a5] -> Text.ParserCombinators.ReadP.P b ->
+                 GHC.Read.$wa
+                   @ (Main.Exp a5)
+                   (Main.$fRead1Exp1 @ a5 $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                             <Main.Exp a5>_R))
+                   @ b
+                   eta1) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fReadExp_$creadList ::
+    GHC.Read.Read a => Text.ParserCombinators.ReadP.ReadS [Main.Exp a]
+  {- Arity: 1, Strictness: <L,U(U,U,U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 $dRead :: GHC.Read.Read a5 ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [Main.Exp a5]
+                   (GHC.Read.$wa
+                      @ (Main.Exp a5)
+                      (Main.$fRead1Exp1 @ a5 $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                <Main.Exp a5>_R))
+                      @ [Main.Exp a5]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ [Main.Exp a5]))) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fReadExp_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [Main.Exp a]
+  {- Arity: 3, Strictness: <L,U(U,U,U,U)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fReadExp1
+                  `cast`
+                (forall a5.
+                 <GHC.Read.Read a5>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                         <[Main.Exp a5]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                    <[Main.Exp a5]>_R))) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fReadExp_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (Main.Exp a)
+  {- Arity: 2, Strictness: <L,U(U,U,U,U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fRead1Exp1
+                  `cast`
+                (forall a5.
+                 <GHC.Read.Read a5>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                               <Main.Exp a5>_R)) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fShow1Exp :: Prelude.Extras.Show1 Main.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Exp
+                  Main.$fShow1Exp_$cshowsPrec1
+                  Main.$fShow1Exp_$cshowList1 -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fShow1Exp_$cshowList1 ::
+    GHC.Show.Show a => [Main.Exp a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   $dShow :: GHC.Show.Show a5
+                   ls :: [Main.Exp a5]
+                   s :: GHC.Base.String ->
+                 Prelude.Extras.showList__
+                   @ (Main.Exp a5)
+                   (Main.$fShow1Exp_$cshowsPrec @ a5 $dShow Prelude.Extras.shows4)
+                   ls
+                   s) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fShow1Exp_$cshowsPrec ::
+    GHC.Show.Show a => GHC.Types.Int -> Main.Exp a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><S,1*U(U)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   w :: GHC.Show.Show a5
+                   w1 :: GHC.Types.Int
+                   w2 :: Main.Exp a5 ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 Main.$w$cshowsPrec @ a5 w ww1 w2 }) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fShow1Exp_$cshowsPrec1 ::
+    GHC.Show.Show a => GHC.Types.Int -> Main.Exp a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><S,1*U(U)><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fShow1Exp_$cshowsPrec -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fShowExp :: GHC.Show.Show a => GHC.Show.Show (Main.Exp a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(U,U,U)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a5 $dShow :: GHC.Show.Show a5.
+                  @ (Main.Exp a5)
+                  (Main.$fShow1Exp_$cshowsPrec @ a5 $dShow)
+                  (Main.$fShowExp_$cshow @ a5 $dShow)
+                  (Main.$fShowExp_$cshowList @ a5 $dShow) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fShowExp_$cshow ::
+    GHC.Show.Show a => Main.Exp a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(U,U,U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 $dShow :: GHC.Show.Show a5 x :: Main.Exp a5 ->
+                 Main.$fShow1Exp_$cshowsPrec
+                   @ a5
+                   $dShow
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fShowExp_$cshowList ::
+    GHC.Show.Show a => [Main.Exp a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   $dShow :: GHC.Show.Show a5
+                   eta :: [Main.Exp a5]
+                   eta1 :: GHC.Base.String ->
+                 GHC.Show.showList__
+                   @ (Main.Exp a5)
+                   (Main.$fShow1Exp_$cshowsPrec @ a5 $dShow Main.$fFoldableExp6)
+                   eta
+                   eta1) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fTraversableExp :: Data.Traversable.Traversable Main.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Exp
+                  Main.$fFunctorExp
+                  Main.$fFoldableExp
+                  Main.$fApplicativeExp_$ctraverse
+                  Main.$fTraversableExp_$csequenceA
+                  Main.$fTraversableExp_$cmapM
+                  Main.$fTraversableExp_$csequence -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fTraversableExp_$cmapM ::
+    GHC.Base.Monad m => (a -> m b) -> Main.Exp a -> m (Main.Exp b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(U(U,U),C(U),C(C1(U)),A,A),A,A,A,A)><L,C(U)><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   @ (m :: * -> *)
+                   @ b
+                   $dMonad :: GHC.Base.Monad m
+                   eta :: a5 -> m b
+                   eta1 :: Main.Exp a5 ->
+                 Main.$fApplicativeExp_$ctraverse
+                   @ a5
+                   @ m
+                   @ b
+                   (GHC.Base.$p1Monad @ m $dMonad)
+                   eta
+                   eta1) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fTraversableExp_$csequence ::
+    GHC.Base.Monad m => Main.Exp (m a) -> m (Main.Exp a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(U(U,U),C(U),C(C1(U)),A,A),A,A,A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (m :: * -> *)
+                   @ a5
+                   $dMonad :: GHC.Base.Monad m
+                   eta :: Main.Exp (m a5) ->
+                 Main.$fApplicativeExp_$ctraverse
+                   @ (m a5)
+                   @ m
+                   @ a5
+                   (GHC.Base.$p1Monad @ m $dMonad)
+                   (GHC.Base.id @ (m a5))
+                   eta) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $fTraversableExp_$csequenceA ::
+    GHC.Base.Applicative f => Main.Exp (f a) -> f (Main.Exp a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(U(U,U),C(U),C(C1(U)),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ (f :: * -> *)
+                   @ a5
+                   $dApplicative :: GHC.Base.Applicative f
+                   eta :: Main.Exp (f a5) ->
+                 Main.$fApplicativeExp_$ctraverse
+                   @ (f a5)
+                   @ f
+                   @ a5
+                   $dApplicative
+                   (GHC.Base.id @ (f a5))
+                   eta) -}
+bc54e07a50896297a962b8c091bbf765
+  $s$fEqScope ::
+    GHC.Classes.Eq
+      (Bound.Scope.Scope GHC.Types.Int Main.Exp [GHC.Types.Char])
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Bound.Scope.Scope GHC.Types.Int Main.Exp [GHC.Types.Char])
+                  (\ eta :: Bound.Scope.Scope GHC.Types.Int Main.Exp [GHC.Types.Char]
+                     eta1 :: Bound.Scope.Scope
+                               GHC.Types.Int Main.Exp [GHC.Types.Char] ->
+                   Main.$fEq1Exp_$c==#
+                     @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                     Main.$s$fEqScope_$s$fEqVar
+                     (Main.lam_$c>>=
+                        @ (Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]))
+                        @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                        eta
+                          `cast`
+                        (Bound.Scope.NTCo:Scope[0]
+                             <GHC.Types.Int>_N <Main.Exp>_N <[GHC.Types.Char]>_N)
+                        (\ v :: Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]) ->
+                         case v of wild {
+                           Bound.Var.B b1
+                           -> Main.V
+                                @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                                (Bound.Var.B @ GHC.Types.Int @ [GHC.Types.Char] b1)
+                           Bound.Var.F e
+                           -> Main.$s$fEqScope_$sliftM
+                                @ [GHC.Types.Char]
+                                @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                                (Bound.Var.F @ GHC.Types.Int @ [GHC.Types.Char])
+                                e }))
+                     (Main.lam_$c>>=
+                        @ (Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]))
+                        @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                        eta1
+                          `cast`
+                        (Bound.Scope.NTCo:Scope[0]
+                             <GHC.Types.Int>_N <Main.Exp>_N <[GHC.Types.Char]>_N)
+                        (\ v :: Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]) ->
+                         case v of wild {
+                           Bound.Var.B b1
+                           -> Main.V
+                                @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                                (Bound.Var.B @ GHC.Types.Int @ [GHC.Types.Char] b1)
+                           Bound.Var.F e
+                           -> Main.$s$fEqScope_$sliftM
+                                @ [GHC.Types.Char]
+                                @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                                (Bound.Var.F @ GHC.Types.Int @ [GHC.Types.Char])
+                                e })))
+                  Main.$s$fEqScope_$s$fEqScope_$c/= -}
+1b6dcee6cea01311469798238b55a81f
+  $s$fEqScope_$s$fEqScope_$c/= ::
+    Bound.Scope.Scope GHC.Types.Int Main.Exp [GHC.Types.Char]
+    -> Bound.Scope.Scope GHC.Types.Int Main.Exp [GHC.Types.Char]
+    -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ eta :: Bound.Scope.Scope GHC.Types.Int Main.Exp [GHC.Types.Char]
+                   eta1 :: Bound.Scope.Scope
+                             GHC.Types.Int Main.Exp [GHC.Types.Char] ->
+                 GHC.Classes.not
+                   (Main.$fEq1Exp_$c==#
+                      @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                      Main.$s$fEqScope_$s$fEqVar
+                      (Main.lam_$c>>=
+                         @ (Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]))
+                         @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                         eta
+                           `cast`
+                         (Bound.Scope.NTCo:Scope[0]
+                              <GHC.Types.Int>_N <Main.Exp>_N <[GHC.Types.Char]>_N)
+                         (\ v :: Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]) ->
+                          case v of wild {
+                            Bound.Var.B b1
+                            -> Main.V
+                                 @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                                 (Bound.Var.B @ GHC.Types.Int @ [GHC.Types.Char] b1)
+                            Bound.Var.F e
+                            -> Main.$s$fEqScope_$sliftM
+                                 @ [GHC.Types.Char]
+                                 @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                                 (Bound.Var.F @ GHC.Types.Int @ [GHC.Types.Char])
+                                 e }))
+                      (Main.lam_$c>>=
+                         @ (Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]))
+                         @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                         eta1
+                           `cast`
+                         (Bound.Scope.NTCo:Scope[0]
+                              <GHC.Types.Int>_N <Main.Exp>_N <[GHC.Types.Char]>_N)
+                         (\ v :: Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]) ->
+                          case v of wild {
+                            Bound.Var.B b1
+                            -> Main.V
+                                 @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                                 (Bound.Var.B @ GHC.Types.Int @ [GHC.Types.Char] b1)
+                            Bound.Var.F e
+                            -> Main.$s$fEqScope_$sliftM
+                                 @ [GHC.Types.Char]
+                                 @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                                 (Bound.Var.F @ GHC.Types.Int @ [GHC.Types.Char])
+                                 e })))) -}
+28a83fc9558f87444dd2a5ec06434f81
+  $s$fEqScope_$s$fEqVar ::
+    GHC.Classes.Eq (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Bound.Var.Var GHC.Types.Int [GHC.Types.Char])
+                  (Bound.Var.$fEq1Var_$c==
+                     @ GHC.Types.Int
+                     @ [GHC.Types.Char]
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEq[]_$s$fEq[]1)
+                  (Bound.Var.$fEqVar_$c/=
+                     @ GHC.Types.Int
+                     @ [GHC.Types.Char]
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEq[]_$s$fEq[]1) -}
+252533aae64240d93df9c716357b692c
+  $s$fEqScope_$sliftM :: (a1 -> r) -> Main.Exp a1 -> Main.Exp r
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 @ r f :: a5 -> r m1 :: Main.Exp a5 ->
+                 Main.lam_$c>>= @ a5 @ r m1 (\ x1 :: a5 -> Main.V @ r (f x1))) -}
+8858988fefcb3e6c53b25049c684360f
+  $s$fEqVar :: GHC.Classes.Eq (Bound.Var.Var () [GHC.Types.Char])
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (Bound.Var.Var () [GHC.Types.Char])
+                  (Bound.Var.$fEq1Var_$c==
+                     @ ()
+                     @ [GHC.Types.Char]
+                     GHC.Classes.$fEq()
+                     GHC.Classes.$fEq[]_$s$fEq[]1)
+                  (Bound.Var.$fEqVar_$c/=
+                     @ ()
+                     @ [GHC.Types.Char]
+                     GHC.Classes.$fEq()
+                     GHC.Classes.$fEq[]_$s$fEq[]1) -}
+154eb7277b30b33651ef33e667401793
+  $s$fFoldableScope4 ::
+    (a3 -> Data.Monoid.Endo GHC.Types.Bool)
+    -> Main.Exp a3 -> Data.Monoid.Endo GHC.Types.Bool
+  {- Unfolding: (\ @ a5 ->
+                 Main.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Endo GHC.Types.Bool)
+                   (Data.Monoid.$fMonoidEndo @ GHC.Types.Bool)) -}
+cee337ef3735b52bf5a0403be470a513
+  $sinstantiate ::
+    (b -> Main.Exp a12)
+    -> Bound.Scope.Scope b Main.Exp a12 -> Main.Exp a12
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ b
+                   @ a12
+                   k :: b -> Main.Exp a12
+                   e :: Bound.Scope.Scope b Main.Exp a12 ->
+                 Main.lam_$c>>=
+                   @ (Bound.Var.Var b (Main.Exp a12))
+                   @ a12
+                   (Bound.Scope.unscope @ b @ Main.Exp @ a12 e)
+                   (\ v :: Bound.Var.Var b (Main.Exp a12) ->
+                    case v of wild {
+                      Bound.Var.B b1 -> k b1 Bound.Var.F a13 -> a13 })) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $w$ccompare ::
+    GHC.Classes.Ord a => Main.Exp a -> Main.Exp a -> GHC.Types.Ordering
+  {- Arity: 1,
+     Strictness: <L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>,
+     Inline: [0] -}
+e450ddbd85076c2c507754cf0d4e47a0
+  $w$cshowsPrec ::
+    GHC.Show.Show a => GHC.Prim.Int# -> Main.Exp a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><L,U><S,1*U>, Inline: [0] -}
+e450ddbd85076c2c507754cf0d4e47a0
+  type role Exp nominal
+  data Exp a
+    = V a
+    | (Main.Exp a) :@ (Main.Exp a)
+    | Lam (Bound.Scope.Scope () Main.Exp a)
+    | Let [Bound.Scope.Scope GHC.Types.Int Main.Exp a]
+          (Bound.Scope.Scope GHC.Types.Int Main.Exp a)
+e11c5531acb117975797becc26c65a04
+  cooked :: Main.Exp a
+  {- Unfolding: (\ @ a5 ->
+                 case Main.$fApplicativeExp_$ctraverse
+                        @ [GHC.Types.Char]
+                        @ GHC.Base.Maybe
+                        @ a5
+                        GHC.Base.$fApplicativeMaybe
+                        (Main.cooked255 @ a5)
+                        Main.cooked1 of wild {
+                   GHC.Base.Nothing -> Data.Maybe.fromJust1 @ (Main.Exp a5)
+                   GHC.Base.Just x -> x }) -}
+fc3135f07a285a92088a3a6b75c07ab5
+  cooked1 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.cooked_$slet_ Main.cooked16 Main.cooked2) -}
+93af4d7a72e845e1fbf6256e5f6730bb
+  cooked10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "add"#) -}
+eba2138f342c7814c79edfd54f222291
+  cooked100 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked102
+                   Main.cooked101) -}
+8bfd593c5946ce132860f1e221cfe7f8
+  cooked101 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v3 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+22d3b63456c4e56a21783ffc4bdcac49
+  cooked102 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked110
+                   Main.cooked103) -}
+ed532350a0cfb7ddc9c62cf69f14c860
+  cooked103 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked104
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+d5844f3c92cb59f510d1b59026deb3d8
+  cooked104 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked106
+                   Main.cooked105) -}
+bbb66434f7b18ade2576de8e1528a312
+  cooked105 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v4 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+8b8a065a4b414efe233e3fcd330e9112
+  cooked106 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked108
+                   Main.cooked107) -}
+8c073995680ed640a387e3ce198da427
+  cooked107 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v4) -}
+9c7dc17b310eb96cf6ed7164652880da
+  cooked108 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked14
+                   Main.cooked109) -}
+59e50d44051abf711a1665118dd5b1fa
+  cooked109 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v3) -}
+34bda8f1864d24bead79aa341b01a733
+  cooked11 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked14
+                   Main.cooked12) -}
+54f955ca26b2f115b1323f5ab5eb9259
+  cooked110 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked113
+                   Main.cooked111) -}
+4ba3d701d54093f7404a05a9c3be6e68
+  cooked111 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked112) -}
+a2570e24060e9b053d251a0ed35a39e4
+  cooked112 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "False"#) -}
+52913d586523e8cc67d3a4c715524177
+  cooked113 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v2) -}
+20b32176306f7789803d7bb659cd65f4
+  cooked114 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked88
+                   Main.cooked115) -}
+17d930643c522ab0580913bd22f37655
+  cooked115 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked119
+                   Main.cooked116) -}
+950ba5c80719329a254d482cf61066a5
+  cooked116 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked117
+                   Main.cooked111) -}
+9dd4b0ad2838e5b1d8ee13b66a40f1b9
+  cooked117 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked118) -}
+89dd117ca707f67e50b89e92c5de2ecf
+  cooked118 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "const"#) -}
+8fedd7ef273e1a4bcb8e91bfdaf43d2b
+  cooked119 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked113
+                   Main.cooked120) -}
+f8a504f64d92fdd211b9d12742d97fff
+  cooked12 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked13) -}
+f9a57c52cfa7caacaebd62d7f24daf55
+  cooked120 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked121) -}
+41ad6185f2f6ba18f0c70efe3606625a
+  cooked121 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "True"#) -}
+c38ec681526ce9e88f04ace67acb8fb3
+  cooked122 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked45, Main.cooked123)) -}
+947f30c29785e9e8b8cb9e13e5377bca
+  cooked123 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked124
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+32a872ee637745ed6df4477de26f460e
+  cooked124 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked125
+                   Main.cooked79) -}
+96d835b46c0e0723f970720f71282f60
+  cooked125 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked131
+                   Main.cooked126) -}
+63881cc033156153ce92108c4f5fe247
+  cooked126 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked127
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+3d20c5332d8a58a9ed6b8a100cf21d23
+  cooked127 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked128
+                   Main.cooked83) -}
+8145468e5a8d3483e3982d4224b25196
+  cooked128 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked130
+                   Main.cooked129) -}
+0344d8521eef23dc4e46808c668ea800
+  cooked129 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked44
+                   Main.cooked86) -}
+065dea57e2e23e32800f7189827fb006
+  cooked13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n720"#) -}
+c110522541b8eefa47aeb872e953d120
+  cooked130 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked56
+                   Main.cooked88) -}
+0632f18f35caab372d7be2ca0f34ee98
+  cooked131 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked88
+                   Main.cooked132) -}
+36e318903ad79fc4743a51f996056e7c
+  cooked132 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked133) -}
+fcf55a010c26c0bc88d68bdbf0990204
+  cooked133 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "one"#) -}
+b39cd960ccec99f1ac5cc3e01cc8b2a5
+  cooked134 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked57, Main.cooked135)) -}
+6e5414632a3323d068506bf18e9f12dc
+  cooked135 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked136
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+75e740617cee2bcf592c641cc3e76909
+  cooked136 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked137
+                   Main.cooked79) -}
+47f2ecb44de792ac2d279cd61a5c6831
+  cooked137 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked138
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+efb77c4050903f7f32e5b46617323b39
+  cooked138 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked139
+                   Main.cooked97) -}
+bdb8e940cec0da202d1d68ffd241933c
+  cooked139 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked89
+                   Main.cooked140) -}
+1ba16715bb43e537ec3f550c606bf338
+  cooked14 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked15) -}
+d7b3b9827d5dbad51bce52e8f82e24dd
+  cooked140 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked141
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+8f9bd74ca9673f8898f4e6df919e38e7
+  cooked141 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked142
+                   Main.cooked83) -}
+ace80622d475f424cd17743bd3369a5b
+  cooked142 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked145
+                   Main.cooked143) -}
+8b9a247e6bb63698f5e8f13d4cb180eb
+  cooked143 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked144
+                   Main.cooked113) -}
+33212e7854168e05cb1c1997a5fa4f35
+  cooked144 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked56
+                   Main.cooked86) -}
+ec495bc1bc862dbfb384b1701f4fb200
+  cooked145 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked9
+                   Main.cooked113) -}
+2b93f95976c6c5c9bc40455d03ab2e00
+  cooked146 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked10, Main.cooked147)) -}
+24303608bcf05c9c034cc70018e8ba0d
+  cooked147 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked148
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+ee5e4c2a195316808b771c3222d9c075
+  cooked148 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked149
+                   Main.cooked79) -}
+77807840e80511d5bfa2c648e7ecf48d
+  cooked149 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked150
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+3ee0d18c63e86c9c8729fd731eea880c
+  cooked15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "eqnat"#) -}
+dcfdc0ce1bf1142a5691373d97f056ec
+  cooked150 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked151
+                   Main.cooked97) -}
+3b1a0198da651f0de5780160f28916b1
+  cooked151 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked157
+                   Main.cooked152) -}
+85ecdfb6573ef086c6473cd543bf265b
+  cooked152 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked153
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+612325e3fae8f09131240c2034088dc8
+  cooked153 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked154
+                   Main.cooked83) -}
+d571318bd9d5a02e026d61d146517702
+  cooked154 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked58
+                   Main.cooked155) -}
+d6134d6058459df06f9d6e7bbb3ab501
+  cooked155 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked156
+                   Main.cooked113) -}
+03d545886a1022a2f773b80e7ddfffca
+  cooked156 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked9
+                   Main.cooked86) -}
+9e2f84607addc1cf550bfbd96ec0df72
+  cooked157 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked88
+                   Main.cooked113) -}
+cd0f6bd40b382d37a181b51c640745ce
+  cooked158 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked171, Main.cooked159)) -}
+f6335ccabaeddbbac9618781ff956cb9
+  cooked159 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked160
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+e282f14ecac48b525ab51a5a76e7730a
+  cooked16 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked250
+                   Main.cooked17) -}
+f854d91113245721b78173efb977771b
+  cooked160 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked162
+                   Main.cooked161) -}
+385f23740b2812de5291380d8665a8ea
+  cooked161 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v5 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+9f0af123295f840f4dd5df4c2832c0ca
+  cooked162 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked170
+                   Main.cooked163) -}
+ec5b4227dcb225d068558be3cfef1b9e
+  cooked163 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked164
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+886fc2adea8e18b469a563b1ab213ef8
+  cooked164 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked166
+                   Main.cooked165) -}
+f626dc2ec0cbea27f93d0e3587d87854
+  cooked165 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v6 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+89d0afb7f9a17c8f0f8d204448e75455
+  cooked166 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked167
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+1586babf656a8583c589c8de54ff6a10
+  cooked167 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked169
+                   Main.cooked168) -}
+d45229f3168ec81dda9b80681849e0b5
+  cooked168 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v7 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+c9a1f2d1f9c34df7e8f1cad1397e711e
+  cooked169 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v7) -}
+f85a481126c8dcf380f66da8d16de27e
+  cooked17 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked245
+                   Main.cooked18) -}
+96f60024a3c172e71a7a3f7defadc0ba
+  cooked170 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v5) -}
+b5b4e856d8f8d1ddcf307dcde61cf872
+  cooked171 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "snd"#) -}
+131137f1e7497846ebdebf27bd0451c4
+  cooked172 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked181, Main.cooked173)) -}
+50cb537d94027e35a5c86a4a41eebf74
+  cooked173 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked174
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+1bc82ad1968de4f4d6d3e8a493d8992a
+  cooked174 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked175
+                   Main.cooked161) -}
+802901ddf45ff244efdd0019b03280de
+  cooked175 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked170
+                   Main.cooked176) -}
+db3a01f95615ae631446ffc8206af76d
+  cooked176 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked177
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+907ae7b1ddfc87593c82225f98490709
+  cooked177 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked178
+                   Main.cooked165) -}
+31b999994406e2c107835cc004aa7925
+  cooked178 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked179
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+3d7fb2e1e2414f6d010a140991b6ea49
+  cooked179 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked180
+                   Main.cooked168) -}
+e2132b098b4d1f6a1e7b8e2cfb965548
+  cooked18 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked231
+                   Main.cooked19) -}
+1fd7d2abf463a28da7becc4699a6aad1
+  cooked180 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v6) -}
+761f8489c7307485141accdc5fab5869
+  cooked181 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "fst"#) -}
+c1ec6e2c5fec743f4c7172479afb5b51
+  cooked182 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked193, Main.cooked183)) -}
+276b7d4e9003818af3d513f6ddba2278
+  cooked183 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked184
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+7aaa3db7047a74f52d03a33220a285cf
+  cooked184 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked185
+                   Main.cooked165) -}
+c517db3e8d42da2bd70beab3f4ac5e00
+  cooked185 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked186
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+7fc24c63a660d36f5250f268a822db5d
+  cooked186 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked187
+                   Main.cooked168) -}
+b3b87a69936ce237b65cbd6f7dd3e7b9
+  cooked187 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked188
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+638aa6bf793e7fb63c1aacddde5dd02f
+  cooked188 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked190
+                   Main.cooked189) -}
+aae7862c2deac77da9e157fd56d7becf
+  cooked189 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v8 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+10dd4ba3e22e02fa92c0106d5746d4ec
+  cooked19 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked225
+                   Main.cooked20) -}
+2310c5615c83d5819df1653f8980351e
+  cooked190 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked191
+                   Main.cooked169) -}
+f7279ca714d34477860a3da66256ebd6
+  cooked191 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked192
+                   Main.cooked180) -}
+8e8a80487f324e4e7213de7e54545d74
+  cooked192 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v8) -}
+b8d6342eb8df611c1baac5d8f705f1e7
+  cooked193 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Pair"#) -}
+571044d13da917d662b4a641986bcde1
+  cooked194 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked118, Main.cooked195)) -}
+02afa7fd608d5a0d2c5dd6ace0639125
+  cooked195 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked196
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+2f30abc161c801a484ef8c9cb4d343c3
+  cooked196 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked197
+                   Main.cooked79) -}
+2e79c9b19f79d678548887e504c2f535
+  cooked197 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked198
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+6dcccf935b133c7bb75ff06bf9d5296b
+  cooked198 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked88
+                   Main.cooked97) -}
+3a339a08fbf1f03f11fc52cd0a06b6d4
+  cooked199 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked207, Main.cooked200)) -}
+34084c15fdb1201f8b825e9638dff51a
+  cooked2 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked11
+                   Main.cooked3) -}
+72b82bc1a44c283b22d4a428e9aca7b2
+  cooked20 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked214
+                   Main.cooked21) -}
+85b12f0fc8042b0dfcb536e7cb4013bd
+  cooked200 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked201
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+6611651b92939e8e5c8b17dc0ddec6cc
+  cooked201 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked202
+                   Main.cooked83) -}
+814289aee759557c68e31ba60120c691
+  cooked202 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked206
+                   Main.cooked203) -}
+bd8d5feb179639c6dee2a9fcc01fc2fb
+  cooked203 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked204
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+f134f774394bd5905230f42f9038d02a
+  cooked204 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked111
+                   Main.cooked205) -}
+c739a320077654a997a19a4d8b5655f8
+  cooked205 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v9 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+4b3ad2d461077eb0530be84ea27cf4ce
+  cooked206 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked86
+                   Main.cooked120) -}
+f4c1a8d886e39f624dfbb32631fd6615
+  cooked207 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "isZero"#) -}
+0d88e65991e1380b94305eef96788bed
+  cooked208 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked69, Main.cooked209)) -}
+475acbe9a7ab6647cea8dbc90bcd3734
+  cooked209 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked58
+                   Main.cooked74) -}
+9fcac7ed7e7fe86ff5cacf0c36865aab
+  cooked21 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked212
+                   Main.cooked22) -}
+7cd9e17fb7331c96e5d8653dddde2c91
+  cooked210 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked75, Main.cooked211)) -}
+fe4c28eb9e74b17c1ccbbc5a7d9b3307
+  cooked211 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked58
+                   Main.cooked132) -}
+0a895280591176bfc4823dd8358e95c7
+  cooked212 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked133, Main.cooked213)) -}
+d166797b434f5395c1d5b91754b5dea3
+  cooked213 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked58
+                   Main.cooked90) -}
+225e4230716ae65ec8178f30cc2d4989
+  cooked214 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked59, Main.cooked215)) -}
+404f6a1acc0ede45bbda85c8265de268
+  cooked215 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked216
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+4c0bf8b71084fc73fc69cb2cb34983a7
+  cooked216 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked217
+                   Main.cooked83) -}
+c4e4c17a2453c79fe524aa34462e9955
+  cooked217 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked218
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+223a487b2e00b35317e2418aa0b5498c
+  cooked218 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked220
+                   Main.cooked219) -}
+d4d400992a9ad4ba7eae4272ffd40311
+  cooked219 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v10 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+cacb46fd808ec787427748826e0a27a6
+  cooked22 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked210
+                   Main.cooked23) -}
+b3775b0a403bcb11ae3e6072c1699260
+  cooked220 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked221
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+8b8db2f0cf1fc5d30feda5f49294455e
+  cooked221 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked223
+                   Main.cooked222) -}
+bb4bddaf92305b2d22aecd0e8b3e2990
+  cooked222 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v11 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+ac9f3eb3d18cc5bf117a1469036b825d
+  cooked223 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked224
+                   Main.cooked86) -}
+eca9d544819c23e5dbbc5179bd9a3054
+  cooked224 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v11) -}
+06cf222e0d18f646838909fa5e16f8dc
+  cooked225 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked91, Main.cooked226)) -}
+b5f16549fc5679416ce072a907b38b4b
+  cooked226 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked227
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+5e970a2e9752f290a460818726535e2e
+  cooked227 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked228
+                   Main.cooked219) -}
+daa5b708d9cb97f6612c7556bff5f55f
+  cooked228 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked229
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+95ca69667178d252807d97175c16fb95
+  cooked229 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked230
+                   Main.cooked222) -}
+5f26d0b51270e8a843882b931890b6b1
+  cooked23 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked208
+                   Main.cooked24) -}
+11f64ca3da10634906d887d585782b8d
+  cooked230 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v10) -}
+4620a83f9ede882a9af276b3c12133e4
+  cooked231 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked244, Main.cooked232)) -}
+db0d343bd4f9a0d11b225c176688cc38
+  cooked232 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked233
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+5838c7c99647a98f37fcc525bfe89d02
+  cooked233 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked234
+                   Main.cooked168) -}
+0fba966a25eddbaca302b49b20703a7e
+  cooked234 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked235
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+6f42df7bcb9e52ae6b283ee0260b1e82
+  cooked235 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked237
+                   Main.cooked236) -}
+3b9d9c4a655ca138cbc846547e680147
+  cooked236 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v12 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+705c3f5eb31e7f2a73a1421354be4824
+  cooked237 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked238
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+98768febe44bd74724dc0b4994f93313
+  cooked238 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked240
+                   Main.cooked239) -}
+371d6e434b1d7edb9f7999b7666c9e89
+  cooked239 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v13 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+0a32b16c7c580963ed09e7d4fb14f2f4
+  cooked24 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked199
+                   Main.cooked25) -}
+e53b0ab753f8e47e615748ba2dacf97a
+  cooked240 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked242
+                   Main.cooked241) -}
+b7e68cac502a8399193b02f16266fbf8
+  cooked241 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v12) -}
+2fdd0824491bc3b47f095a7571ea5f38
+  cooked242 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked169
+                   Main.cooked243) -}
+b385401f29860d8e2e1f719f049b2077
+  cooked243 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v13) -}
+aff32952300c0d7241595614373f5ce3
+  cooked244 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "if"#) -}
+260c7815793b677ab41c045658fbdbd2
+  cooked245 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked121, Main.cooked246)) -}
+a937fd6b48cb4bf0c43bbe56f8167ab2
+  cooked246 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked247
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+c9db742958d9cd576602a1062ef76508
+  cooked247 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked248
+                   Main.cooked239) -}
+5112cf7503d23d367609f1849dad8291
+  cooked248 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked249
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+cec72482aae0de8012da98103b659777
+  cooked249 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked241
+                   Main.cooked236) -}
+8c146449ff5ad83b87171ab93cb4e2c5
+  cooked25 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked194
+                   Main.cooked26) -}
+df78f153a9df2872e7adbef63199a0dd
+  cooked250 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked112, Main.cooked251)) -}
+1110d54b1805dc3498c256f73296c09b
+  cooked251 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked252
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+ff14802a79623b27f2c01c5bc6de73d7
+  cooked252 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked253
+                   Main.cooked239) -}
+40d375372f1e038c651d9f4ebd34a754
+  cooked253 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked254
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+530593a262316786264d3ad2a264a143
+  cooked254 ::
+    Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked243
+                   Main.cooked236) -}
+741bf931f10f171b4929b53b85d8564b
+  cooked255 :: [GHC.Types.Char] -> GHC.Base.Maybe a
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ @ a5 ds :: [GHC.Types.Char] ->
+                 GHC.Base.Nothing @ a5) -}
+caee214d8fb65b684aac38b8f3bb77b2
+  cooked26 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked182
+                   Main.cooked27) -}
+b416e8218ab05a276c0c397fc8332c58
+  cooked27 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked172
+                   Main.cooked28) -}
+1974a72c400701f9325ae7ead7d5f4be
+  cooked28 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked158
+                   Main.cooked29) -}
+88cdcdf93cac2810ceaf5886a0eeab1e
+  cooked29 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked146
+                   Main.cooked30) -}
+cfacc5e70b9dd538fe57f339ec445d12
+  cooked3 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked6
+                   Main.cooked4) -}
+348e4564e0c6c7deb48290f51782f9c2
+  cooked30 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked134
+                   Main.cooked31) -}
+67e941c2e7de3f3e5fc0b17c9e9bc72a
+  cooked31 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked122
+                   Main.cooked32) -}
+93bde31861cc4d5266978e8306b36894
+  cooked32 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked92
+                   Main.cooked33) -}
+d71d82539e0b84fe6f95b219f4ce763b
+  cooked33 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked76
+                   Main.cooked34) -}
+252418ab502e9a5d6d1dab0cb1d91144
+  cooked34 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked71
+                   Main.cooked35) -}
+f1d71d68ec3c622ca16accb8b0898b70
+  cooked35 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked66
+                   Main.cooked36) -}
+b656a2daa5d07da1c731d356ddf61131
+  cooked36 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked60
+                   Main.cooked37) -}
+9cb6be1fb2ce8e5ee2b4355358101d56
+  cooked37 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked52
+                   Main.cooked38) -}
+0bde9cfc8658770ed722c689d1d40d01
+  cooked38 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked46
+                   Main.cooked39) -}
+f8fd1774278cbffb2bce019f7c9483e6
+  cooked39 :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                   Main.cooked40
+                   (GHC.Types.[] @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char]))) -}
+d31da1b8e12bcf450ba20addf0166d0a
+  cooked4 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked5) -}
+bbc730876ea904dbf538c357d9852400
+  cooked40 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked13, Main.cooked41)) -}
+0dc297732f0f49709bbe14fe4d9c937e
+  cooked41 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked44
+                   Main.cooked42) -}
+a96e463bd063c6aeb697941ca21e3bd2
+  cooked42 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked43) -}
+b4185ebb27743f5b64a2dd64819fc12e
+  cooked43 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n6"#) -}
+cd352d851eae73c019ef7bdd6b3a2faa
+  cooked44 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked45) -}
+44f3a709f66885ccfe432596d05d9025
+  cooked45 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "fac"#) -}
+b8500463a52619c11a765864df61402f
+  cooked46 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked8, Main.cooked47)) -}
+b9385dc8b8b57dfa2cadebaaf941ba3d
+  cooked47 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked50
+                   Main.cooked48) -}
+f7f07c3a4b2a5ad301d357100717051a
+  cooked48 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked49) -}
+a651753df4f725736ca5ac37fc3a5007
+  cooked49 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n37"#) -}
+7cd3143e5d98f34ed70bf4a3db9080b3
+  cooked5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n17"#) -}
+181203c72fc1832991d9c9c7c8b419f7
+  cooked50 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked51) -}
+26e3597939b71f8193dfcd55dc293dd0
+  cooked51 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "sumto"#) -}
+9d7ac470ea46e4ce665acc1f40925242
+  cooked52 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked49, Main.cooked53)) -}
+4caf6e34382f7d6afa2ca340dce8d27e
+  cooked53 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked58
+                   Main.cooked54) -}
+940f2b61c61266f6d903c14dfc0139fd
+  cooked54 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked55
+                   Main.cooked42) -}
+b9ceb002ae661874df98f57336643ace
+  cooked55 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked56
+                   Main.cooked42) -}
+7e6292ef8ad0dd344b6955c78c7de8fb
+  cooked56 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked57) -}
+e72ff293663c20cc09c2f335cbdcd9d1
+  cooked57 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "mul"#) -}
+7a5ac78dde2ab4992e8ba384d0376d84
+  cooked58 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked59) -}
+acebc6e48df8c14035d5fd92605105e0
+  cooked59 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Succ"#) -}
+54e78d8b9b84ac25f944b812ef3c4f8d
+  cooked6 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked9
+                   Main.cooked7) -}
+7619ca7265b69fba1d336e5a07d214ad
+  cooked60 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked5, Main.cooked61)) -}
+bb769b2a729828defba7a43651471d63
+  cooked61 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked65
+                   Main.cooked62) -}
+0bfffdb5617640a939e365ee1a09e660
+  cooked62 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked65
+                   Main.cooked63) -}
+16fcb7d9c23698534ef7964351a37d76
+  cooked63 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked64) -}
+c8e82e3f695a7b76d25511fdb96b1545
+  cooked64 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n5"#) -}
+46747f0c4db8e034ebc456032c2476c0
+  cooked65 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked9
+                   Main.cooked42) -}
+667fdbe02618313af8e847ebb971fa95
+  cooked66 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked43, Main.cooked67)) -}
+71c841d2be9ffe385fa436b5582efc67
+  cooked67 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked70
+                   Main.cooked68) -}
+07e835dfc81b5ff448426133b684bd45
+  cooked68 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked69) -}
+d0b375939b8b9bd0ea2cea8ada67f4eb
+  cooked69 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "three"#) -}
+4a84b97ecfa2aad825a7489ca7bf7599
+  cooked7 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked8) -}
+feadfc88d130be11b8b559ccd651e1a1
+  cooked70 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked9
+                   Main.cooked68) -}
+4eeb210074c21eecfe2c43e9feae3475
+  cooked71 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked64, Main.cooked72)) -}
+5739b1a9033a337e9a990f09a021b56f
+  cooked72 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked73
+                   Main.cooked68) -}
+e04329d295bacfd656c7955e8864ba75
+  cooked73 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked9
+                   Main.cooked74) -}
+081d3633b46a5f76191bacb07dd1f1dd
+  cooked74 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked75) -}
+d8988b93f4444cf31f88ccb1214cd0fb
+  cooked75 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "two"#) -}
+281c0e23605a81417986d3bdf3ed615c
+  cooked76 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked51, Main.cooked77)) -}
+2f02194b9f9b613332fae999d95e0a08
+  cooked77 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked78
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+fb67355b4a96302a29d1a7e4793f619e
+  cooked78 :: Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked80
+                   Main.cooked79) -}
+59023bf8a3f59f4f08e8f50115ed87a7
+  cooked79 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+57961c883ef194561d7b2bfcfbf203d8
+  cooked8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n703"#) -}
+c8b3984bbd5c0d9799c66bec9c46b1b2
+  cooked80 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked89
+                   Main.cooked81) -}
+5f7774a435e8c773b66b0fc5cc6d40e8
+  cooked81 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked82
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+30e4eef6e2590c8867dc8185d9862ca4
+  cooked82 :: Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked84
+                   Main.cooked83) -}
+2a792a3449ab6c26a607d6f131ac0310
+  cooked83 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v1 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+20eff6acea6e9f3a66a60ea8bc9c4395
+  cooked84 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked87
+                   Main.cooked85) -}
+cc90f17dd6085cbee3196bf4916424d5
+  cooked85 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked50
+                   Main.cooked86) -}
+2176cb37010f5cfbf9573399b15619df
+  cooked86 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v1) -}
+936f7335947ca1a9e5cc31a8f5262de9
+  cooked87 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked9
+                   Main.cooked88) -}
+976bb70f9d0cdf59ddac23ee39f91d42
+  cooked88 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked_v) -}
+88a7452f922b7c5c9b2df624f6d54d14
+  cooked89 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked88
+                   Main.cooked90) -}
+248ba70d7358243343fb74b316deb7c5
+  cooked9 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked10) -}
+9e0180828944f47f4f0520d588bc44d8
+  cooked90 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.cooked91) -}
+7afa7f29baae9787ce428f4767069727
+  cooked91 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Zero"#) -}
+b262cb4ede0f65104e28ca71234d8f94
+  cooked92 :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+  {- Unfolding: ((Main.cooked15, Main.cooked93)) -}
+3baf51ef20a9ea986c1190d0b6859da6
+  cooked93 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked94
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+d891e2210c73a86c4ac37cf57ebed3e4
+  cooked94 :: Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked95
+                   Main.cooked79) -}
+e02bd1950817edf4cb818d0aada591b2
+  cooked95 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked96
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+3f2389bc0f373e211be8e09299190448
+  cooked96 :: Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.cooked98
+                   Main.cooked97) -}
+0b520c6fdc009740c96206f72b9272f9
+  cooked97 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.cooked_v2 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+ae229ac769ff8c3d8e3ae3fd7496806f
+  cooked98 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.:@
+                   @ [GHC.Types.Char]
+                   Main.cooked114
+                   Main.cooked99) -}
+6e8c1c72fd8e22ba7f98b537a2ffa5ca
+  cooked99 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.cooked100
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+000d1a6cf057c91b736ab29ed63e01fe
+  cooked_$slet_ ::
+    [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+    -> Main.Exp [GHC.Types.Char] -> Main.Exp [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ ds :: [([GHC.Types.Char], Main.Exp [GHC.Types.Char])]
+                   b :: Main.Exp [GHC.Types.Char] ->
+                 case ds of wild {
+                   [] -> b
+                   : ipv ipv1
+                   -> let {
+                        ds1 :: [[GHC.Types.Char]]
+                        = GHC.Base.map
+                            @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                            @ [GHC.Types.Char]
+                            (Data.Tuple.fst @ [GHC.Types.Char] @ (Main.Exp [GHC.Types.Char]))
+                            wild
+                      } in
+                      Main.Let
+                        @ [GHC.Types.Char]
+                        (GHC.Base.map
+                           @ ([GHC.Types.Char], Main.Exp [GHC.Types.Char])
+                           @ (Bound.Scope.Scope GHC.Types.Int Main.Exp [GHC.Types.Char])
+                           (\ x :: ([GHC.Types.Char], Main.Exp [GHC.Types.Char]) ->
+                            case x of wild1 { (,) ds2 y ->
+                            Main.lam_$c>>=
+                              @ [GHC.Types.Char]
+                              @ (Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]))
+                              y
+                              (\ x1 :: [GHC.Types.Char] ->
+                               Main.V
+                                 @ (Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]))
+                                 (case Data.OldList.findIndex
+                                         @ [GHC.Types.Char]
+                                         (GHC.Base.eqString x1)
+                                         ds1 of wild2 {
+                                    GHC.Base.Nothing
+                                    -> Bound.Var.F
+                                         @ GHC.Types.Int
+                                         @ (Main.Exp [GHC.Types.Char])
+                                         (Main.V @ [GHC.Types.Char] x1)
+                                    GHC.Base.Just z
+                                    -> Bound.Var.B
+                                         @ GHC.Types.Int
+                                         @ (Main.Exp [GHC.Types.Char])
+                                         z })) })
+                             `cast`
+                           (<([GHC.Types.Char], Main.Exp [GHC.Types.Char])>_R
+                            ->_R Sym (Bound.Scope.NTCo:Scope[0]
+                                          <GHC.Types.Int>_N <Main.Exp>_N <[GHC.Types.Char]>_N))
+                           wild)
+                        (Main.lam_$c>>=
+                           @ [GHC.Types.Char]
+                           @ (Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]))
+                           b
+                           (\ x1 :: [GHC.Types.Char] ->
+                            Main.V
+                              @ (Bound.Var.Var GHC.Types.Int (Main.Exp [GHC.Types.Char]))
+                              (case Data.OldList.findIndex
+                                      @ [GHC.Types.Char]
+                                      (GHC.Base.eqString x1)
+                                      ds1 of wild1 {
+                                 GHC.Base.Nothing
+                                 -> Bound.Var.F
+                                      @ GHC.Types.Int
+                                      @ (Main.Exp [GHC.Types.Char])
+                                      (Main.V @ [GHC.Types.Char] x1)
+                                 GHC.Base.Just z
+                                 -> Bound.Var.B @ GHC.Types.Int @ (Main.Exp [GHC.Types.Char]) z })))
+                          `cast`
+                        (Sym (Bound.Scope.NTCo:Scope[0]
+                                  <GHC.Types.Int>_N <Main.Exp>_N <[GHC.Types.Char]>_N)) }) -}
+e94f1537e0bbb841b6c008f5ea5999d8
+  cooked_v :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x"#) -}
+f8e61a17664c79c482c10e4b7b20adb3
+  cooked_v1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n"#) -}
+067c718da9ffcb9cf9470ff300f13eda
+  cooked_v10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "z"#) -}
+455c3ea9266189ca675363d861bba797
+  cooked_v11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "s"#) -}
+904708459ccd1168a5a6bc5bd2d52811
+  cooked_v12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "t"#) -}
+f25b264e698c4c1799d4bca3279f0d5b
+  cooked_v13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "f"#) -}
+e160ebfbe5dcea68738747ba56bfa656
+  cooked_v2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "y"#) -}
+57a2b033e5d5ff896ad50af1c8360522
+  cooked_v3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x1"#) -}
+30d655bad88ceb51be9ce619d65a4db5
+  cooked_v4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "y1"#) -}
+8b93723f7063afb2e8cfa4e2b9e47881
+  cooked_v5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ab"#) -}
+c13b952648199ed43a0afefee3367bb1
+  cooked_v6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "a"#) -}
+95e67bc2fb88d912a79a1f0f081b9b2f
+  cooked_v7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "b"#) -}
+5240b5b670d0d3fe39bfebb38ad1712b
+  cooked_v8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "p"#) -}
+d94b2defee14bca5e68d7a5e4a69d01e
+  cooked_v9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "m"#) -}
+51df2b3099038d8e37c699d0464ed780
+  lam :: GHC.Classes.Eq a => a -> Main.Exp a -> Main.Exp a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U><L,1*U>m3, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5 w :: GHC.Classes.Eq a5 w1 :: a5 w2 :: Main.Exp a5 ->
+                 Main.Lam
+                   @ a5
+                   (Main.lam_$c>>=
+                      @ a5
+                      @ (Bound.Var.Var () (Main.Exp a5))
+                      w2
+                      (\ x1 :: a5 ->
+                       Main.V
+                         @ (Bound.Var.Var () (Main.Exp a5))
+                         (case GHC.Classes.== @ a5 w w1 x1 of wild {
+                            GHC.Types.False
+                            -> Bound.Var.F @ () @ (Main.Exp a5) (Main.V @ a5 x1)
+                            GHC.Types.True -> Main.lam2 @ a5 })))
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0] <()>_N <Main.Exp>_N <a5>_N))) -}
+e1a7cb84e32d6c507a40b0d52319cf28
+  lam1 :: Bound.Var.Var () (Main.Exp [GHC.Types.Char])
+  {- HasNoCafRefs,
+     Unfolding: (Bound.Var.B
+                   @ ()
+                   @ (Main.Exp [GHC.Types.Char])
+                   GHC.Tuple.()) -}
+757c78e67926fa2adbcd9d4bc2fbafa3
+  lam2 :: Bound.Var.Var () (Main.Exp a)
+  {- HasNoCafRefs,
+     Unfolding: (\ @ a5 ->
+                 Bound.Var.B @ () @ (Main.Exp a5) GHC.Tuple.()) -}
+e450ddbd85076c2c507754cf0d4e47a0
+  lam_$c>>= :: Main.Exp a -> (a -> Main.Exp b) -> Main.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,C(U)> -}
+4079c8b2599f435196a4256f048be8f9
+  let_ ::
+    GHC.Classes.Eq a => [(a, Main.Exp a)] -> Main.Exp a -> Main.Exp a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C(U)),A)><S,1*U><L,1*U>,
+     Unfolding: (\ @ a5
+                   $dEq :: GHC.Classes.Eq a5
+                   ds :: [(a5, Main.Exp a5)]
+                   b :: Main.Exp a5 ->
+                 case ds of wild {
+                   [] -> b
+                   : ipv ipv1
+                   -> let {
+                        ds1 :: [a5]
+                        = GHC.Base.map
+                            @ (a5, Main.Exp a5)
+                            @ a5
+                            (Data.Tuple.fst @ a5 @ (Main.Exp a5))
+                            wild
+                      } in
+                      Main.Let
+                        @ a5
+                        (GHC.Base.map
+                           @ (a5, Main.Exp a5)
+                           @ (Bound.Scope.Scope GHC.Types.Int Main.Exp a5)
+                           (\ x :: (a5, Main.Exp a5) ->
+                            case x of wild1 { (,) ds2 y ->
+                            Main.lam_$c>>=
+                              @ a5
+                              @ (Bound.Var.Var GHC.Types.Int (Main.Exp a5))
+                              y
+                              (\ x1 :: a5 ->
+                               Main.V
+                                 @ (Bound.Var.Var GHC.Types.Int (Main.Exp a5))
+                                 (case Data.OldList.findIndex
+                                         @ a5
+                                         (GHC.Classes.== @ a5 $dEq x1)
+                                         ds1 of wild2 {
+                                    GHC.Base.Nothing
+                                    -> Bound.Var.F @ GHC.Types.Int @ (Main.Exp a5) (Main.V @ a5 x1)
+                                    GHC.Base.Just z
+                                    -> Bound.Var.B @ GHC.Types.Int @ (Main.Exp a5) z })) })
+                             `cast`
+                           (<(a5, Main.Exp a5)>_R
+                            ->_R Sym (Bound.Scope.NTCo:Scope[0]
+                                          <GHC.Types.Int>_N <Main.Exp>_N <a5>_N))
+                           wild)
+                        (Main.lam_$c>>=
+                           @ a5
+                           @ (Bound.Var.Var GHC.Types.Int (Main.Exp a5))
+                           b
+                           (\ x1 :: a5 ->
+                            Main.V
+                              @ (Bound.Var.Var GHC.Types.Int (Main.Exp a5))
+                              (case Data.OldList.findIndex
+                                      @ a5
+                                      (GHC.Classes.== @ a5 $dEq x1)
+                                      ds1 of wild1 {
+                                 GHC.Base.Nothing
+                                 -> Bound.Var.F @ GHC.Types.Int @ (Main.Exp a5) (Main.V @ a5 x1)
+                                 GHC.Base.Just z
+                                 -> Bound.Var.B @ GHC.Types.Int @ (Main.Exp a5) z })))
+                          `cast`
+                        (Sym (Bound.Scope.NTCo:Scope[0]
+                                  <GHC.Types.Int>_N <Main.Exp>_N <a5>_N)) }) -}
+d4c0830ef0fc4e3c665ab55ebe74f93f
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+41fe5628dc2f95c5e0e3eb7d058e8b60
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main6
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case Main.$fEq1Exp_$s$c==
+                        (Main.main_result @ GHC.Base.String)
+                        Main.true of wild {
+                   GHC.Types.False
+                   -> case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             Main.main5
+                             GHC.Types.True
+                             ipv of ds2 { (#,#) ipv2 ipv3 ->
+                      case GHC.IO.Handle.Text.hPutStr2
+                             GHC.IO.Handle.FD.stdout
+                             Main.main3
+                             GHC.Types.True
+                             ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                      System.Exit.die2 @ () ipv4 } }
+                   GHC.Types.True
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Main.main2
+                        GHC.Types.True
+                        ipv } }) -}
+92dcf26fcdc24fad0a962fd6f5699d2e
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Result correct."#) -}
+39592db2687b990f6c463c12a8e3d74b
+  main3 :: GHC.Base.String
+  {- Unfolding: (Main.prettyWith
+                   Main.main4
+                   (Main.main_result @ GHC.Base.String)) -}
+6e7e8c0f16f1b9a6fb5e9f33a76da125
+  main4 :: [[GHC.Types.Char]]
+  {- Unfolding: (Main.main_go 97) -}
+d6c53b2f9b19f0e2ec38f0ac25414912
+  main5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Unexpected result:"#) -}
+7873bd001a5e1e33192fc3c10ef42601
+  main6 :: GHC.Base.String
+  {- Unfolding: (Main.prettyWith
+                   Main.main4
+                   (Main.cooked @ GHC.Base.String)) -}
+7ad6bc4cfeebccfcd28427ae6202621b
+  main7 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+49304b6ba9079487808c08343dc2a93f
+  main_go :: GHC.Prim.Int# -> [[GHC.Types.Char]]
+  {- Arity: 1, Strictness: <L,U> -}
+d4934803c8726371e04cf017a15f2ed2
+  main_result :: Main.Exp a
+  {- Unfolding: (\ @ a5 -> Main.nf @ a5 (Main.cooked @ a5)) -}
+162eee96177a208d8ab4ec5fdcc753d9
+  nf :: Main.Exp a -> Main.Exp a
+  {- Arity: 1, Strictness: <S,1*U> -}
+4d69d86697e41b493706312b32af599c
+  pp :: Main.Exp GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.pp1
+                  `cast`
+                (<Main.Exp GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+d81181dd653282d485779b971e88de65
+  pp1 ::
+    Main.Exp GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: Main.Exp GHC.Base.String
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (Main.prettyWith Main.main4 x)
+                   GHC.Types.True
+                   eta) -}
+ae6977af9d351bb71dc4d9235009a9c0
+  pretty :: Main.Exp GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Unfolding: (Main.prettyWith Main.main4) -}
+e611d637bca505f7281de287a05e6df2
+  prettyPrec ::
+    [GHC.Base.String]
+    -> GHC.Types.Bool
+    -> GHC.Types.Int
+    -> Main.Exp GHC.Base.String
+    -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U><L,1*U><L,U(U)><S,1*U> -}
+72e0237ab9aae9cde53c4d78896553a5
+  prettyWith ::
+    [GHC.Base.String] -> Main.Exp GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: (\ vs :: [GHC.Base.String]
+                   t :: Main.Exp GHC.Base.String ->
+                 Main.prettyPrec
+                   (GHC.List.filter
+                      @ [GHC.Types.Char]
+                      (let {
+                         ds :: [GHC.Base.String]
+                         = (Main.prettyWith1
+                              (GHC.Types.: @ GHC.Base.String)
+                                `cast`
+                              (<GHC.Base.String>_R
+                               ->_R Sym (Data.Monoid.NTCo:Endo[0] <[GHC.Base.String]>_R))
+                              t)
+                             `cast`
+                           (Data.Monoid.NTCo:Endo[0] <[GHC.Base.String]>_R)
+                             (GHC.Types.[] @ GHC.Base.String)
+                       } in
+                       \ ds1 :: GHC.Base.String ->
+                       case GHC.List.elem
+                              @ GHC.Base.String
+                              GHC.Classes.$fEq[]_$s$fEq[]1
+                              ds1
+                              ds of wild {
+                         GHC.Types.False -> GHC.Types.True
+                         GHC.Types.True -> GHC.Types.False })
+                      vs)
+                   GHC.Types.False
+                   Main.$fFoldableExp6
+                   t
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+fced4f0a753f2965ef811265486fb8dd
+  prettyWith1 ::
+    (GHC.Base.String -> Data.Monoid.Endo [GHC.Base.String])
+    -> Main.Exp GHC.Base.String -> Data.Monoid.Endo [GHC.Base.String]
+  {- Unfolding: (Main.$cfoldr_$cfoldMap
+                   @ GHC.Base.String
+                   @ (Data.Monoid.Endo [GHC.Base.String])
+                   (Data.Monoid.$fMonoidEndo @ [GHC.Base.String])) -}
+144c8bd6c58d7b53f59b0fd1faa9465b
+  true :: Main.Exp GHC.Base.String
+  {- Strictness: m3,
+     Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.true1
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+d859cb204b9b9cc4819e80227d25624a
+  true1 :: Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.true3
+                   Main.true2) -}
+0cee8c41172c78d59a68e2b9ac09d33f
+  true2 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.true_v x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+a6966bb49645718300fc59e0e9f40f85
+  true3 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.Lam
+                   @ [GHC.Types.Char]
+                   Main.true4
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <Main.Exp>_N <[GHC.Types.Char]>_N))) -}
+d85e078d8bb31abf017a76cf0f553a43
+  true4 :: Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Unfolding: (Main.lam_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   Main.true6
+                   Main.true5) -}
+3f3f6a59c1057f717f207f4262499340
+  true5 ::
+    [GHC.Types.Char]
+    -> Main.Exp (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 Main.V
+                   @ (Bound.Var.Var () (Main.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString Main.true_v1 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (Main.Exp [GHC.Types.Char])
+                           (Main.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> Main.lam1 })) -}
+6078c870adfec5c728630ae7f632b86e
+  true6 :: Main.Exp [GHC.Types.Char]
+  {- Unfolding: (Main.V @ [GHC.Types.Char] Main.true_v1) -}
+342b4fdc1d200e89c47fa70fdc3f5035
+  true_v :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "F"#) -}
+8341f3a27323c77c6a2f9c59d885c733
+  true_v1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "T"#) -}
+67342de1c219e0f1216b66f1f13096ab
+  whnf :: Main.Exp a -> Main.Exp a
+  {- Arity: 1, Strictness: <S,1*U> -}
+instance GHC.Base.Applicative [Main.Exp] = Main.$fApplicativeExp
+instance Prelude.Extras.Eq1 [Main.Exp] = Main.$fEq1Exp
+instance GHC.Classes.Eq [Main.Exp] = Main.$fEqExp
+instance Data.Foldable.Foldable [Main.Exp] = Main.$fFoldableExp
+instance GHC.Base.Functor [Main.Exp] = Main.$fFunctorExp
+instance GHC.Base.Monad [Main.Exp] = Main.$fMonadExp
+instance Prelude.Extras.Ord1 [Main.Exp] = Main.$fOrd1Exp
+instance GHC.Classes.Ord [Main.Exp] = Main.$fOrdExp
+instance Prelude.Extras.Read1 [Main.Exp] = Main.$fRead1Exp
+instance GHC.Read.Read [Main.Exp] = Main.$fReadExp
+instance Prelude.Extras.Show1 [Main.Exp] = Main.$fShow1Exp
+instance GHC.Show.Show [Main.Exp] = Main.$fShowExp
+instance Data.Traversable.Traversable [Main.Exp]
+  = Main.$fTraversableExp
+"SPEC $c== @ [Char]" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                               [GHC.Types.Char]
+  Main.$fEq1Exp_$c== @ [GHC.Types.Char] $dEq = Main.$fEq1Exp_$s$c==
+"SPEC let_ @ [Char]" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                               [GHC.Types.Char]
+  Main.let_ @ [GHC.Types.Char] $dEq = Main.cooked_$slet_
+"SPEC/Main $dm>> @ Exp" [ALWAYS] forall $dMonad :: GHC.Base.Monad
+                                                     Main.Exp
+  GHC.Base.$dm>> @ Main.Exp $dMonad
+  = \ @ a5 @ b m1 :: Main.Exp a5 k :: Main.Exp b ->
+    Main.lam_$c>>= @ a5 @ b m1 (\ ds :: a5 -> k)
+"SPEC/Main $dmfail @ Exp" [ALWAYS] forall $dMonad :: GHC.Base.Monad
+                                                       Main.Exp
+  GHC.Base.$dmfail @ Main.Exp $dMonad = Main.$fMonadExp_$s$dmfail
+"SPEC/Main $dmtoList @ Exp" [ALWAYS] forall $dFoldable :: Data.Foldable.Foldable
+                                                            Main.Exp
+  Data.Foldable.$dmtoList @ Main.Exp $dFoldable
+  = \ @ a5 t1 :: Main.Exp a5 ->
+    GHC.Base.build
+      @ a5
+      (\ @ b c :: a5 -> b -> b[OneShot] n1 :: b[OneShot] ->
+       Main.$cfoldr @ a5 @ b c n1 t1)
+"SPEC/Main $fEqScope @ Int @ Exp @ [Char]" [ALWAYS] forall $dMonad :: GHC.Base.Monad
+                                                                        Main.Exp
+                                                           $dEq :: GHC.Classes.Eq GHC.Types.Int
+                                                           $dEq1 :: Prelude.Extras.Eq1 Main.Exp
+                                                           $dEq2 :: GHC.Classes.Eq [GHC.Types.Char]
+  Bound.Scope.$fEqScope @ GHC.Types.Int
+                        @ Main.Exp
+                        @ [GHC.Types.Char]
+                        $dMonad
+                        $dEq
+                        $dEq1
+                        $dEq2
+  = Main.$s$fEqScope
+"SPEC/Main $fEqScope_$c/= @ Int @ Exp @ [Char]" [ALWAYS] forall $dMonad :: GHC.Base.Monad
+                                                                             Main.Exp
+                                                                $dEq :: GHC.Classes.Eq GHC.Types.Int
+                                                                $dEq1 :: Prelude.Extras.Eq1 Main.Exp
+                                                                $dEq2 :: GHC.Classes.Eq
+                                                                           [GHC.Types.Char]
+  Bound.Scope.$fEqScope_$c/= @ GHC.Types.Int
+                             @ Main.Exp
+                             @ [GHC.Types.Char]
+                             $dMonad
+                             $dEq
+                             $dEq1
+                             $dEq2
+  = Main.$s$fEqScope_$s$fEqScope_$c/=
+"SPEC/Main $fEqVar @ () @ [Char]" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                                            ()
+                                                  $dEq1 :: GHC.Classes.Eq [GHC.Types.Char]
+  Bound.Var.$fEqVar @ () @ [GHC.Types.Char] $dEq $dEq1
+  = Main.$s$fEqVar
+"SPEC/Main $fEqVar @ Int @ [Char]" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                                             GHC.Types.Int
+                                                   $dEq1 :: GHC.Classes.Eq [GHC.Types.Char]
+  Bound.Var.$fEqVar @ GHC.Types.Int @ [GHC.Types.Char] $dEq $dEq1
+  = Main.$s$fEqScope_$s$fEqVar
+"SPEC/Main >>>= @ (Scope ())" [ALWAYS] forall tpl :: Bound.Class.Bound
+                                                       (Bound.Scope.Scope ())
+  Bound.Class.>>>= @ (Bound.Scope.Scope ()) tpl
+  = Bound.Scope.$fBoundScope_$c>>>= @ ()
+"SPEC/Main >>>= @ (Scope Int)" [ALWAYS] forall tpl :: Bound.Class.Bound
+                                                        (Bound.Scope.Scope GHC.Types.Int)
+  Bound.Class.>>>= @ (Bound.Scope.Scope GHC.Types.Int) tpl
+  = Bound.Scope.$fBoundScope_$c>>>= @ GHC.Types.Int
+"SPEC/Main fmapDefault _ _ @ Exp" [ALWAYS] forall @ a5
+                                                  @ b
+                                                  $dTraversable :: Data.Traversable.Traversable
+                                                                     Main.Exp
+  Data.Traversable.fmapDefault @ a5 @ b @ Main.Exp $dTraversable
+  = Main.$fFunctorExp_$sfmapDefault @ a5 @ b
+"SPEC/Main instantiate _ @ Exp _" [ALWAYS] forall @ b
+                                                  @ a12
+                                                  $dMonad :: GHC.Base.Monad Main.Exp
+  Bound.Scope.instantiate @ b @ Main.Exp @ a12 $dMonad
+  = Main.$sinstantiate @ b @ a12
+"SPEC/Main liftM _ _ @ Exp" [ALWAYS] forall @ a5
+                                            @ r
+                                            $dMonad :: GHC.Base.Monad Main.Exp
+  GHC.Base.liftM @ a5 @ r @ Main.Exp $dMonad
+  = Main.$s$fEqScope_$sliftM @ a5 @ r
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
