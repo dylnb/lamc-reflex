@@ -14,10 +14,14 @@ muDB (Mu f) =
     (ALambda x body) -> lambda x (muDB body)
 
 
+
 {--}
 
 -- example2 :: Mu AST
 -- example2 = Mu $ AApply (Mu . ALambda "x" . Mu $ AIdent "x") (Mu $ ANumber 2)
+
+t :: Mu AST
+t = app (var "k1") (var "plus1")
 
 comp :: Mu AST
 comp = lam "f" (lam "g" (lam "x" (app (var "f") (app (var "g") (var "x")))))
@@ -29,7 +33,7 @@ ident :: Mu AST
 ident = lam "x" (var "x")
 
 ex2 :: Mu AST
-ex2 = app (app comp k3) ident
+ex2 = app (app (app comp k3) ident) (num 7)
 
 ex3 :: Mu AST
 ex3 = app (lam "f" (app (var "f") (var "f"))) (lam "x" (var "x"))

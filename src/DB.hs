@@ -160,3 +160,34 @@ prettyWith vs t = prettyPrec (filter (`notElem` toList t) vs) False 0 t ""
 pretty :: Exp String -> String
 pretty = prettyWith $ [ [i] | i <- ['a'..'z']] ++ [i : show j | j <- [1..], i <- ['a'..'z'] ]
 
+data Val
+  = VInt Int
+  | VFun (Val -> Val)
+  | VClosure (Scope () Exp String) Env
+
+instance Show Val where
+  show (VInt i) = show i
+  show (VFun _) = "fun "
+  show (VClosure _ _) = "closure "
+
+type Env = String -> Val
+
+defEnv :: Env
+defEnv s =
+  case s of
+    "1" -> VInt 1
+    "2" -> VInt 2
+    "3" -> VInt 3
+    "4" -> VInt 4
+    "id" -> VFun id
+    "plus1" -> VFun $ \(VInt i) -> VInt (i+1)
+    "k1" -> VFun $ \(VFun g) -> g (VInt 1)
+
+
+eval :: Env -> Exp String -> Val
+eval env exp =
+  let t = nf exp in
+  case t of
+    V x -> env x
+    Lam e -> VClosure e env
+    m :@ n -> case eval env m of {VFun f -> f (eval env n)}
