@@ -1,7 +1,4 @@
-module DB where
-
--- this is a simple example where lambdas only bind a single variable at a time
--- this directly corresponds to the usual de bruijn presentation
+module DbExp where
 
 import Data.List (elemIndex)
 import Data.Foldable hiding (notElem)
@@ -25,14 +22,8 @@ data Exp a
   | Let [Scope Int Exp a] (Scope Int Exp a)
   deriving (Eq,Ord,Show,Read)
 
--- | A smart constructor for Lam
---
--- >>> lam "y" (lam "x" (V "x" :@ V "y"))
--- Lam (Scope (Lam (Scope (V (B ()) :@ V (F (V (B ())))))))
 lambda :: Eq a => a -> Exp a -> Exp a
 lambda v b = Lam (abstract1 v b)
-
--- | A smart constructor for Let bindings
 
 let_ :: Eq a => [(a,Exp a)] -> Exp a -> Exp a
 let_ [] b = b
@@ -67,7 +58,6 @@ instance Ord1 Exp     where compare1   = compare
 instance Show1 Exp    where showsPrec1 = showsPrec
 instance Read1 Exp    where readsPrec1 = readsPrec
 
--- | Compute the normal form of an expression
 nf :: Exp a -> Exp a
 nf e@N{}   = e
 nf e@V{}   = e
@@ -79,7 +69,6 @@ nf (Let bs b) = nf (inst b)
   where es = map inst bs
         inst = instantiate (es !!)
 
--- | Reduce a term to weak head normal form
 whnf :: Exp a -> Exp a
 whnf e@N{}   = e
 whnf e@V{}   = e
@@ -151,7 +140,7 @@ prettyPrec vs     d n (x :@ y)   = showParen d $
     (Lam b) -> prettyPrec vs True n x . showChar ' ' . prettyPrec vs True n y
     _       -> prettyPrec vs False n x . showChar ' ' . prettyPrec vs True n y
 prettyPrec (v:vs) d n (Lam b)    = showParen d $ 
-  showString "λ" . showString v . showString ". " . prettyPrec vs False n (instantiate1 (V v) b)
+  showString v . showString ". " . prettyPrec vs False n (instantiate1 (V v) b)
 prettyPrec vs     d n (Let bs b) = showParen d $ 
   showString "let" .  foldr (.) id (zipWith showBinding xs bs) .
   showString " in " . indent . prettyPrec ys False n (inst b)
@@ -165,32 +154,3 @@ prettyWith vs t = prettyPrec (filter (`notElem` toList t) vs) False 0 t ""
 
 pretty :: Exp String -> String
 pretty = prettyWith $ [ [i] | i <- ['a'..'z']] ++ [i : show j | j <- [1..], i <- ['a'..'z'] ]
-
-data Val
-  = VInt Int
-  | VFun (Val -> Val)
-  | VClosure (Scope () Exp String) Env
-
-instance Show Val where
-  show (VInt i) = show i
-  show (VFun _) = "fun "
-  show (VClosure _ _) = "closure "
-
-type Env = String -> Val
-
-defEnv :: Env
-defEnv s =
-  case s of
-    "id" -> VFun id
-    "plus1" -> VFun $ \(VInt i) -> VInt (i+1)
-    "k1" -> VFun $ \(VFun g) -> g (VInt 1)
-
-
-eval :: Env -> Exp String -> Val
-eval env exp =
-  let t = nf exp in
-  case t of
-    N i -> VInt i
-    V x -> env x
-    Lam e -> VClosure e env
-    m :@ n -> case eval env m of {VFun f -> f (eval env n)}

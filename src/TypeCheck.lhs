@@ -1,26 +1,11 @@
-How do we add extra information to a tree? This has been called [The
-AST Typing
-Problem](http://blog.ezyang.com/2013/05/the-ast-typing-problem/).
-
-After being hit with this problem in Roy's new type-inference engine,
-I tried figuring out how to represent the algorithm. I eventually
-realised that it looked like a comonadic operation. Turns out it's
-been done before but I couldn't find any complete example.
-
-Below is some literate Haskell to show how to use the Cofree Comonad
-to perform [bottom-up, constraint-based
-type-inference](http://igitur-archive.library.uu.nl/math/2007-1122-200535/heeren_02_generalizinghindleymilner.pdf). It's
-essentially a tiny version of how Roy's new type-system works.
 
 > {-# LANGUAGE DeriveFoldable #-}
 > {-# LANGUAGE DeriveFunctor #-}
 > {-# LANGUAGE DeriveTraversable #-}
 > {-# LANGUAGE StandaloneDeriving #-}
->
-> module CofreeTree where
->
-> import Prelude hiding (sequence)
->
+
+> module TypeCheck where
+
 > import Control.Comonad
 > import Control.Comonad.Cofree
 > import Control.Monad.State hiding (sequence)
@@ -29,44 +14,7 @@ essentially a tiny version of how Roy's new type-system works.
 > import Data.Monoid
 > import Data.Traversable (Traversable, sequence)
 > import qualified Data.Map as M
-
-Our little language is an extended lambda calculus with integer and
-string literals. The interesting thing here is that the AST doesn't
-specify `(AST a)` for recursion, only `a` - this gives us more
-flexibility; we can have a node that isn't recursive or even a special
-type of recursion (e.g. we'll eventually get annotated recursion).
-
-> data AST a = ALambda String a
->            | AApply a a
->            | ANumber Int
->            | AString String
->            | AIdent String
-
-But for now we want a normal recursive AST. If we use a fixed-point we
-can get a normal one using `Mu AST`.
-
-> newtype Mu f = Mu (f (Mu f))
-
-Now it's surprisingly easy to create an unattributed AST. Our example
-will use the following lambda expression: (λx.x)2
-
-> example :: Mu AST
-> example = Mu $ AApply (Mu . ALambda "x" . Mu $ AIdent "x") (Mu $ ANumber 2)
-
-> num = Mu . ANumber
-> var = Mu . AIdent
-> lam = (Mu .) . ALambda
-> app = (Mu .) . AApply
-
-Later on we'll need to be able to traverse the AST and store it in a
-map.
-
-> deriving instance Show a => Show (AST a)
-> deriving instance Functor AST
-> deriving instance Foldable AST
-> deriving instance Traversable AST
-> deriving instance Eq a => Eq (AST a)
-> deriving instance Ord a => Ord (AST a)
+> import CofreeTree
 
 We're going to add types to our AST. `TVar` is a parametric type. For
 example, the type `α → α` is represented as `TLambda (TVar 0) (TVar
@@ -154,8 +102,8 @@ takes a parameterised type and makes it recursive with each step
 having an attribute. Our initial attribution will be unit (i.e. we'll
 initially use Cofree just for the recursive comonadic structure).
 
-> cofreeMu :: Functor f => Mu f -> Cofree f ()
-> cofreeMu (Mu f) = () :< fmap cofreeMu f
+> -- mu2cf :: Functor f => Mu f -> Cofree f ()
+> -- mu2cf (Mu f) = () :< fmap mu2cf f
 
 The real annotation function will take a unit annotated Cofree AST
 then do a comonadic extend so that each node is annotated with its
@@ -164,11 +112,6 @@ type and state. Fairly easy.
 But we'll get a Cofree where each attribute is a State operation. We
 can sequence to get a combined State of a Cofree AST. Then we can run
 the State to get just a Cofree AST with our attributes!
-
-> attribute :: Cofree AST () -> Cofree AST (Type, TypeResult)
-> attribute c =
->     let initial = TypeState { memo = M.empty, varId = 0 }
->     in evalState (sequence $ extend (memoizedTC generateConstraints) c) initial
 
 Let's take a look at the comonadic operation which generates a type
 along with its constraints and assumptions.
@@ -281,51 +224,3 @@ Now we can put it all together. We attribute the tree to get a type
 and its constraints. We then solve those constraints to get a
 substitution map. Finally, we can map over each AST node, discarding
 the constraints and applying the substitution map to get a final type.
-
-> typeTree :: Cofree AST () -> Maybe (Cofree AST Type)
-> typeTree c =
->     let result = attribute c
->         (r :< _) = result
->         maybeSubs = solveConstraints . constraints $ snd r
->     in fmap (\subs -> fmap (substitute subs . fst) result) maybeSubs
-
-Now we can go back to the `cofreeMu` example we wrote above and print:
-
-1. The AST
-2. The AST attributed with constraints, assumptions and unsolved types
-3. The AST with solved types
-
-main :: IO ()
-main = do
-  print $ cofreeMu example
-  print . attribute $ cofreeMu example
-  print . typeTree $ cofreeMu example
-
-The last is the most interesting:
-
-    Just
-      (TNumber :< AApply
-        (TLambda TNumber TNumber :< ALambda "x"
-          (TNumber :< AIdent "x"))
-        (TNumber :< ANumber 2))
-
-Awesome. Does exactly what we want. It seems like the type system
-allows easy extension. We could even add extra comonadic operations
-for different phases of the compiler, like annotating nodes with
-type-class dictionaries.
-
-But I can think of two problems with this comonadic approach:
-
-1. We have to explicitly sequence comonadic phases. It'd be better if
-we could annotate the AST with a semigroup and then append different
-phases in parallel but then we'd probably lose type-safety when trying
-to retrieve an attribute.
-
-2. The memoisation is annoying and seems to reflect the way we're
-traversing using a comonad. But then, doing it without Cofree seems
-even more annoying.
-
-Anyway, time to translate the
-[above](https://github.com/puffnfresh/fantasy-states)
-[to](https://github.com/puffnfresh/fantasy-cofrees)
-[JavaScript](https://github.com/puffnfresh/fantasy-land)...
