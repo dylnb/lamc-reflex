@@ -18,7 +18,8 @@ import System.Exit
 infixl 9 :@
 
 data Exp a
-  = V a
+  = N Int
+  | V a
   | Exp a :@ Exp a
   | Lam (Scope () Exp a)
   | Let [Scope Int Exp a] (Scope Int Exp a)
@@ -46,6 +47,7 @@ instance Applicative Exp where
   (<*>) = ap
 
 instance Traversable Exp where
+  traverse f (N i)      = pure (N i)
   traverse f (V a)      = V <$> f a
   traverse f (x :@ y)   = (:@) <$> traverse f x <*> traverse f y
   traverse f (Lam e)    = Lam <$> traverse f e
@@ -53,6 +55,7 @@ instance Traversable Exp where
 
 instance Monad Exp where
   return = V
+  N i      >>= f = N i
   V a      >>= f = f a
   (x :@ y) >>= f = (x >>= f) :@ (y >>= f)
   Lam e    >>= f = Lam (e >>>= f)
@@ -66,6 +69,7 @@ instance Read1 Exp    where readsPrec1 = readsPrec
 
 -- | Compute the normal form of an expression
 nf :: Exp a -> Exp a
+nf e@N{}   = e
 nf e@V{}   = e
 nf (Lam b) = Lam $ toScope $ nf $ fromScope b
 nf (f :@ a) = case whnf f of
@@ -77,6 +81,7 @@ nf (Let bs b) = nf (inst b)
 
 -- | Reduce a term to weak head normal form
 whnf :: Exp a -> Exp a
+whnf e@N{}   = e
 whnf e@V{}   = e
 whnf e@Lam{} = e
 whnf (f :@ a) = case whnf f of
@@ -139,13 +144,14 @@ cooked = fromJust $ closed $ let_
 -- TODO: use a real pretty printer
 
 prettyPrec :: [String] -> Bool -> Int -> Exp String -> ShowS
+prettyPrec _      d n (N i)      = showString (show i)
 prettyPrec _      d n (V a)      = showString a
 prettyPrec vs     d n (x :@ y)   = showParen d $ 
   case x of
     (Lam b) -> prettyPrec vs True n x . showChar ' ' . prettyPrec vs True n y
     _       -> prettyPrec vs False n x . showChar ' ' . prettyPrec vs True n y
 prettyPrec (v:vs) d n (Lam b)    = showParen d $ 
-  showString "\\" . showString v . showString ". " . prettyPrec vs False n (instantiate1 (V v) b)
+  showString "λ" . showString v . showString ". " . prettyPrec vs False n (instantiate1 (V v) b)
 prettyPrec vs     d n (Let bs b) = showParen d $ 
   showString "let" .  foldr (.) id (zipWith showBinding xs bs) .
   showString " in " . indent . prettyPrec ys False n (inst b)
@@ -175,10 +181,6 @@ type Env = String -> Val
 defEnv :: Env
 defEnv s =
   case s of
-    "1" -> VInt 1
-    "2" -> VInt 2
-    "3" -> VInt 3
-    "4" -> VInt 4
     "id" -> VFun id
     "plus1" -> VFun $ \(VInt i) -> VInt (i+1)
     "k1" -> VFun $ \(VFun g) -> g (VInt 1)
@@ -188,6 +190,7 @@ eval :: Env -> Exp String -> Val
 eval env exp =
   let t = nf exp in
   case t of
+    N i -> VInt i
     V x -> env x
     Lam e -> VClosure e env
     m :@ n -> case eval env m of {VFun f -> f (eval env n)}

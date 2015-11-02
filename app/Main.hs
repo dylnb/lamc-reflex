@@ -3,17 +3,28 @@ module Main where
 import CofreeTree
 import DB
 import System.Exit
+import Control.Comonad
+import Control.Comonad.Cofree
 
 
-muDB :: Mu AST -> Exp String
-muDB (Mu f) =
+cofreeDB :: Cofree AST a -> Exp String
+cofreeDB (_ :< f) =
   case f of
-    (ANumber i) -> V (show i)
+    (ANumber i) -> N i
     (AIdent x) -> V x
-    (AApply m n) -> muDB m :@ muDB n
-    (ALambda x body) -> lambda x (muDB body)
+    (AApply m n) -> cofreeDB m :@ cofreeDB n
+    (ALambda x body) -> lambda x (cofreeDB body)
 
+annotate :: Cofree AST () -> Cofree AST String
+annotate = extend (pretty . nf . cofreeDB)
 
+evaluate :: Cofree AST () -> Cofree AST Val
+evaluate = extend (eval defEnv . cofreeDB)
+
+-- attribute :: Cofree AST () -> Cofree AST (Type, TypeResult)
+-- attribute c =
+--     let initial = TypeState { memo = M.empty, varId = 0 }
+--     in evalState (sequence $ extend (memoizedTC generateConstraints) c) initial
 
 {--}
 
