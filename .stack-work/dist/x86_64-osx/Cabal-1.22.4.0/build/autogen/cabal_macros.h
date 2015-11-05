@@ -21,6 +21,13 @@
   (major1) == 4 && (major2) <  2 || \
   (major1) == 4 && (major2) == 2 && (minor) <= 7)
 
+/* package containers-0.5.6.2 */
+#define VERSION_containers "0.5.6.2"
+#define MIN_VERSION_containers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 6)
+
 /* package free-4.12.1 */
 #define VERSION_free "4.12.1"
 #define MIN_VERSION_free(major1,major2,minor) (\
@@ -28,12 +35,26 @@
   (major1) == 4 && (major2) <  12 || \
   (major1) == 4 && (major2) == 12 && (minor) <= 1)
 
+/* package mtl-2.2.1 */
+#define VERSION_mtl "2.2.1"
+#define MIN_VERSION_mtl(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  2 || \
+  (major1) == 2 && (major2) == 2 && (minor) <= 1)
+
 /* package prelude-extras-0.4.0.2 */
 #define VERSION_prelude_extras "0.4.0.2"
 #define MIN_VERSION_prelude_extras(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  4 || \
   (major1) == 0 && (major2) == 4 && (minor) <= 0)
+
+/* package pretty-tree-0.1.0.0 */
+#define VERSION_pretty_tree "0.1.0.0"
+#define MIN_VERSION_pretty_tree(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 0)
 
 /* package transformers-0.4.2.0 */
 #define VERSION_transformers "0.4.2.0"
@@ -105,5 +126,5 @@
   (major1) == 0 && (major2) <  28 || \
   (major1) == 0 && (major2) == 28 && (minor) <= 0)
 
-#define CURRENT_PACKAGE_KEY "lamc_9uDZMoCHyR10gBkbUwACvd"
+#define CURRENT_PACKAGE_KEY "lamc_5eVrUU1K4dW8f168hbG4XR"
 

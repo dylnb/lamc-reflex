@@ -17,7 +17,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/dylan/Code/lamc/.stack-work/install/x86_64-osx/lts-3.11/7.10.2/bin"
-libdir     = "/Users/dylan/Code/lamc/.stack-work/install/x86_64-osx/lts-3.11/7.10.2/lib/x86_64-osx-ghc-7.10.2/lamc-0.1.0.0-9uDZMoCHyR10gBkbUwACvd"
+libdir     = "/Users/dylan/Code/lamc/.stack-work/install/x86_64-osx/lts-3.11/7.10.2/lib/x86_64-osx-ghc-7.10.2/lamc-0.1.0.0-5eVrUU1K4dW8f168hbG4XR"
 datadir    = "/Users/dylan/Code/lamc/.stack-work/install/x86_64-osx/lts-3.11/7.10.2/share/x86_64-osx-ghc-7.10.2/lamc-0.1.0.0"
 libexecdir = "/Users/dylan/Code/lamc/.stack-work/install/x86_64-osx/lts-3.11/7.10.2/libexec"
 sysconfdir = "/Users/dylan/Code/lamc/.stack-work/install/x86_64-osx/lts-3.11/7.10.2/etc"

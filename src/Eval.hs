@@ -1,16 +1,18 @@
 module Eval where
 
 import DbExp
-import Data.Maybe (fromJust)
+import Data.Maybe (fromMaybe)
 import Bound
 
 data Val
   = VInt Int
   | VFun (Val -> Val)
+  | VString String
 
 instance Show Val where
   show (VInt i) = show i
   show (VFun _) = "fun"
+  show (VString s) = s
 
 type Env = [(String,Val)]
 
@@ -24,8 +26,10 @@ eval env exp =
   let t = nf exp in
   case t of
     N i -> VInt i
-    V x -> fromJust $ lookup x env
+    V x -> fromMaybe (VString "???") (lookup x env)
     Lam e -> VFun $ \v ->
                let env' = update env v in
                eval (fst env') (instantiate1 (V $ snd env') e)
-    m :@ n -> case eval env m of {VFun f -> f (eval env n)}
+    m :@ n -> case eval env m of
+                VFun f -> f (eval env n)
+                VString x -> VString x

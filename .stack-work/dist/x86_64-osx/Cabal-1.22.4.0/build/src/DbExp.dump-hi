@@ -1,0 +1,3122 @@
+
+==================== FINAL INTERFACE ====================
+2015-11-03 20:02:49.072389 UTC
+
+interface lamc_5eVrUU1K4dW8f168hbG4XR:DbExp 7102
+  interface hash: de0495083073f8f7bacb658006ff7202
+  ABI hash: 2c871b58ec3e6a5e18514b97f796835a
+  export-list hash: 0363ee771a7cf6025c6cab77be821e4f
+  orphan hash: 6dcd3627ea8c845159f244c875eb7840
+  flag hash: 56b9a755d22be00f2eba50f3628a69c7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  DbExp.!
+  DbExp.cooked
+  DbExp.lambda
+  DbExp.let_
+  DbExp.nf
+  DbExp.pretty
+  DbExp.prettyPrec
+  DbExp.prettyWith
+  DbExp.true
+  DbExp.whnf
+  DbExp.Exp{DbExp.:@ DbExp.Lam DbExp.Let DbExp.N DbExp.V}
+module dependencies:
+package dependencies: array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ
+                      base-4.8.1.0* bifunctors-5@bifun_6cWzSBWZD9ID5wcfOFIydn
+                      binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd
+                      bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva
+                      bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH
+                      bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh
+                      cereal-0.4.1.1@cerea_LMaR4P6lFvNJtmY00msKYH
+                      comonad-4.2.7.2@comon_EsayKmuIGPJJdbMoBEcxRq
+                      containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o
+                      distributive-0.4.4@distr_IiTFZxvjHzA0FvKz3AU35Q ghc-prim-0.4.0.0
+                      hashable-1.2.3.3@hasha_2GTZqecVp8NJZrNuKzGxfy
+                      hashable-extras-0.2.2@hasha_9lOVH88b48ZLAqTz1S5Of9
+                      integer-gmp-1.0.0.0 mtl-2.2.1@mtl_KMpng31YRYc5JfMWFZ3FCU
+                      prelude-extras-0.4.0.2@prelu_57eavILAbKD5CaKv31zEDY*
+                      profunctors-5.1.1@profu_IRUD0QFY0OF0nZWAglFFc5
+                      semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO
+                      tagged-0.8.1@tagge_6Tf46oJAk552xT73wGffBW
+                      text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh
+                      time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH
+                      transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X
+                      unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+         binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString.Builder
+         hashable-1.2.3.3@hasha_2GTZqecVp8NJZrNuKzGxfy:Data.Hashable.Generic
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Lazy
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Show
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Format.Parse
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X:Control.Monad.Trans.Error
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Var
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.Get
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.Signed
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.VarInt
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntMap.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntSet.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Sequence
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+                         semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO:Data.List.NonEmpty
+                         semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO:Data.Semigroup
+                         tagged-0.8.1@tagge_6Tf46oJAk552xT73wGffBW:Data.Tagged
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Lazy
+                         unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a:Data.HashMap.Base
+                         unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a:Data.HashSet
+import  -/  base-4.8.1.0:Control.Applicative a283901553892ce761385d18e455c2ce
+import  -/  base-4.8.1.0:Control.Monad dfea142d91349c4861427789d50d5b80
+import  -/  base-4.8.1.0:Data.Foldable 2e5acb797cfda6b3b7fabd7052abe290
+import  -/  base-4.8.1.0:Data.Functor 5c701b0af1708f0192a25dfe14ce6274
+import  -/  base-4.8.1.0:Data.List 2a4f5f92892d432e7113f64cd9dcca53
+import  -/  base-4.8.1.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.1.0:Data.OldList 21f46c368c20a00483b41333e53a55cb
+import  -/  base-4.8.1.0:Data.Traversable 89769555cf5e62f4edd3d085405c2caa
+import  -/  base-4.8.1.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.List f31ed8784b3e05f1397195751f7d74ea
+import  -/  base-4.8.1.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.1.0:GHC.Read cfaa50b414b9b02ef6fe4fe5600d9b95
+import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  base-4.8.1.0:System.Exit 667ccf9b7fe125c4036efb58a244974a
+import  -/  base-4.8.1.0:Text.ParserCombinators.ReadPrec 1844ee1249db84f72bd233d7a9bbd968
+import  -/  base-4.8.1.0:Text.Read.Lex 1ec4c08d49d1d5264b910cc76b6c6fde
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound 27948c3946c584a558a120b58a71cfbd
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Class ff195fc5e9355d2cac7060357316a4f6
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Scope 88a2159c4b1f5b479ccde978e658c7dc
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Term 2fbccf474e93d9040ce17051b9e06300
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  prelude-extras-0.4.0.2@prelu_57eavILAbKD5CaKv31zEDY:Prelude.Extras c8824f723e39f0c22546facb2843e192
+import  -/  transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X:Control.Monad.Trans.Class ced5621141aaa24ab095912d5a649dcc
+fixities infixl 9 :@, infixr 0 !
+f2e45a5d787e47975805035038a0e0d7
+  (!) :: GHC.Classes.Eq a => a -> DbExp.Exp a -> DbExp.Exp a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U><L,1*U>m4,
+     Unfolding: InlineRule (0, True, True) DbExp.lambda -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $cfoldr :: (a -> b -> b) -> b -> DbExp.Exp a -> b
+  {- Arity: 3, Strictness: <L,U><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5 @ b f :: a5 -> b -> b z :: b t1 :: DbExp.Exp a5 ->
+                 (DbExp.$cfoldr_$cfoldMap
+                    @ a5
+                    @ (Data.Monoid.Endo b)
+                    (Data.Monoid.$fMonoidEndo @ b)
+                    f `cast` (<a5>_R ->_R Sym (Data.Monoid.NTCo:Endo[0] <b>_R))
+                    t1)
+                   `cast`
+                 (Data.Monoid.NTCo:Endo[0] <b>_R)
+                   z) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $cfoldr_$cfoldMap ::
+    GHC.Base.Monoid m => (a -> m) -> DbExp.Exp a -> m
+  {- Arity: 1, Strictness: <L,U(U,U,A)> -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fApplicativeExp :: GHC.Base.Applicative DbExp.Exp
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DbExp.Exp
+                  DbExp.$fFunctorExp
+                  DbExp.V
+                  DbExp.$fApplicativeExp_$c<*>
+                  DbExp.$fApplicativeExp_$c*>
+                  DbExp.$fApplicativeExp_$c<* -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fApplicativeExp_$c*> :: DbExp.Exp a -> DbExp.Exp b -> DbExp.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 @ b eta :: DbExp.Exp a5 eta1 :: DbExp.Exp b ->
+                 DbExp.$fApplicativeExp_$c<*>
+                   @ b
+                   @ b
+                   (DbExp.$fApplicativeExp_$ctraverse
+                      @ a5
+                      @ Data.Traversable.Id
+                      @ (b -> b)
+                      Data.Traversable.$fApplicativeId
+                      (\ x :: a5 eta2 :: b -> eta2)
+                        `cast`
+                      (<a5>_R ->_R Sym (Data.Traversable.NTCo:Id[0] <b -> b>_R))
+                      eta)
+                     `cast`
+                   (Data.Traversable.NTCo:Id[0] <DbExp.Exp (b -> b)>_R)
+                   eta1) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fApplicativeExp_$c<* :: DbExp.Exp a -> DbExp.Exp b -> DbExp.Exp a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 @ b eta :: DbExp.Exp a5 eta1 :: DbExp.Exp b ->
+                 DbExp.$fApplicativeExp_$c<*>
+                   @ b
+                   @ a5
+                   (DbExp.$fApplicativeExp_$ctraverse
+                      @ a5
+                      @ Data.Traversable.Id
+                      @ (b -> a5)
+                      Data.Traversable.$fApplicativeId
+                      (\ x :: a5 ds :: b -> x)
+                        `cast`
+                      (<a5>_R ->_R Sym (Data.Traversable.NTCo:Id[0] <b -> a5>_R))
+                      eta)
+                     `cast`
+                   (Data.Traversable.NTCo:Id[0] <DbExp.Exp (b -> a5)>_R)
+                   eta1) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fApplicativeExp_$c<*> ::
+    DbExp.Exp (a -> b) -> DbExp.Exp a -> DbExp.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ @ a5
+                   @ b
+                   m1 :: DbExp.Exp (a5 -> b)
+                   m2 :: DbExp.Exp a5 ->
+                 DbExp.lambda_$c>>=
+                   @ (a5 -> b)
+                   @ b
+                   m1
+                   (\ x1 :: a5 -> b ->
+                    DbExp.lambda_$c>>=
+                      @ a5
+                      @ b
+                      m2
+                      (\ x2 :: a5 -> DbExp.V @ b (x1 x2)))) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fApplicativeExp_$ctraverse ::
+    GHC.Base.Applicative f =>
+    (a -> f b) -> DbExp.Exp a -> f (DbExp.Exp b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S,U(U(U,U),C(U),C(C1(U)),A,A)><L,C(U)><S,1*U> -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fEq1Exp :: Prelude.Extras.Eq1 DbExp.Exp
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>,
+     Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                DbExp.$fEq1Exp_$c==#
+                  `cast`
+                (Sym (Prelude.Extras.NTCo:Eq1[0] <DbExp.Exp>_N)) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fEq1Exp_$c== ::
+    GHC.Classes.Eq a => DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)> -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fEq1Exp_$c==# ::
+    GHC.Classes.Eq a => DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>,
+     Unfolding: InlineRule (0, True, True) DbExp.$fEq1Exp_$c== -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fEqExp :: GHC.Classes.Eq a => GHC.Classes.Eq (DbExp.Exp a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a5 $dEq :: GHC.Classes.Eq a5.
+                  @ (DbExp.Exp a5)
+                  (DbExp.$fEq1Exp_$c== @ a5 $dEq)
+                  (DbExp.$fEqExp_$c/= @ a5 $dEq) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fEqExp_$c/= ::
+    GHC.Classes.Eq a => DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A)><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq a5
+                   a6 :: DbExp.Exp a5
+                   b :: DbExp.Exp a5 ->
+                 case DbExp.$fEq1Exp_$c== @ a5 $dEq a6 b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp :: Data.Foldable.Foldable DbExp.Exp
+  DFunId[0]
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DbExp.Exp
+                  DbExp.$fFoldableExp_$cfold
+                  DbExp.$cfoldr_$cfoldMap
+                  DbExp.$cfoldr
+                  DbExp.$fFoldableExp_$cfoldr'
+                  DbExp.$fFoldableExp_$cfoldl
+                  DbExp.$fFoldableExp_$cfoldl'
+                  DbExp.$fFoldableExp_$cfoldr1
+                  DbExp.$fFoldableExp_$cfoldl1
+                  DbExp.$fFoldableExp_$ctoList
+                  DbExp.$fFoldableExp_$cnull
+                  DbExp.$fFoldableExp_$clength
+                  DbExp.$fFoldableExp_$celem
+                  DbExp.$fFoldableExp_$cmaximum
+                  DbExp.$fFoldableExp_$cminimum
+                  DbExp.$fFoldableExp_$csum
+                  DbExp.$fFoldableExp_$cproduct -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp1 ::
+    GHC.Num.Num a3 => DbExp.Exp a3 -> Data.Monoid.Product a3
+  {- Arity: 1, Strictness: <L,U(A,A,U,A,A,A,C(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 $dNum :: GHC.Num.Num a5 ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Product a5)
+                   (Data.Monoid.$fMonoidProduct @ a5 $dNum)
+                   (\ tpl :: a5 -> tpl)
+                     `cast`
+                   (<a5>_R ->_R Sym (Data.Monoid.NTCo:Product[0] <a5>_R))) -}
+ddac46263129435f631abc9ac3090dd5
+  $fFoldableExp10 :: a3
+  {- Strictness: b -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp11 ::
+    (a3 -> Data.Monoid.Dual (Data.Monoid.Endo (GHC.Base.Maybe a3)))
+    -> DbExp.Exp a3
+    -> Data.Monoid.Dual (Data.Monoid.Endo (GHC.Base.Maybe a3))
+  {- Unfolding: (\ @ a5 ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Dual (Data.Monoid.Endo (GHC.Base.Maybe a5)))
+                   (DbExp.$fFoldableExp12 @ (GHC.Base.Maybe a5))) -}
+88f43d3685bd440b7ce5e1a95870e690
+  $fFoldableExp12 ::
+    GHC.Base.Monoid (Data.Monoid.Dual (Data.Monoid.Endo b))
+  {- Unfolding: (\ @ b ->
+                 Data.Monoid.$fMonoidDual
+                   @ (Data.Monoid.Endo b)
+                   (Data.Monoid.$fMonoidEndo @ b)) -}
+7a311cb22159d7ed36df8ba468f7323f
+  $fFoldableExp13 :: a3
+  {- Strictness: b -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp14 ::
+    (a3 -> Data.Monoid.Endo (GHC.Base.Maybe a3))
+    -> DbExp.Exp a3 -> Data.Monoid.Endo (GHC.Base.Maybe a3)
+  {- Unfolding: (\ @ a5 ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Endo (GHC.Base.Maybe a5))
+                   (Data.Monoid.$fMonoidEndo @ (GHC.Base.Maybe a5))) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp15 ::
+    (a3 -> Data.Monoid.Endo (b -> b))
+    -> DbExp.Exp a3 -> Data.Monoid.Endo (b -> b)
+  {- Unfolding: (\ @ b @ a5 ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Endo (b -> b))
+                   (Data.Monoid.$fMonoidEndo @ (b -> b))) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp16 ::
+    (a3 -> Data.Monoid.Dual (Data.Monoid.Endo (b -> b)))
+    -> DbExp.Exp a3 -> Data.Monoid.Dual (Data.Monoid.Endo (b -> b))
+  {- Unfolding: (\ @ a5 @ b ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Dual (Data.Monoid.Endo (b -> b)))
+                   (DbExp.$fFoldableExp12 @ (b -> b))) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp2 ::
+    GHC.Num.Num a3 => DbExp.Exp a3 -> Data.Monoid.Sum a3
+  {- Arity: 1, Strictness: <L,U(U,A,A,A,A,A,C(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 $dNum :: GHC.Num.Num a5 ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Sum a5)
+                   (Data.Monoid.$fMonoidSum @ a5 $dNum)
+                   (\ tpl :: a5 -> tpl)
+                     `cast`
+                   (<a5>_R ->_R Sym (Data.Monoid.NTCo:Sum[0] <a5>_R))) -}
+9068cfbbc726b4dc48b031e8b4cf4eaf
+  $fFoldableExp3 :: a3
+  {- Strictness: b -}
+1ce96b79eedf991dd4bd38902b692fa0
+  $fFoldableExp4 :: a3
+  {- Strictness: b -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp5 ::
+    GHC.Classes.Eq a3 => a3 -> DbExp.Exp a3 -> Data.Monoid.Any
+  {- Arity: 2, Strictness: <L,1*U(1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 $dEq :: GHC.Classes.Eq a5 eta :: a5 ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ Data.Monoid.Any
+                   Data.Monoid.$fMonoidAny
+                   (GHC.Classes.== @ a5 $dEq eta)
+                     `cast`
+                   (<a5>_R ->_R Sym (Data.Monoid.NTCo:Any[0]))) -}
+45523ae02951873cf15e2c172e2182ed
+  $fFoldableExp6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+553364fd59f945a221ce0e08d8d57d36
+  $fFoldableExp7 ::
+    a3
+    -> (GHC.Types.Int -> GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+  {- Arity: 3, HasNoCafRefs,
+     Unfolding: (\ @ a5
+                   x :: a5
+                   k :: GHC.Types.Int -> GHC.Types.Int
+                   z :: GHC.Types.Int ->
+                 case z of wild { GHC.Types.I# x1 ->
+                 k (GHC.Types.I# (GHC.Prim.+# x1 1)) }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp8 ::
+    (a3 -> Data.Monoid.Endo (GHC.Types.Int -> GHC.Types.Int))
+    -> DbExp.Exp a3
+    -> Data.Monoid.Endo (GHC.Types.Int -> GHC.Types.Int)
+  {- Unfolding: (\ @ a5 ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Endo (GHC.Types.Int -> GHC.Types.Int))
+                   (Data.Monoid.$fMonoidEndo @ (GHC.Types.Int -> GHC.Types.Int))) -}
+8e3267ebf5774e6f8e6dd5fd3c765d89
+  $fFoldableExp9 :: a3 -> GHC.Types.Bool -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a5 ds :: a5 ds1 :: GHC.Types.Bool -> GHC.Types.False) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$celem ::
+    GHC.Classes.Eq a => a -> DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 2, Strictness: <L,1*U(1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fFoldableExp5
+                  `cast`
+                (forall a5.
+                 <GHC.Classes.Eq a5>_R
+                 ->_R <a5>_R
+                 ->_R <DbExp.Exp a5>_R
+                 ->_R Data.Monoid.NTCo:Any[0]) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cfold :: GHC.Base.Monoid m => DbExp.Exp m -> m
+  {- Arity: 1, Strictness: <L,U(U,U,A)> -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cfoldl :: (b -> a -> b) -> b -> DbExp.Exp a -> b
+  {- Arity: 3, Strictness: <L,C(C1(U))><L,U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ b @ a5 f :: b -> a5 -> b z :: b t1 :: DbExp.Exp a5 ->
+                 (DbExp.$cfoldr_$cfoldMap
+                    @ a5
+                    @ (Data.Monoid.Dual (Data.Monoid.Endo b))
+                    (DbExp.$fFoldableExp12 @ b)
+                    (\ x :: a5 eta :: b -> f eta x)
+                      `cast`
+                    (<a5>_R
+                     ->_R Sym (Data.Monoid.NTCo:Dual[0]
+                                   (Data.Monoid.NTCo:Endo[0] <b>_R)))
+                    t1)
+                   `cast`
+                 (Data.Monoid.NTCo:Dual[0] (Data.Monoid.NTCo:Endo[0] <b>_R))
+                   z) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cfoldl' :: (b -> a -> b) -> b -> DbExp.Exp a -> b
+  {- Arity: 3, Strictness: <L,C(C1(U))><L,U><L,U>,
+     Unfolding: (\ @ b
+                   @ a5
+                   f :: b -> a5 -> b
+                   z0 :: b
+                   xs :: DbExp.Exp a5 ->
+                 (DbExp.$fFoldableExp15
+                    @ b
+                    @ a5
+                    (\ x :: a5 k :: b -> b z :: b ->
+                     case f z x of vx { DEFAULT -> k vx })
+                      `cast`
+                    (<a5>_R ->_R Sym (Data.Monoid.NTCo:Endo[0] <b -> b>_R))
+                    xs)
+                   `cast`
+                 (Data.Monoid.NTCo:Endo[0] <b -> b>_R)
+                   (GHC.Base.id @ b)
+                   z0) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cfoldl1 :: (a -> a -> a) -> DbExp.Exp a -> a
+  {- Arity: 2, Strictness: <L,C(C1(U))><L,U>,
+     Unfolding: (\ @ a5 f :: a5 -> a5 -> a5 xs :: DbExp.Exp a5 ->
+                 case (DbExp.$fFoldableExp11
+                         @ a5
+                         (\ x :: a5 eta :: GHC.Base.Maybe a5 ->
+                          GHC.Base.Just
+                            @ a5
+                            (case eta of wild {
+                               GHC.Base.Nothing -> x GHC.Base.Just x1 -> f x1 x }))
+                           `cast`
+                         (<a5>_R
+                          ->_R Sym (Data.Monoid.NTCo:Dual[0]
+                                        (Data.Monoid.NTCo:Endo[0] <GHC.Base.Maybe a5>_R)))
+                         xs)
+                        `cast`
+                      (Data.Monoid.NTCo:Dual[0]
+                           (Data.Monoid.NTCo:Endo[0] <GHC.Base.Maybe a5>_R))
+                        (GHC.Base.Nothing @ a5) of wild {
+                   GHC.Base.Nothing -> DbExp.$fFoldableExp10 @ a5
+                   GHC.Base.Just v -> v }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cfoldr' :: (a -> b -> b) -> b -> DbExp.Exp a -> b
+  {- Arity: 3, Strictness: <L,C(C1(U))><L,U><L,U>,
+     Unfolding: (\ @ a5
+                   @ b
+                   f :: a5 -> b -> b
+                   z0 :: b
+                   xs :: DbExp.Exp a5 ->
+                 (DbExp.$fFoldableExp16
+                    @ a5
+                    @ b
+                    (\ x :: a5 eta :: b -> b z :: b ->
+                     case f x z of vx { DEFAULT -> eta vx })
+                      `cast`
+                    (<a5>_R
+                     ->_R Sym (Data.Monoid.NTCo:Dual[0]
+                                   (Data.Monoid.NTCo:Endo[0] <b -> b>_R)))
+                    xs)
+                   `cast`
+                 (Data.Monoid.NTCo:Dual[0] (Data.Monoid.NTCo:Endo[0] <b -> b>_R))
+                   (GHC.Base.id @ b)
+                   z0) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cfoldr1 :: (a -> a -> a) -> DbExp.Exp a -> a
+  {- Arity: 2, Strictness: <L,C(C1(U))><L,U>,
+     Unfolding: (\ @ a5 f :: a5 -> a5 -> a5 xs :: DbExp.Exp a5 ->
+                 case (DbExp.$fFoldableExp14
+                         @ a5
+                         (\ x :: a5 m :: GHC.Base.Maybe a5 ->
+                          GHC.Base.Just
+                            @ a5
+                            (case m of wild {
+                               GHC.Base.Nothing -> x GHC.Base.Just y -> f x y }))
+                           `cast`
+                         (<a5>_R ->_R Sym (Data.Monoid.NTCo:Endo[0] <GHC.Base.Maybe a5>_R))
+                         xs)
+                        `cast`
+                      (Data.Monoid.NTCo:Endo[0] <GHC.Base.Maybe a5>_R)
+                        (GHC.Base.Nothing @ a5) of wild {
+                   GHC.Base.Nothing -> DbExp.$fFoldableExp13 @ a5
+                   GHC.Base.Just v -> v }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$clength :: DbExp.Exp a -> GHC.Types.Int
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ @ a5 xs :: DbExp.Exp a5 ->
+                 (DbExp.$fFoldableExp8
+                    @ a5
+                    (DbExp.$fFoldableExp7 @ a5)
+                      `cast`
+                    (<a5>_R
+                     ->_R Sym (Data.Monoid.NTCo:Endo[0]
+                                   <GHC.Types.Int -> GHC.Types.Int>_R))
+                    xs)
+                   `cast`
+                 (Data.Monoid.NTCo:Endo[0] <GHC.Types.Int -> GHC.Types.Int>_R)
+                   (GHC.Base.id @ GHC.Types.Int)
+                   DbExp.$fFoldableExp6) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cmaximum :: GHC.Classes.Ord a => DbExp.Exp a -> a
+  {- Arity: 1, Strictness: <L,U(A,A,A,A,A,C(C1(U)),A,A)>,
+     Unfolding: (\ @ a5 $dOrd :: GHC.Classes.Ord a5 ->
+                 let {
+                   g :: DbExp.Exp a5 -> Data.Foldable.Max a5
+                   = DbExp.$cfoldr_$cfoldMap
+                       @ a5
+                       @ (Data.Foldable.Max a5)
+                       (Data.Foldable.$fMonoidMax @ a5 $dOrd)
+                       (GHC.Base.Just @ a5)
+                         `cast`
+                       (<a5>_R ->_R Sym (Data.Foldable.NTCo:Max[0]) <a5>_N)
+                 } in
+                 \ x :: DbExp.Exp a5 ->
+                 case (g x) `cast` (Data.Foldable.NTCo:Max[0] <a5>_N) of wild {
+                   GHC.Base.Nothing -> DbExp.$fFoldableExp4 @ a5
+                   GHC.Base.Just v -> v }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cminimum :: GHC.Classes.Ord a => DbExp.Exp a -> a
+  {- Arity: 1, Strictness: <L,U(A,A,A,C(C1(U)),A,A,A,A)>,
+     Unfolding: (\ @ a5 $dOrd :: GHC.Classes.Ord a5 ->
+                 let {
+                   g :: DbExp.Exp a5 -> Data.Foldable.Min a5
+                   = DbExp.$cfoldr_$cfoldMap
+                       @ a5
+                       @ (Data.Foldable.Min a5)
+                       (Data.Foldable.$fMonoidMin @ a5 $dOrd)
+                       (GHC.Base.Just @ a5)
+                         `cast`
+                       (<a5>_R ->_R Sym (Data.Foldable.NTCo:Min[0]) <a5>_N)
+                 } in
+                 \ x :: DbExp.Exp a5 ->
+                 case (g x) `cast` (Data.Foldable.NTCo:Min[0] <a5>_N) of wild {
+                   GHC.Base.Nothing -> DbExp.$fFoldableExp3 @ a5
+                   GHC.Base.Just v -> v }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cnull :: DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 t1 :: DbExp.Exp a5 ->
+                 (DbExp.$cfoldr_$cfoldMap
+                    @ a5
+                    @ (Data.Monoid.Endo GHC.Types.Bool)
+                    (Data.Monoid.$fMonoidEndo @ GHC.Types.Bool)
+                    (DbExp.$fFoldableExp9 @ a5)
+                      `cast`
+                    (<a5>_R ->_R Sym (Data.Monoid.NTCo:Endo[0] <GHC.Types.Bool>_R))
+                    t1)
+                   `cast`
+                 (Data.Monoid.NTCo:Endo[0] <GHC.Types.Bool>_R)
+                   GHC.Types.True) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$cproduct :: GHC.Num.Num a => DbExp.Exp a -> a
+  {- Arity: 1, Strictness: <L,U(A,A,U,A,A,A,C(U))>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fFoldableExp1
+                  `cast`
+                (forall a5.
+                 <GHC.Num.Num a5>_R
+                 ->_R <DbExp.Exp a5>_R
+                 ->_R Data.Monoid.NTCo:Product[0] <a5>_R) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$csum :: GHC.Num.Num a => DbExp.Exp a -> a
+  {- Arity: 1, Strictness: <L,U(U,A,A,A,A,A,C(U))>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fFoldableExp2
+                  `cast`
+                (forall a5.
+                 <GHC.Num.Num a5>_R
+                 ->_R <DbExp.Exp a5>_R
+                 ->_R Data.Monoid.NTCo:Sum[0] <a5>_R) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFoldableExp_$ctoList :: DbExp.Exp a -> [a]
+  {- Arity: 1, Strictness: <L,U>, Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a5 t1 :: DbExp.Exp a5 ->
+                 GHC.Base.build
+                   @ a5
+                   (\ @ b c :: a5 -> b -> b[OneShot] n1 :: b[OneShot] ->
+                    DbExp.$cfoldr @ a5 @ b c n1 t1)) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFunctorExp :: GHC.Base.Functor DbExp.Exp
+  DFunId[0]
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DbExp.Exp DbExp.$fFunctorExp_$cfmap DbExp.$fFunctorExp_$c<$ -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFunctorExp1 ::
+    a -> DbExp.Exp b -> Data.Traversable.Id (DbExp.Exp a)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 @ b eta :: a5 eta1 :: DbExp.Exp b ->
+                 DbExp.$fApplicativeExp_$ctraverse
+                   @ b
+                   @ Data.Traversable.Id
+                   @ a5
+                   Data.Traversable.$fApplicativeId
+                   (\ x :: b -> eta)
+                     `cast`
+                   (<b>_R ->_R Sym (Data.Traversable.NTCo:Id[0] <a5>_R))
+                   eta1) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFunctorExp_$c<$ :: a -> DbExp.Exp b -> DbExp.Exp a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fFunctorExp1
+                  `cast`
+                (forall a5 b.
+                 <a5>_R
+                 ->_R <DbExp.Exp b>_R
+                 ->_R Data.Traversable.NTCo:Id[0] <DbExp.Exp a5>_R) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFunctorExp_$cfmap :: (a -> b) -> DbExp.Exp a -> DbExp.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fFunctorExp_$sfmapDefault -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fFunctorExp_$sfmapDefault ::
+    (a -> b) -> DbExp.Exp a -> DbExp.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Inline: INLINE (sat-args=1),
+     Unfolding: InlineRule (1, False, False)
+                (\ @ a5 @ b f :: a5 -> b eta :: DbExp.Exp a5 ->
+                 Data.Traversable.getId
+                   @ (DbExp.Exp b)
+                   (DbExp.$fApplicativeExp_$ctraverse
+                      @ a5
+                      @ Data.Traversable.Id
+                      @ b
+                      Data.Traversable.$fApplicativeId
+                      (\ x :: a5 -> f x)
+                        `cast`
+                      (<a5>_R ->_R Sym (Data.Traversable.NTCo:Id[0] <b>_R))
+                      eta)) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fMonadExp :: GHC.Base.Monad DbExp.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DbExp.Exp
+                  DbExp.$fApplicativeExp
+                  DbExp.lambda_$c>>=
+                  DbExp.$fMonadExp_$c>>
+                  DbExp.V
+                  DbExp.$fMonadExp_$s$dmfail -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fMonadExp_$c>> :: DbExp.Exp a -> DbExp.Exp b -> DbExp.Exp b
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a5 @ b m1 :: DbExp.Exp a5 k :: DbExp.Exp b ->
+                 DbExp.lambda_$c>>= @ a5 @ b m1 (\ ds :: a5 -> k)) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fMonadExp_$s$dmfail :: GHC.Base.String -> DbExp.Exp a
+  {- Arity: 1, Strictness: <B,U>b,
+     Unfolding: InlineRule (-1, True, True)
+                (\ @ a5 eta :: [GHC.Types.Char] ->
+                 GHC.Err.error @ (DbExp.Exp a5) eta) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrd1Exp :: Prelude.Extras.Ord1 DbExp.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DbExp.Exp
+                  DbExp.$fEq1Exp_$c==#
+                    `cast`
+                  (Sym (Prelude.Extras.NTCo:Eq1[0] <DbExp.Exp>_N))
+                  DbExp.$fOrd1Exp_$ccompare1 -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrd1Exp_$ccompare ::
+    (GHC.Classes.Eq (DbExp.Exp a), GHC.Classes.Ord a) =>
+    DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Ordering
+  {- Arity: 2,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a5
+                   w :: GHC.Classes.Eq (DbExp.Exp a5)
+                   w1 :: GHC.Classes.Ord a5 ->
+                 DbExp.$w$ccompare @ a5 w1) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrd1Exp_$ccompare1 ::
+    GHC.Classes.Ord a =>
+    DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Ordering
+  {- Arity: 1,
+     Strictness: <L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 $dOrd :: GHC.Classes.Ord a5 ->
+                 DbExp.$fOrd1Exp_$ccompare
+                   @ a5
+                   (DbExp.$fEqExp @ a5 (GHC.Classes.$p1Ord @ a5 $dOrd))
+                   $dOrd) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrdExp ::
+    (GHC.Classes.Eq (DbExp.Exp a), GHC.Classes.Ord a) =>
+    GHC.Classes.Ord (DbExp.Exp a)
+  DFunId[1]
+  {- Arity: 2,
+     Strictness: <L,U><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a5
+                      $dEq :: GHC.Classes.Eq (DbExp.Exp a5)
+                      $dOrd :: GHC.Classes.Ord a5.
+                  @ (DbExp.Exp a5)
+                  $dEq
+                  (DbExp.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd)
+                  (DbExp.$fOrdExp_$c< @ a5 $dEq $dOrd)
+                  (DbExp.$fOrdExp_$c<= @ a5 $dEq $dOrd)
+                  (DbExp.$fOrdExp_$c> @ a5 $dEq $dOrd)
+                  (DbExp.$fOrdExp_$c>= @ a5 $dEq $dOrd)
+                  (DbExp.$fOrdExp_$cmax @ a5 $dEq $dOrd)
+                  (DbExp.$fOrdExp_$cmin @ a5 $dEq $dOrd) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrdExp_$c< ::
+    (GHC.Classes.Eq (DbExp.Exp a), GHC.Classes.Ord a) =>
+    DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (DbExp.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: DbExp.Exp a5
+                   y :: DbExp.Exp a5 ->
+                 case DbExp.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.LT -> GHC.Types.True }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrdExp_$c<= ::
+    (GHC.Classes.Eq (DbExp.Exp a), GHC.Classes.Ord a) =>
+    DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (DbExp.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: DbExp.Exp a5
+                   y :: DbExp.Exp a5 ->
+                 case DbExp.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.GT -> GHC.Types.False }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrdExp_$c> ::
+    (GHC.Classes.Eq (DbExp.Exp a), GHC.Classes.Ord a) =>
+    DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (DbExp.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: DbExp.Exp a5
+                   y :: DbExp.Exp a5 ->
+                 case DbExp.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> GHC.Types.False GHC.Types.GT -> GHC.Types.True }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrdExp_$c>= ::
+    (GHC.Classes.Eq (DbExp.Exp a), GHC.Classes.Ord a) =>
+    DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Bool
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (DbExp.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: DbExp.Exp a5
+                   y :: DbExp.Exp a5 ->
+                 case DbExp.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> GHC.Types.True GHC.Types.LT -> GHC.Types.False }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrdExp_$cmax ::
+    (GHC.Classes.Eq (DbExp.Exp a), GHC.Classes.Ord a) =>
+    DbExp.Exp a -> DbExp.Exp a -> DbExp.Exp a
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (DbExp.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: DbExp.Exp a5
+                   y :: DbExp.Exp a5 ->
+                 case DbExp.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> y GHC.Types.GT -> x }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fOrdExp_$cmin ::
+    (GHC.Classes.Eq (DbExp.Exp a), GHC.Classes.Ord a) =>
+    DbExp.Exp a -> DbExp.Exp a -> DbExp.Exp a
+  {- Arity: 4,
+     Strictness: <L,A><L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)><L,U><L,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a5
+                   $dEq :: GHC.Classes.Eq (DbExp.Exp a5)
+                   $dOrd :: GHC.Classes.Ord a5
+                   x :: DbExp.Exp a5
+                   y :: DbExp.Exp a5 ->
+                 case DbExp.$fOrd1Exp_$ccompare @ a5 $dEq $dOrd x y of wild {
+                   DEFAULT -> x GHC.Types.GT -> y }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fRead1Exp :: Prelude.Extras.Read1 DbExp.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DbExp.Exp
+                  DbExp.$fRead1Exp_$creadsPrec1
+                  DbExp.$fRead1Exp_$creadList1 -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fRead1Exp1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP (DbExp.Exp a)
+  {- Arity: 2, Strictness: <L,U(U,U,U,U)><L,U> -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fRead1Exp_$creadList1 ::
+    GHC.Read.Read a => Text.ParserCombinators.ReadP.ReadS [DbExp.Exp a]
+  {- Arity: 1, Strictness: <L,U> -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fRead1Exp_$creadsPrec ::
+    GHC.Read.Read a =>
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS (DbExp.Exp a)
+  {- Arity: 2, Strictness: <L,U(U,U,U,U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 $dRead :: GHC.Read.Read a5 eta :: GHC.Types.Int ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (DbExp.Exp a5)
+                   ((DbExp.$fRead1Exp1 @ a5 $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.NTCo:ReadP[0] <DbExp.Exp a5>_R)
+                      @ (DbExp.Exp a5)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ (DbExp.Exp a5)))) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fRead1Exp_$creadsPrec1 ::
+    GHC.Read.Read a =>
+    GHC.Types.Int -> Text.ParserCombinators.ReadP.ReadS (DbExp.Exp a)
+  {- Arity: 2, Strictness: <L,U(U,U,U,U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fRead1Exp_$creadsPrec -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fReadExp :: GHC.Read.Read a => GHC.Read.Read (DbExp.Exp a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(U,U,U,U)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a5 $dRead :: GHC.Read.Read a5.
+                  @ (DbExp.Exp a5)
+                  (DbExp.$fRead1Exp_$creadsPrec @ a5 $dRead)
+                  (DbExp.$fReadExp_$creadList @ a5 $dRead)
+                  (DbExp.$fReadExp_$creadPrec @ a5 $dRead)
+                  (DbExp.$fReadExp_$creadListPrec @ a5 $dRead) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fReadExp1 ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([DbExp.Exp a] -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(U,U,U,U)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   $dRead :: GHC.Read.Read a5
+                   eta :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta1 :: [DbExp.Exp a5] -> Text.ParserCombinators.ReadP.P b ->
+                 GHC.Read.$wa
+                   @ (DbExp.Exp a5)
+                   (DbExp.$fRead1Exp1 @ a5 $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                             <DbExp.Exp a5>_R))
+                   @ b
+                   eta1) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fReadExp_$creadList ::
+    GHC.Read.Read a => Text.ParserCombinators.ReadP.ReadS [DbExp.Exp a]
+  {- Arity: 1, Strictness: <L,U(U,U,U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a5 $dRead :: GHC.Read.Read a5 ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [DbExp.Exp a5]
+                   (GHC.Read.$wa
+                      @ (DbExp.Exp a5)
+                      (DbExp.$fRead1Exp1 @ a5 $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                <DbExp.Exp a5>_R))
+                      @ [DbExp.Exp a5]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ [DbExp.Exp a5]))) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fReadExp_$creadListPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec [DbExp.Exp a]
+  {- Arity: 3, Strictness: <L,U(U,U,U,U)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fReadExp1
+                  `cast`
+                (forall a5.
+                 <GHC.Read.Read a5>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                         <[DbExp.Exp a5]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                    <[DbExp.Exp a5]>_R))) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fReadExp_$creadPrec ::
+    GHC.Read.Read a =>
+    Text.ParserCombinators.ReadPrec.ReadPrec (DbExp.Exp a)
+  {- Arity: 2, Strictness: <L,U(U,U,U,U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fRead1Exp1
+                  `cast`
+                (forall a5.
+                 <GHC.Read.Read a5>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                               <DbExp.Exp a5>_R)) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fShow1Exp :: Prelude.Extras.Show1 DbExp.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DbExp.Exp
+                  DbExp.$fShow1Exp_$cshowsPrec1
+                  DbExp.$fShow1Exp_$cshowList1 -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fShow1Exp_$cshowList1 ::
+    GHC.Show.Show a => [DbExp.Exp a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   $dShow :: GHC.Show.Show a5
+                   ls :: [DbExp.Exp a5]
+                   s :: GHC.Base.String ->
+                 Prelude.Extras.showList__
+                   @ (DbExp.Exp a5)
+                   (DbExp.$fShow1Exp_$cshowsPrec @ a5 $dShow Prelude.Extras.shows4)
+                   ls
+                   s) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fShow1Exp_$cshowsPrec ::
+    GHC.Show.Show a => GHC.Types.Int -> DbExp.Exp a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><S,1*U(U)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   w :: GHC.Show.Show a5
+                   w1 :: GHC.Types.Int
+                   w2 :: DbExp.Exp a5 ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 DbExp.$w$cshowsPrec @ a5 w ww1 w2 }) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fShow1Exp_$cshowsPrec1 ::
+    GHC.Show.Show a => GHC.Types.Int -> DbExp.Exp a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><S,1*U(U)><S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                DbExp.$fShow1Exp_$cshowsPrec -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fShowExp :: GHC.Show.Show a => GHC.Show.Show (DbExp.Exp a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(U,U,U)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a5 $dShow :: GHC.Show.Show a5.
+                  @ (DbExp.Exp a5)
+                  (DbExp.$fShow1Exp_$cshowsPrec @ a5 $dShow)
+                  (DbExp.$fShowExp_$cshow @ a5 $dShow)
+                  (DbExp.$fShowExp_$cshowList @ a5 $dShow) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fShowExp_$cshow ::
+    GHC.Show.Show a => DbExp.Exp a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(U,U,U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a5 $dShow :: GHC.Show.Show a5 x :: DbExp.Exp a5 ->
+                 DbExp.$fShow1Exp_$cshowsPrec
+                   @ a5
+                   $dShow
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fShowExp_$cshowList ::
+    GHC.Show.Show a => [DbExp.Exp a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   $dShow :: GHC.Show.Show a5
+                   eta :: [DbExp.Exp a5]
+                   eta1 :: GHC.Base.String ->
+                 GHC.Show.showList__
+                   @ (DbExp.Exp a5)
+                   (DbExp.$fShow1Exp_$cshowsPrec @ a5 $dShow DbExp.$fFoldableExp6)
+                   eta
+                   eta1) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fTraversableExp :: Data.Traversable.Traversable DbExp.Exp
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ DbExp.Exp
+                  DbExp.$fFunctorExp
+                  DbExp.$fFoldableExp
+                  DbExp.$fApplicativeExp_$ctraverse
+                  DbExp.$fTraversableExp_$csequenceA
+                  DbExp.$fTraversableExp_$cmapM
+                  DbExp.$fTraversableExp_$csequence -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fTraversableExp_$cmapM ::
+    GHC.Base.Monad m => (a -> m b) -> DbExp.Exp a -> m (DbExp.Exp b)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(U(U,U),C(U),C(C1(U)),A,A),A,A,A,A)><L,C(U)><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5
+                   @ (m :: * -> *)
+                   @ b
+                   $dMonad :: GHC.Base.Monad m
+                   eta :: a5 -> m b
+                   eta1 :: DbExp.Exp a5 ->
+                 DbExp.$fApplicativeExp_$ctraverse
+                   @ a5
+                   @ m
+                   @ b
+                   (GHC.Base.$p1Monad @ m $dMonad)
+                   eta
+                   eta1) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fTraversableExp_$csequence ::
+    GHC.Base.Monad m => DbExp.Exp (m a) -> m (DbExp.Exp a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(U(U,U),C(U),C(C1(U)),A,A),A,A,A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ (m :: * -> *)
+                   @ a5
+                   $dMonad :: GHC.Base.Monad m
+                   eta :: DbExp.Exp (m a5) ->
+                 DbExp.$fApplicativeExp_$ctraverse
+                   @ (m a5)
+                   @ m
+                   @ a5
+                   (GHC.Base.$p1Monad @ m $dMonad)
+                   (GHC.Base.id @ (m a5))
+                   eta) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $fTraversableExp_$csequenceA ::
+    GHC.Base.Applicative f => DbExp.Exp (f a) -> f (DbExp.Exp a)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(U(U,U),C(U),C(C1(U)),A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ (f :: * -> *)
+                   @ a5
+                   $dApplicative :: GHC.Base.Applicative f
+                   eta :: DbExp.Exp (f a5) ->
+                 DbExp.$fApplicativeExp_$ctraverse
+                   @ (f a5)
+                   @ f
+                   @ a5
+                   $dApplicative
+                   (GHC.Base.id @ (f a5))
+                   eta) -}
+fb44f6f500e92d9ab4511a8d8a4e46cf
+  $s$fFoldableScope4 ::
+    (a3 -> Data.Monoid.Endo GHC.Types.Bool)
+    -> DbExp.Exp a3 -> Data.Monoid.Endo GHC.Types.Bool
+  {- Unfolding: (\ @ a5 ->
+                 DbExp.$cfoldr_$cfoldMap
+                   @ a5
+                   @ (Data.Monoid.Endo GHC.Types.Bool)
+                   (Data.Monoid.$fMonoidEndo @ GHC.Types.Bool)) -}
+d557643eef148100ffb85dc71361f2c5
+  $sinstantiate ::
+    (b -> DbExp.Exp a12)
+    -> Bound.Scope.Scope b DbExp.Exp a12 -> DbExp.Exp a12
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ b
+                   @ a12
+                   k :: b -> DbExp.Exp a12
+                   e :: Bound.Scope.Scope b DbExp.Exp a12 ->
+                 DbExp.lambda_$c>>=
+                   @ (Bound.Var.Var b (DbExp.Exp a12))
+                   @ a12
+                   (Bound.Scope.unscope @ b @ DbExp.Exp @ a12 e)
+                   (\ v :: Bound.Var.Var b (DbExp.Exp a12) ->
+                    case v of wild {
+                      Bound.Var.B b1 -> k b1 Bound.Var.F a13 -> a13 })) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $w$ccompare ::
+    GHC.Classes.Ord a =>
+    DbExp.Exp a -> DbExp.Exp a -> GHC.Types.Ordering
+  {- Arity: 1,
+     Strictness: <L,U(U(U,U),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>,
+     Inline: [0] -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  $w$cshowsPrec ::
+    GHC.Show.Show a => GHC.Prim.Int# -> DbExp.Exp a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(U,U,U)><L,U><S,1*U>, Inline: [0] -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  type role Exp nominal
+  data Exp a
+    = N GHC.Types.Int
+    | V a
+    | (DbExp.Exp a) :@ (DbExp.Exp a)
+    | Lam (Bound.Scope.Scope () DbExp.Exp a)
+    | Let [Bound.Scope.Scope GHC.Types.Int DbExp.Exp a]
+          (Bound.Scope.Scope GHC.Types.Int DbExp.Exp a)
+95deb096d544541b08923d9c690fa692
+  cooked :: DbExp.Exp a
+  {- Unfolding: (\ @ a5 ->
+                 case DbExp.$fApplicativeExp_$ctraverse
+                        @ [GHC.Types.Char]
+                        @ GHC.Base.Maybe
+                        @ a5
+                        GHC.Base.$fApplicativeMaybe
+                        (DbExp.cooked255 @ a5)
+                        DbExp.cooked1 of wild {
+                   GHC.Base.Nothing -> Data.Maybe.fromJust1 @ (DbExp.Exp a5)
+                   GHC.Base.Just x -> x }) -}
+169504b5bfa05c5aa508c1c78dfc6613
+  cooked1 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.cooked_$slet_ DbExp.cooked16 DbExp.cooked2) -}
+a313c0e9dae13c1f4a39cf8ede1f695e
+  cooked10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "add"#) -}
+e82649cce9441cf70f1557977ae0150c
+  cooked100 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked102
+                   DbExp.cooked101) -}
+f4b142ecea6c49fd784d77db6658ac6f
+  cooked101 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v3 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+7f669692364c7da76647bdb5b778aeb5
+  cooked102 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked110
+                   DbExp.cooked103) -}
+9f3701c41d0d33bc909e30b3e30f736d
+  cooked103 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked104
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+3c9fe2b914d965dbd226a16ec1d37f14
+  cooked104 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked106
+                   DbExp.cooked105) -}
+3dfb595bc2bee3edd2b79d463ebc070a
+  cooked105 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v4 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+7c03cc3be8e31fdd409e4536ea3cfa88
+  cooked106 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked108
+                   DbExp.cooked107) -}
+1c978be334d6dfc9939005befa4a1fc6
+  cooked107 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v4) -}
+6e1020e59f67fa4d43b1db8c75cb90e2
+  cooked108 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked14
+                   DbExp.cooked109) -}
+bd8e70ac8888d3105bdee9d2f95d59b4
+  cooked109 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v3) -}
+080b13e933247ae8bcd1f8afcedd616f
+  cooked11 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked14
+                   DbExp.cooked12) -}
+339861d8c4e37cb7043e7377b1b97c67
+  cooked110 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked113
+                   DbExp.cooked111) -}
+094685b756417f6525cafe8212556523
+  cooked111 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked112) -}
+da3518ee444fbfaf76c64f0dfd88382a
+  cooked112 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "False"#) -}
+862c722332c5f0db5ba3185607fca95c
+  cooked113 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v2) -}
+c64ab7eed97d84fbdb7d1ee81f6d4c6f
+  cooked114 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked88
+                   DbExp.cooked115) -}
+1d2f47bf67f3323a7a2c04ff688c9057
+  cooked115 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked119
+                   DbExp.cooked116) -}
+83dfa8b14b0cc75c7bceeaed1801b254
+  cooked116 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked117
+                   DbExp.cooked111) -}
+c579d61d375eb175bb64df3db5c9968d
+  cooked117 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked118) -}
+a87ab697f90cfe9dbb3db9b6ec8a1d9b
+  cooked118 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "const"#) -}
+9b6dd6dad3ffeb3ecdbabf194acc2ba9
+  cooked119 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked113
+                   DbExp.cooked120) -}
+9b1b0a5cc728bfd37b436992183c0d29
+  cooked12 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked13) -}
+6c05a707e53398e6a11337a75578dd60
+  cooked120 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked121) -}
+14df42dad41fffdd2557c3325a6741c5
+  cooked121 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "True"#) -}
+f39a5263ab542834d6e3f18b4f951b46
+  cooked122 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked45, DbExp.cooked123)) -}
+132f0f0bf47518d2d3dabb8eb4b8f917
+  cooked123 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked124
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+52559539f6de1032ec285e547c444949
+  cooked124 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked125
+                   DbExp.cooked79) -}
+7d41c5ac94f276c3b06022f60eac87ef
+  cooked125 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked131
+                   DbExp.cooked126) -}
+47b186b05c8504a88f74a148ebf29c3d
+  cooked126 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked127
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+60ab681053fe9b61d70c5f265ae04e9a
+  cooked127 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked128
+                   DbExp.cooked83) -}
+c3ccd08384385ac526f71bf90dd124c9
+  cooked128 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked130
+                   DbExp.cooked129) -}
+4cdab14c362aa83bf2d49cf49b80fc65
+  cooked129 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked44
+                   DbExp.cooked86) -}
+96343f299e1745e750d143bd1d08d063
+  cooked13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n720"#) -}
+6cb8dd3f88d62f73582b28ffb9962186
+  cooked130 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked56
+                   DbExp.cooked88) -}
+5fe0876940213741fa5c82349b32bf35
+  cooked131 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked88
+                   DbExp.cooked132) -}
+2396b060703ee07f1fb1af37782a7684
+  cooked132 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked133) -}
+38299495d30d21851f9c8ea22adf5239
+  cooked133 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "one"#) -}
+eddc222c5fb46e5f5a7da31dc29d9df7
+  cooked134 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked57, DbExp.cooked135)) -}
+d7d6dec99bc136229df23cb2fa53c95f
+  cooked135 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked136
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+75739a216a57b70d6e179a2a325bc8b9
+  cooked136 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked137
+                   DbExp.cooked79) -}
+51bb50d14961cc6af85c7b8c8a9c9626
+  cooked137 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked138
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+505c659e39b747051ad4bc4b9e159c6a
+  cooked138 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked139
+                   DbExp.cooked97) -}
+2aeb825ffffb4f65e337a94a3134ece1
+  cooked139 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked89
+                   DbExp.cooked140) -}
+169fec41e0e3723b7b672242eda1b542
+  cooked14 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked15) -}
+376531f66a20d75414ec92569177961d
+  cooked140 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked141
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+1480e2e6b670c33534232a59e67a1a0a
+  cooked141 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked142
+                   DbExp.cooked83) -}
+d0e3e5f5432e84488c222acb14ca9862
+  cooked142 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked145
+                   DbExp.cooked143) -}
+0535cbfe70bf2f5c41a94de9c80c5072
+  cooked143 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked144
+                   DbExp.cooked113) -}
+752bca40a8bdab09249b27f2afae9928
+  cooked144 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked56
+                   DbExp.cooked86) -}
+9b9886f0593367cb4173b5084d0ba86a
+  cooked145 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked9
+                   DbExp.cooked113) -}
+9c70f51307ce7032b509258f23a2427d
+  cooked146 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked10, DbExp.cooked147)) -}
+ffd32acb90753cde3adb5f0bf00142bc
+  cooked147 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked148
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+8ef7a14f581687b52ab025b300c72f07
+  cooked148 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked149
+                   DbExp.cooked79) -}
+d892fb5d015af3ba0f53a49934fd71cb
+  cooked149 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked150
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+91dae62fecf865fbe17ba77d20a6144b
+  cooked15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "eqnat"#) -}
+ec8c34f96f518e5edfe894fe51e27f55
+  cooked150 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked151
+                   DbExp.cooked97) -}
+f9125c06f4c1bd226c19b1a370a4ea93
+  cooked151 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked157
+                   DbExp.cooked152) -}
+398a3406c36053f9b83578302d686123
+  cooked152 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked153
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+93e9cccfa7b2ff907d816c825bc170d4
+  cooked153 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked154
+                   DbExp.cooked83) -}
+799924d0b2e678dd170d24268ac7db04
+  cooked154 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked58
+                   DbExp.cooked155) -}
+478d0dd63c7c29c2f343753da95f341a
+  cooked155 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked156
+                   DbExp.cooked113) -}
+e41f554a9840618d6ebfc03e678090f8
+  cooked156 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked9
+                   DbExp.cooked86) -}
+2b7e53db79bb108bd05f61182ff006ae
+  cooked157 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked88
+                   DbExp.cooked113) -}
+88ccfe86be51455b8caeedb9cbcda292
+  cooked158 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked171, DbExp.cooked159)) -}
+9b7a35cdf8e7c1bc09561708df5be64a
+  cooked159 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked160
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+46c7fc0f718d7e3fa29dd52361a45855
+  cooked16 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked250
+                   DbExp.cooked17) -}
+34561fabf98529ae872d713da715ef88
+  cooked160 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked162
+                   DbExp.cooked161) -}
+be82ea117da7d2a6878ab78ee3cca8c2
+  cooked161 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v5 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+3926953c95d12347f9b0b0dc01482fd4
+  cooked162 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked170
+                   DbExp.cooked163) -}
+6802f78c5d336dee8b8841e32ba0fa88
+  cooked163 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked164
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+a6e29d06aeb2ee05c111c7ec5e88cc25
+  cooked164 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked166
+                   DbExp.cooked165) -}
+6c812f885273e62b20f5e43cf4f02d12
+  cooked165 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v6 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+ee4a58ecf939739b00bfffa5a9b69471
+  cooked166 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked167
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+2a5f2ca262585117ddf482909170db3a
+  cooked167 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked169
+                   DbExp.cooked168) -}
+b1a46d93dc5f64cab9de2defdf4513b4
+  cooked168 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v7 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+33892f2c0a48519a485f93cd9848c8e0
+  cooked169 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v7) -}
+5641b5ea48ea9f8fe25034b4e285b3ec
+  cooked17 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked245
+                   DbExp.cooked18) -}
+085c8f8241aca8050c770dbdefc96fdc
+  cooked170 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v5) -}
+4fbf04da1489271a8bfefb4964995369
+  cooked171 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "snd"#) -}
+41361135b052fbcefe5c127e9f834c5d
+  cooked172 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked181, DbExp.cooked173)) -}
+2faa608ff9bf64c415be8cd155a45f88
+  cooked173 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked174
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+701bc4842b0b5697843cbefe6e207268
+  cooked174 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked175
+                   DbExp.cooked161) -}
+a4b2e5772dab94f0c248f1e36812dd94
+  cooked175 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked170
+                   DbExp.cooked176) -}
+178ea758d2f5bae549b821d11eb21716
+  cooked176 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked177
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+b122f898a65ebf8926d0e15504529cce
+  cooked177 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked178
+                   DbExp.cooked165) -}
+1a9a58676e857f47def891068e5fb8d8
+  cooked178 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked179
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+ca5869ec5fd9286e66933911e53dd723
+  cooked179 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked180
+                   DbExp.cooked168) -}
+55a22e1c91fcba43ac51ac058be0a436
+  cooked18 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked231
+                   DbExp.cooked19) -}
+4e87619bed71799a0b9a56d69406025c
+  cooked180 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v6) -}
+f36a9cf440bac3486c2e56eddebc7702
+  cooked181 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "fst"#) -}
+fa931032af7460a0593558cceaf4fda1
+  cooked182 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked193, DbExp.cooked183)) -}
+114c372574bd8e82f656ba67fef87104
+  cooked183 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked184
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+cf7c02b0aaf647b6e6c4ee69d3cee245
+  cooked184 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked185
+                   DbExp.cooked165) -}
+1bd4e5f1b89700585824bced35a09142
+  cooked185 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked186
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+f3fa45273e520087c9a931b3dcc63449
+  cooked186 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked187
+                   DbExp.cooked168) -}
+3e111c7db48debade50ad9c877df5bd9
+  cooked187 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked188
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+acdb31421dc632f903a7bf4b6759c30b
+  cooked188 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked190
+                   DbExp.cooked189) -}
+73083cf721f0233ddd09738397b536b7
+  cooked189 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v8 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+156526e4dcad79e65d27ea4f4f322fdf
+  cooked19 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked225
+                   DbExp.cooked20) -}
+c0ce528379ecbd7210d8c68b3107d641
+  cooked190 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked191
+                   DbExp.cooked169) -}
+679c78ee1ea78a8fc452cde058ef988e
+  cooked191 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked192
+                   DbExp.cooked180) -}
+8727fe7c7e7d23a0e6385676f4ed8570
+  cooked192 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v8) -}
+3aab57190a9719adb9a5388913cc8f2d
+  cooked193 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Pair"#) -}
+14c624b76caa2a864a5404588e342fb1
+  cooked194 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked118, DbExp.cooked195)) -}
+c7d29aef6cb2d6dd4c96198f5e8a16df
+  cooked195 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked196
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+fa59e7b58827d9bc82099687a4929c0f
+  cooked196 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked197
+                   DbExp.cooked79) -}
+0a438474b23269c3a20d7f99dcfc3905
+  cooked197 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked198
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+9cbbcc7c988bc9c742e6b1704a0d531a
+  cooked198 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked88
+                   DbExp.cooked97) -}
+1a275baa69bd5d555e015702a99d7d31
+  cooked199 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked207, DbExp.cooked200)) -}
+43eef23f319004d9b91d0158a99da6da
+  cooked2 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked11
+                   DbExp.cooked3) -}
+f8c1f5d65c4fabe5aa5c5f1f38769166
+  cooked20 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked214
+                   DbExp.cooked21) -}
+81adf14d8828da701ccabf5bd8056e42
+  cooked200 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked201
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+19f0fc37dc19c9b2fadff192269408f5
+  cooked201 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked202
+                   DbExp.cooked83) -}
+4fe14201ed500776915f4b449b2b2f51
+  cooked202 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked206
+                   DbExp.cooked203) -}
+f11f4805c800bc7d3cba0a80c8b2d2f0
+  cooked203 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked204
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+8a8f4c1c0b71e950b66686f1aba7725a
+  cooked204 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked111
+                   DbExp.cooked205) -}
+82bd4619ce056ea0a4e9e1a01af25e59
+  cooked205 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v9 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+9a048f7c5005fcb9e7b2eeedbc002e2a
+  cooked206 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked86
+                   DbExp.cooked120) -}
+c1671c2d36d2326b54d1fbad6e35908a
+  cooked207 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "isZero"#) -}
+9bda7cfaff5e488b081ba84438e9e368
+  cooked208 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked69, DbExp.cooked209)) -}
+544715edc1ed93f63dfafa7b517bbe1c
+  cooked209 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked58
+                   DbExp.cooked74) -}
+aa2b5d302cb965a26f7850f12c1ce0a9
+  cooked21 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked212
+                   DbExp.cooked22) -}
+7feeeadd37e66a242b2fcd512cf1fd62
+  cooked210 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked75, DbExp.cooked211)) -}
+8640ca606414639c9966d6fbf7be79ff
+  cooked211 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked58
+                   DbExp.cooked132) -}
+65c4de179f81ccfea9a0456e103beb22
+  cooked212 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked133, DbExp.cooked213)) -}
+4828009c2025f65259305140fef796d3
+  cooked213 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked58
+                   DbExp.cooked90) -}
+46c44e774a83418a84bda7f884b8f29c
+  cooked214 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked59, DbExp.cooked215)) -}
+5710281b92c098b23d014ae96ce699cc
+  cooked215 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked216
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+2c8544bc0286ba2ad55e66e7ad443a9e
+  cooked216 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked217
+                   DbExp.cooked83) -}
+96d34f752d74aa6d5c8e1b1909fb602e
+  cooked217 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked218
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+1305a6396b2e45ebac3463387045ef46
+  cooked218 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked220
+                   DbExp.cooked219) -}
+dd425b8ab4ca0b69cb31a67ebfcaacc9
+  cooked219 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v10 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+1efa187c17d26fcba56b7b22240b13f7
+  cooked22 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked210
+                   DbExp.cooked23) -}
+88e7b1b8198b43f2818223a6df316190
+  cooked220 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked221
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+a5e0c29a7d9afd7d6afb320f16677e29
+  cooked221 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked223
+                   DbExp.cooked222) -}
+e1ee631abd5bbcb31a6415df78fbb083
+  cooked222 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v11 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+3260abc5ccf88de4d686a38771a944d7
+  cooked223 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked224
+                   DbExp.cooked86) -}
+9e418c35d21f35236ffb43d66d498665
+  cooked224 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v11) -}
+e9716cc0db2ed9c4cc351d07125ce6f8
+  cooked225 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked91, DbExp.cooked226)) -}
+2e183616ab37648d7fc1c17303145663
+  cooked226 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked227
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+9ab2c2250f33127c15313f2400bfc1c8
+  cooked227 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked228
+                   DbExp.cooked219) -}
+ecd93ee5723d403065df4def3a3ce48d
+  cooked228 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked229
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+a9d180b30dca75ffed2005e79ceeb298
+  cooked229 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked230
+                   DbExp.cooked222) -}
+e7c7725e018ad4f58f0b62ccece96143
+  cooked23 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked208
+                   DbExp.cooked24) -}
+abe0baf19444da95960c33cf6b863894
+  cooked230 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v10) -}
+39018a2abde89b0239fd31affe1dc172
+  cooked231 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked244, DbExp.cooked232)) -}
+35326f778c9c643e22a7de83ef782938
+  cooked232 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked233
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+d7becc3e0d099cb4f4b16456ebec3c55
+  cooked233 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked234
+                   DbExp.cooked168) -}
+5a74406ca4ceb1ad252f2b603fc97614
+  cooked234 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked235
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+f25c1d3a702477bd7c08b90d1c01024d
+  cooked235 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked237
+                   DbExp.cooked236) -}
+e2b83132fb0d1a9e0386e00a1fc3048a
+  cooked236 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v12 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+5a5fa39b6ef27aa8d8cba9fe0c2c9b06
+  cooked237 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked238
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+dcb67076b3742d0921770f34a6118bd8
+  cooked238 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked240
+                   DbExp.cooked239) -}
+be807101987fff63ccee6d2dcb17ed87
+  cooked239 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v13 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+17ddf2eeaa0bf9fa78f89c682c2589d0
+  cooked24 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked199
+                   DbExp.cooked25) -}
+451919c119e3c8433cb74416c2e3c5a9
+  cooked240 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked242
+                   DbExp.cooked241) -}
+8145fd0763935fcee5d3bd9944378750
+  cooked241 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v12) -}
+8d84ea73e1fcd63740b25803cac7b890
+  cooked242 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked169
+                   DbExp.cooked243) -}
+663c721d53f28808bf3aa6571c1b3c7e
+  cooked243 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v13) -}
+18dcd0a6b30426ef0a4efbd1052ab251
+  cooked244 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "if"#) -}
+c451b24862d7d730e4d6c6c4d08ad032
+  cooked245 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked121, DbExp.cooked246)) -}
+8a9e5f9499e57168b832f716e95b2453
+  cooked246 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked247
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+b25ef427c01c004150c0ec54e716802c
+  cooked247 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked248
+                   DbExp.cooked239) -}
+c375b76a9515ab8be10bb0a081ebce01
+  cooked248 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked249
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+34e223806312b922bf1f403f231733b3
+  cooked249 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked241
+                   DbExp.cooked236) -}
+6d4a765a60ef0cb2978e9af306f0b100
+  cooked25 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked194
+                   DbExp.cooked26) -}
+3786430e139af8b6753346b376c7de7d
+  cooked250 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked112, DbExp.cooked251)) -}
+b5a799a13f7b48a01c71b5b7ce59cc50
+  cooked251 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked252
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+c7f1dc31377831f13003065f8580634f
+  cooked252 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked253
+                   DbExp.cooked239) -}
+b1a4e41003873caaad66873c8c105c15
+  cooked253 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked254
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+b68c3d965612b3e95cf29420d8b95d55
+  cooked254 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked243
+                   DbExp.cooked236) -}
+994e5baede817d17a3872b885114d89d
+  cooked255 :: [GHC.Types.Char] -> GHC.Base.Maybe a
+  {- Arity: 1, HasNoCafRefs,
+     Unfolding: (\ @ a5 ds :: [GHC.Types.Char] ->
+                 GHC.Base.Nothing @ a5) -}
+13d66d9a6448dc333c7605a833750e98
+  cooked26 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked182
+                   DbExp.cooked27) -}
+68ab5c4492aa92aa48f46267257d1df8
+  cooked27 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked172
+                   DbExp.cooked28) -}
+3f6aa455133d900af460f26b9c7c848e
+  cooked28 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked158
+                   DbExp.cooked29) -}
+a79b3944db3871e67a7782ef1a256178
+  cooked29 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked146
+                   DbExp.cooked30) -}
+c4d5af176bedbb37c39dc116a8cbdc36
+  cooked3 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked6
+                   DbExp.cooked4) -}
+a13926f60c8755b77c1689145d347474
+  cooked30 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked134
+                   DbExp.cooked31) -}
+e0092b044a6514d716779ac560b3c202
+  cooked31 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked122
+                   DbExp.cooked32) -}
+141eeccd917c4d8f16a08e9380b1fa5d
+  cooked32 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked92
+                   DbExp.cooked33) -}
+58a0199eb11e5f776de20f277fa86b22
+  cooked33 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked76
+                   DbExp.cooked34) -}
+ce41b2327d3635c93733a41d41e10c30
+  cooked34 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked71
+                   DbExp.cooked35) -}
+aa4f4d4b34cc3c2b5340391f7cd6fa3c
+  cooked35 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked66
+                   DbExp.cooked36) -}
+eeea8f04d0ca2d13a061d686a0636a0d
+  cooked36 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked60
+                   DbExp.cooked37) -}
+40ac1282120b3208ee054fa38a873921
+  cooked37 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked52
+                   DbExp.cooked38) -}
+d9a0b8a7ae30e3ac55d03887c8a582fc
+  cooked38 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked46
+                   DbExp.cooked39) -}
+7c5c176560da82055d16417a79670036
+  cooked39 :: [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+  {- Unfolding: (GHC.Types.:
+                   @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                   DbExp.cooked40
+                   (GHC.Types.[] @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char]))) -}
+f128d8800f6b6f17052671a926af09ca
+  cooked4 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked5) -}
+1e6a50713e47b6b26af951b80e7b3230
+  cooked40 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked13, DbExp.cooked41)) -}
+5c974db537d2f619c62fc5f406ca4bf9
+  cooked41 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked44
+                   DbExp.cooked42) -}
+07079087d6982290b4c3bbc5fb8b66e1
+  cooked42 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked43) -}
+ec05e2b6633597b2ab9547ef10deb314
+  cooked43 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n6"#) -}
+a685e80182ccb20d82935dae72ae99ea
+  cooked44 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked45) -}
+740e9f56a41d93095e417eec555285f2
+  cooked45 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "fac"#) -}
+99ec36cd877e6adada9a1588235febba
+  cooked46 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked8, DbExp.cooked47)) -}
+58b58697ac23c7b91b2f2f2fac776b3e
+  cooked47 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked50
+                   DbExp.cooked48) -}
+12170983761f4621628eb1c5d129f824
+  cooked48 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked49) -}
+53b62ba887e693564c1ca9a064d6443a
+  cooked49 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n37"#) -}
+1caab5fbcf084a73c76dfab8971f3e78
+  cooked5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n17"#) -}
+7f48c38676008236edd99675982484b1
+  cooked50 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked51) -}
+dc39efe0da78bf997612ea46cdf21114
+  cooked51 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "sumto"#) -}
+0bb6c95724c0a53e8c9d6ddfbf3fd360
+  cooked52 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked49, DbExp.cooked53)) -}
+64f2842a397d81a4fafae94fe5924fc7
+  cooked53 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked58
+                   DbExp.cooked54) -}
+d3110db4f07e46d7b2f33ce75a6cc2b3
+  cooked54 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked55
+                   DbExp.cooked42) -}
+f54f016d5f77e425b77531c8f2a51d3f
+  cooked55 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked56
+                   DbExp.cooked42) -}
+9d601369d92348fc3000b2104c3fb5b6
+  cooked56 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked57) -}
+1ab6b98bebbbf78937b10ef822fc6516
+  cooked57 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "mul"#) -}
+be8e893fc9c171398034f838f247797c
+  cooked58 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked59) -}
+20c027d22b934f6a76bf6175e5679f89
+  cooked59 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Succ"#) -}
+00969860e6182389ae3a23333aed5502
+  cooked6 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked9
+                   DbExp.cooked7) -}
+40d678960e9a153b62f0a5f4752294fd
+  cooked60 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked5, DbExp.cooked61)) -}
+67e4450015256ff4caa92f5523a63375
+  cooked61 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked65
+                   DbExp.cooked62) -}
+a6db68a0538de2db03b960c9f7bb2005
+  cooked62 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked65
+                   DbExp.cooked63) -}
+385596390ddba00a23c0eab6d44cdcc4
+  cooked63 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked64) -}
+af7e07ad63d9beb983d93007e40170a3
+  cooked64 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n5"#) -}
+d1619cde9fe46513f4015e8c4f32d6e7
+  cooked65 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked9
+                   DbExp.cooked42) -}
+528edf72b670a4d270fec4a1d97ff49b
+  cooked66 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked43, DbExp.cooked67)) -}
+d5cd09f3d96e2f067fe97de6a3a37408
+  cooked67 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked70
+                   DbExp.cooked68) -}
+276b473deb49a3e9fa21346987f4a5f3
+  cooked68 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked69) -}
+659a15091f4b32c8eb898e93be7a0c8f
+  cooked69 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "three"#) -}
+37b8c3cc1e487eea780f3e21cbbda514
+  cooked7 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked8) -}
+ebfb1d5e2fa2e36eae991c5671852dfa
+  cooked70 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked9
+                   DbExp.cooked68) -}
+04267ad0587aaeb34e4991500136d39a
+  cooked71 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked64, DbExp.cooked72)) -}
+0419e16dd2c30e9eb26666fd95945408
+  cooked72 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked73
+                   DbExp.cooked68) -}
+4952808467c1b2a02bb51d2f7437a4ed
+  cooked73 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked9
+                   DbExp.cooked74) -}
+aa72ec90ad57227f8c1583aaff3429c0
+  cooked74 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked75) -}
+fda938c24ecb22be556b321af9670921
+  cooked75 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "two"#) -}
+9dd6fda1d4d979e7691a0568642730cd
+  cooked76 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked51, DbExp.cooked77)) -}
+7abae258b7b39f75417bb16c937a898b
+  cooked77 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked78
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+4dd08dcada5504a8e79088c26bac8e9c
+  cooked78 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked80
+                   DbExp.cooked79) -}
+401109373f4a73910bd4db3765230ffa
+  cooked79 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+77368c332022dc303f0bbc543f0b2746
+  cooked8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n703"#) -}
+ff94fe2d0f77c64a652612125f46a7c5
+  cooked80 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked89
+                   DbExp.cooked81) -}
+61b8fe8523a96cf56291494b857592bb
+  cooked81 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked82
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+352aba91ad79a28eea2b3650c3b7ec2c
+  cooked82 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked84
+                   DbExp.cooked83) -}
+9d5e06b1703a57f8fe14dd3ead919742
+  cooked83 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v1 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+1c9d96c22da797861e63cc6882d79f16
+  cooked84 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked87
+                   DbExp.cooked85) -}
+1101a83f70f867de9bce4a5ec6d74bed
+  cooked85 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked50
+                   DbExp.cooked86) -}
+77ae730acf5672565d4cfbcda1ecd032
+  cooked86 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v1) -}
+ce001a3c2260b8cff252e2840ddbf396
+  cooked87 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked9
+                   DbExp.cooked88) -}
+936067a729078a23d2cd5da1f8e767c3
+  cooked88 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked_v) -}
+a819094b3d2937a15752b5a69870b61d
+  cooked89 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked88
+                   DbExp.cooked90) -}
+ae0329f520e45e1ff543a241e60a485c
+  cooked9 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked10) -}
+7f3db4ab904a621df8a0600bdd36e567
+  cooked90 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.cooked91) -}
+9c994203a69c26f1d7357fd6972d23d0
+  cooked91 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Zero"#) -}
+f197b1f328ab3f0dee250cda0667f0e9
+  cooked92 :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+  {- Unfolding: ((DbExp.cooked15, DbExp.cooked93)) -}
+a6c96bf19afad132a6f8e6a7fbc84442
+  cooked93 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked94
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+95498390df119b6c0166010c600384a1
+  cooked94 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked95
+                   DbExp.cooked79) -}
+a849610fa0f7de545fd7b2d3a30e25c4
+  cooked95 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked96
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+57cbf532821e7ba410a2dd3effedcca4
+  cooked96 ::
+    DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.cooked98
+                   DbExp.cooked97) -}
+02c557231737782443f7535e49792c9a
+  cooked97 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.cooked_v2 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+9fc4867571c602a89c1b5c584983e162
+  cooked98 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.:@
+                   @ [GHC.Types.Char]
+                   DbExp.cooked114
+                   DbExp.cooked99) -}
+1be5aa11a10489b95909b52e2df8253e
+  cooked99 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.cooked100
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+f0b2f1dd1f44492d80d7ba10f8c48c33
+  cooked_$slet_ ::
+    [([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])]
+    -> DbExp.Exp [GHC.Types.Char] -> DbExp.Exp [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: (\ ds :: [([GHC.Types.Char],
+                           DbExp.Exp [GHC.Types.Char])]
+                   b :: DbExp.Exp [GHC.Types.Char] ->
+                 case ds of wild {
+                   [] -> b
+                   : ipv ipv1
+                   -> let {
+                        ds1 :: [[GHC.Types.Char]]
+                        = GHC.Base.map
+                            @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                            @ [GHC.Types.Char]
+                            (Data.Tuple.fst @ [GHC.Types.Char] @ (DbExp.Exp [GHC.Types.Char]))
+                            wild
+                      } in
+                      DbExp.Let
+                        @ [GHC.Types.Char]
+                        (GHC.Base.map
+                           @ ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])
+                           @ (Bound.Scope.Scope GHC.Types.Int DbExp.Exp [GHC.Types.Char])
+                           (\ x :: ([GHC.Types.Char], DbExp.Exp [GHC.Types.Char]) ->
+                            case x of wild1 { (,) ds2 y ->
+                            DbExp.lambda_$c>>=
+                              @ [GHC.Types.Char]
+                              @ (Bound.Var.Var GHC.Types.Int (DbExp.Exp [GHC.Types.Char]))
+                              y
+                              (\ x1 :: [GHC.Types.Char] ->
+                               DbExp.V
+                                 @ (Bound.Var.Var GHC.Types.Int (DbExp.Exp [GHC.Types.Char]))
+                                 (case Data.OldList.findIndex
+                                         @ [GHC.Types.Char]
+                                         (GHC.Base.eqString x1)
+                                         ds1 of wild2 {
+                                    GHC.Base.Nothing
+                                    -> Bound.Var.F
+                                         @ GHC.Types.Int
+                                         @ (DbExp.Exp [GHC.Types.Char])
+                                         (DbExp.V @ [GHC.Types.Char] x1)
+                                    GHC.Base.Just z
+                                    -> Bound.Var.B
+                                         @ GHC.Types.Int
+                                         @ (DbExp.Exp [GHC.Types.Char])
+                                         z })) })
+                             `cast`
+                           (<([GHC.Types.Char], DbExp.Exp [GHC.Types.Char])>_R
+                            ->_R Sym (Bound.Scope.NTCo:Scope[0]
+                                          <GHC.Types.Int>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))
+                           wild)
+                        (DbExp.lambda_$c>>=
+                           @ [GHC.Types.Char]
+                           @ (Bound.Var.Var GHC.Types.Int (DbExp.Exp [GHC.Types.Char]))
+                           b
+                           (\ x1 :: [GHC.Types.Char] ->
+                            DbExp.V
+                              @ (Bound.Var.Var GHC.Types.Int (DbExp.Exp [GHC.Types.Char]))
+                              (case Data.OldList.findIndex
+                                      @ [GHC.Types.Char]
+                                      (GHC.Base.eqString x1)
+                                      ds1 of wild1 {
+                                 GHC.Base.Nothing
+                                 -> Bound.Var.F
+                                      @ GHC.Types.Int
+                                      @ (DbExp.Exp [GHC.Types.Char])
+                                      (DbExp.V @ [GHC.Types.Char] x1)
+                                 GHC.Base.Just z
+                                 -> Bound.Var.B
+                                      @ GHC.Types.Int
+                                      @ (DbExp.Exp [GHC.Types.Char])
+                                      z })))
+                          `cast`
+                        (Sym (Bound.Scope.NTCo:Scope[0]
+                                  <GHC.Types.Int>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N)) }) -}
+5585e04dfcbf0ea6f9b116251e4ab390
+  cooked_v :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x"#) -}
+0e29478d40735d3e9a7a3055656fe054
+  cooked_v1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "n"#) -}
+8b50163256faa5302ff0717dd27bd2fe
+  cooked_v10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "z"#) -}
+43ef02dea04b67149a093f39ead19020
+  cooked_v11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "s"#) -}
+fafc4ad1e493da4baadc84790bbdfca9
+  cooked_v12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "t"#) -}
+c51dcc65288b71163cd1d3efc63a225c
+  cooked_v13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "f"#) -}
+af5613d953c08a89b8a0e64648e79d2c
+  cooked_v2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "y"#) -}
+7ce8f8875db9b70df4a9567be4fa9580
+  cooked_v3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "x1"#) -}
+b5f4baf6510c097cd48e518914915449
+  cooked_v4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "y1"#) -}
+1aad2f890ef957c8ef113a66afdcfd21
+  cooked_v5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "ab"#) -}
+38617996d96fbb6d3739cad94d7bee91
+  cooked_v6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "a"#) -}
+d2e1a1960a4b2c491ec4244dadcd8169
+  cooked_v7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "b"#) -}
+960125bb5b2294f717c75d26768f596f
+  cooked_v8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "p"#) -}
+e5d4e36f6da3c8f53c5950de64edd31c
+  cooked_v9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "m"#) -}
+28b0c73ce0569b308be5114325e12771
+  lambda :: GHC.Classes.Eq a => a -> DbExp.Exp a -> DbExp.Exp a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U><L,1*U>m4, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a5 w :: GHC.Classes.Eq a5 w1 :: a5 w2 :: DbExp.Exp a5 ->
+                 DbExp.Lam
+                   @ a5
+                   (DbExp.lambda_$c>>=
+                      @ a5
+                      @ (Bound.Var.Var () (DbExp.Exp a5))
+                      w2
+                      (\ x1 :: a5 ->
+                       DbExp.V
+                         @ (Bound.Var.Var () (DbExp.Exp a5))
+                         (case GHC.Classes.== @ a5 w w1 x1 of wild {
+                            GHC.Types.False
+                            -> Bound.Var.F @ () @ (DbExp.Exp a5) (DbExp.V @ a5 x1)
+                            GHC.Types.True -> DbExp.lambda2 @ a5 })))
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0] <()>_N <DbExp.Exp>_N <a5>_N))) -}
+14f97ad2307b9d72f0a9e3e45f89454d
+  lambda1 :: Bound.Var.Var () (DbExp.Exp [GHC.Types.Char])
+  {- HasNoCafRefs,
+     Unfolding: (Bound.Var.B
+                   @ ()
+                   @ (DbExp.Exp [GHC.Types.Char])
+                   GHC.Tuple.()) -}
+be69754c968a65b0b1eca08402ba427a
+  lambda2 :: Bound.Var.Var () (DbExp.Exp a)
+  {- HasNoCafRefs,
+     Unfolding: (\ @ a5 ->
+                 Bound.Var.B @ () @ (DbExp.Exp a5) GHC.Tuple.()) -}
+a267a0ff637fbc7a6a2d5fbf58da6fe6
+  lambda_$c>>= :: DbExp.Exp a -> (a -> DbExp.Exp b) -> DbExp.Exp b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,C(U)> -}
+18216c54ecb9ec5567b9240d42c7da71
+  let_ ::
+    GHC.Classes.Eq a =>
+    [(a, DbExp.Exp a)] -> DbExp.Exp a -> DbExp.Exp a
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C(U)),A)><S,1*U><L,1*U>,
+     Unfolding: (\ @ a5
+                   $dEq :: GHC.Classes.Eq a5
+                   ds :: [(a5, DbExp.Exp a5)]
+                   b :: DbExp.Exp a5 ->
+                 case ds of wild {
+                   [] -> b
+                   : ipv ipv1
+                   -> let {
+                        ds1 :: [a5]
+                        = GHC.Base.map
+                            @ (a5, DbExp.Exp a5)
+                            @ a5
+                            (Data.Tuple.fst @ a5 @ (DbExp.Exp a5))
+                            wild
+                      } in
+                      DbExp.Let
+                        @ a5
+                        (GHC.Base.map
+                           @ (a5, DbExp.Exp a5)
+                           @ (Bound.Scope.Scope GHC.Types.Int DbExp.Exp a5)
+                           (\ x :: (a5, DbExp.Exp a5) ->
+                            case x of wild1 { (,) ds2 y ->
+                            DbExp.lambda_$c>>=
+                              @ a5
+                              @ (Bound.Var.Var GHC.Types.Int (DbExp.Exp a5))
+                              y
+                              (\ x1 :: a5 ->
+                               DbExp.V
+                                 @ (Bound.Var.Var GHC.Types.Int (DbExp.Exp a5))
+                                 (case Data.OldList.findIndex
+                                         @ a5
+                                         (GHC.Classes.== @ a5 $dEq x1)
+                                         ds1 of wild2 {
+                                    GHC.Base.Nothing
+                                    -> Bound.Var.F
+                                         @ GHC.Types.Int
+                                         @ (DbExp.Exp a5)
+                                         (DbExp.V @ a5 x1)
+                                    GHC.Base.Just z
+                                    -> Bound.Var.B @ GHC.Types.Int @ (DbExp.Exp a5) z })) })
+                             `cast`
+                           (<(a5, DbExp.Exp a5)>_R
+                            ->_R Sym (Bound.Scope.NTCo:Scope[0]
+                                          <GHC.Types.Int>_N <DbExp.Exp>_N <a5>_N))
+                           wild)
+                        (DbExp.lambda_$c>>=
+                           @ a5
+                           @ (Bound.Var.Var GHC.Types.Int (DbExp.Exp a5))
+                           b
+                           (\ x1 :: a5 ->
+                            DbExp.V
+                              @ (Bound.Var.Var GHC.Types.Int (DbExp.Exp a5))
+                              (case Data.OldList.findIndex
+                                      @ a5
+                                      (GHC.Classes.== @ a5 $dEq x1)
+                                      ds1 of wild1 {
+                                 GHC.Base.Nothing
+                                 -> Bound.Var.F @ GHC.Types.Int @ (DbExp.Exp a5) (DbExp.V @ a5 x1)
+                                 GHC.Base.Just z
+                                 -> Bound.Var.B @ GHC.Types.Int @ (DbExp.Exp a5) z })))
+                          `cast`
+                        (Sym (Bound.Scope.NTCo:Scope[0]
+                                  <GHC.Types.Int>_N <DbExp.Exp>_N <a5>_N)) }) -}
+c3bbf8beb9e98aaf1c156072c9db5fa6
+  nf :: DbExp.Exp a -> DbExp.Exp a
+  {- Arity: 1, Strictness: <S,1*U> -}
+d52c5c60685b300d249eff31ab24be8c
+  pretty :: DbExp.Exp GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Unfolding: (DbExp.prettyWith DbExp.pretty1) -}
+591f106df39a530732569b33281dd20c
+  pretty1 :: [[GHC.Types.Char]]
+  {- Unfolding: (DbExp.pretty_go 97) -}
+c5545581312418f4d700a9b0231d6564
+  prettyPrec ::
+    [GHC.Base.String]
+    -> GHC.Types.Bool
+    -> GHC.Types.Int
+    -> DbExp.Exp GHC.Base.String
+    -> GHC.Show.ShowS
+  {- Arity: 4, Strictness: <L,U><L,1*U><L,U(U)><S,1*U> -}
+3cd05e599debdd5aec05c441e0d126fb
+  prettyWith ::
+    [GHC.Base.String] -> DbExp.Exp GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: (\ vs :: [GHC.Base.String]
+                   t :: DbExp.Exp GHC.Base.String ->
+                 DbExp.prettyPrec
+                   (GHC.List.filter
+                      @ [GHC.Types.Char]
+                      (let {
+                         ds :: [GHC.Base.String]
+                         = (DbExp.prettyWith1
+                              (GHC.Types.: @ GHC.Base.String)
+                                `cast`
+                              (<GHC.Base.String>_R
+                               ->_R Sym (Data.Monoid.NTCo:Endo[0] <[GHC.Base.String]>_R))
+                              t)
+                             `cast`
+                           (Data.Monoid.NTCo:Endo[0] <[GHC.Base.String]>_R)
+                             (GHC.Types.[] @ GHC.Base.String)
+                       } in
+                       \ ds1 :: GHC.Base.String ->
+                       case GHC.List.elem
+                              @ GHC.Base.String
+                              GHC.Classes.$fEq[]_$s$fEq[]1
+                              ds1
+                              ds of wild {
+                         GHC.Types.False -> GHC.Types.True
+                         GHC.Types.True -> GHC.Types.False })
+                      vs)
+                   GHC.Types.False
+                   DbExp.$fFoldableExp6
+                   t
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+bd7303692e19a28b9def8b79971d8c3d
+  prettyWith1 ::
+    (GHC.Base.String -> Data.Monoid.Endo [GHC.Base.String])
+    -> DbExp.Exp GHC.Base.String -> Data.Monoid.Endo [GHC.Base.String]
+  {- Unfolding: (DbExp.$cfoldr_$cfoldMap
+                   @ GHC.Base.String
+                   @ (Data.Monoid.Endo [GHC.Base.String])
+                   (Data.Monoid.$fMonoidEndo @ [GHC.Base.String])) -}
+051968042abfece3d6e276dea4858a3b
+  pretty_go :: GHC.Prim.Int# -> [[GHC.Types.Char]]
+  {- Arity: 1, Strictness: <L,U> -}
+33353b5b1bf842a1d6b0a39fc9bc3c45
+  true :: DbExp.Exp GHC.Base.String
+  {- Strictness: m4,
+     Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.true1
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+7af841a5c9cab7b1b6fac6101c0d3f76
+  true1 :: DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.true3
+                   DbExp.true2) -}
+725023b0d7c488cbb09f2b758ded8024
+  true2 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.true_v x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+561f94faf79ef7697fcda2c6a699b509
+  true3 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.Lam
+                   @ [GHC.Types.Char]
+                   DbExp.true4
+                     `cast`
+                   (Sym (Bound.Scope.NTCo:Scope[0]
+                             <()>_N <DbExp.Exp>_N <[GHC.Types.Char]>_N))) -}
+6d790981f7bd259cd47c7d3bdb0b17f3
+  true4 :: DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Unfolding: (DbExp.lambda_$c>>=
+                   @ [GHC.Types.Char]
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   DbExp.true6
+                   DbExp.true5) -}
+aef2a83543eff3058f2ebe312ed8b767
+  true5 ::
+    [GHC.Types.Char]
+    -> DbExp.Exp (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+  {- Arity: 1,
+     Unfolding: (\ x1 :: [GHC.Types.Char] ->
+                 DbExp.V
+                   @ (Bound.Var.Var () (DbExp.Exp [GHC.Types.Char]))
+                   (case GHC.Base.eqString DbExp.true_v1 x1 of wild {
+                      GHC.Types.False
+                      -> Bound.Var.F
+                           @ ()
+                           @ (DbExp.Exp [GHC.Types.Char])
+                           (DbExp.V @ [GHC.Types.Char] x1)
+                      GHC.Types.True -> DbExp.lambda1 })) -}
+481938139f015485950c8d144585f590
+  true6 :: DbExp.Exp [GHC.Types.Char]
+  {- Unfolding: (DbExp.V @ [GHC.Types.Char] DbExp.true_v1) -}
+0d0fb74983cdb3a5dc07bc603dfea8cc
+  true_v :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "F"#) -}
+4a1d601cc8520e1ecad80cf508941557
+  true_v1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "T"#) -}
+05abd8f84d167fa4e18696f1a370abb3
+  whnf :: DbExp.Exp a -> DbExp.Exp a
+  {- Arity: 1, Strictness: <S,1*U> -}
+instance GHC.Base.Applicative [DbExp.Exp] = DbExp.$fApplicativeExp
+instance Prelude.Extras.Eq1 [DbExp.Exp] = DbExp.$fEq1Exp
+instance GHC.Classes.Eq [DbExp.Exp] = DbExp.$fEqExp
+instance Data.Foldable.Foldable [DbExp.Exp] = DbExp.$fFoldableExp
+instance GHC.Base.Functor [DbExp.Exp] = DbExp.$fFunctorExp
+instance GHC.Base.Monad [DbExp.Exp] = DbExp.$fMonadExp
+instance Prelude.Extras.Ord1 [DbExp.Exp] = DbExp.$fOrd1Exp
+instance GHC.Classes.Ord [DbExp.Exp] = DbExp.$fOrdExp
+instance Prelude.Extras.Read1 [DbExp.Exp] = DbExp.$fRead1Exp
+instance GHC.Read.Read [DbExp.Exp] = DbExp.$fReadExp
+instance Prelude.Extras.Show1 [DbExp.Exp] = DbExp.$fShow1Exp
+instance GHC.Show.Show [DbExp.Exp] = DbExp.$fShowExp
+instance Data.Traversable.Traversable [DbExp.Exp]
+  = DbExp.$fTraversableExp
+"SPEC let_ @ [Char]" [ALWAYS] forall $dEq :: GHC.Classes.Eq
+                                               [GHC.Types.Char]
+  DbExp.let_ @ [GHC.Types.Char] $dEq = DbExp.cooked_$slet_
+"SPEC/DbExp $dm>> @ Exp" [ALWAYS] forall $dMonad :: GHC.Base.Monad
+                                                      DbExp.Exp
+  GHC.Base.$dm>> @ DbExp.Exp $dMonad
+  = \ @ a5 @ b m1 :: DbExp.Exp a5 k :: DbExp.Exp b ->
+    DbExp.lambda_$c>>= @ a5 @ b m1 (\ ds :: a5 -> k)
+"SPEC/DbExp $dmfail @ Exp" [ALWAYS] forall $dMonad :: GHC.Base.Monad
+                                                        DbExp.Exp
+  GHC.Base.$dmfail @ DbExp.Exp $dMonad = DbExp.$fMonadExp_$s$dmfail
+"SPEC/DbExp $dmtoList @ Exp" [ALWAYS] forall $dFoldable :: Data.Foldable.Foldable
+                                                             DbExp.Exp
+  Data.Foldable.$dmtoList @ DbExp.Exp $dFoldable
+  = \ @ a5 t1 :: DbExp.Exp a5 ->
+    GHC.Base.build
+      @ a5
+      (\ @ b c :: a5 -> b -> b[OneShot] n1 :: b[OneShot] ->
+       DbExp.$cfoldr @ a5 @ b c n1 t1)
+"SPEC/DbExp >>>= @ (Scope ())" [ALWAYS] forall tpl :: Bound.Class.Bound
+                                                        (Bound.Scope.Scope ())
+  Bound.Class.>>>= @ (Bound.Scope.Scope ()) tpl
+  = Bound.Scope.$fBoundScope_$c>>>= @ ()
+"SPEC/DbExp >>>= @ (Scope Int)" [ALWAYS] forall tpl :: Bound.Class.Bound
+                                                         (Bound.Scope.Scope GHC.Types.Int)
+  Bound.Class.>>>= @ (Bound.Scope.Scope GHC.Types.Int) tpl
+  = Bound.Scope.$fBoundScope_$c>>>= @ GHC.Types.Int
+"SPEC/DbExp fmapDefault _ _ @ Exp" [ALWAYS] forall @ a5
+                                                   @ b
+                                                   $dTraversable :: Data.Traversable.Traversable
+                                                                      DbExp.Exp
+  Data.Traversable.fmapDefault @ a5 @ b @ DbExp.Exp $dTraversable
+  = DbExp.$fFunctorExp_$sfmapDefault @ a5 @ b
+"SPEC/DbExp instantiate _ @ Exp _" [ALWAYS] forall @ b
+                                                   @ a12
+                                                   $dMonad :: GHC.Base.Monad DbExp.Exp
+  Bound.Scope.instantiate @ b @ DbExp.Exp @ a12 $dMonad
+  = DbExp.$sinstantiate @ b @ a12
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

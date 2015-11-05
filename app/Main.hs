@@ -1,6 +1,6 @@
 module Main where
 
-import CofreeTree
+import CofreeTree as CF
 import DbExp
 import TypeCheck
 import Eval
@@ -12,17 +12,18 @@ import qualified Data.Map as M
 mu2cf :: MuTree -> CfTree ()
 mu2cf (Mu f) = () :< fmap mu2cf f
 
+
 cf2db :: CfTree a -> Exp String
 cf2db cf =
   case unwrap cf of
     (ANumber i) -> N i
-    (AIdent x) -> V x
+    (AVar x) -> V x
+    (ALex w) -> fromLex (V w)
     (AApply m n) -> cf2db m :@ cf2db n
     (ALambda x body) -> lambda x (cf2db body)
 
 mu2db :: MuTree -> Exp String
 mu2db = cf2db . mu2cf
-
 
 labelTypes :: MuTree -> Maybe (CfTree Type)
 labelTypes t = fmap (\subs -> fmap (substitute subs . fst) result) maybeSubs
@@ -39,8 +40,7 @@ labelNormals = extend (pretty . nf . cf2db) . mu2cf
 labelMeanings :: MuTree -> CfTree Val
 labelMeanings = extend (eval defEnv . cf2db) . mu2cf
   where defEnv =
-          [ ("x", VInt 25)
-          , ("id", VFun id)
+          [ ("id", VFun id)
           , ("plus1", VFun $ \(VInt i) -> VInt (i+1))
           , ("k1", VFun $ \(VFun g) -> g (VInt 1))
           , ("k2k5", VFun $ \(VFun g) ->
@@ -55,6 +55,13 @@ t1 = app (var "k1") (var "plus1")
 
 t2 :: MuTree
 t2 = app (app (var "k2k5") (lam "x" (var "x"))) (lam "y" (var "z"))
+
+-- recursive; blows up!
+add23 :: MuTree
+add23 = app (app (CF.lex "add") (CF.lex "two")) (CF.lex "three")
+
+iftt :: MuTree
+iftt = app (app (CF.lex "if") (CF.lex "True")) (CF.lex "True")
 
 comp :: MuTree
 comp = lam "f" (lam "g" (lam "x" (app (var "f") (app (var "g") (var "x")))))
@@ -74,8 +81,10 @@ ex3 = app (lam "f" (app (var "f") (var "f"))) (lam "x" (var "x"))
 ex4 :: MuTree
 ex4 = app (var "x") (var "x")
 
+main :: IO ()
+main = return ()
 
-{--}
+{--
 pp :: Exp String -> IO ()
 pp = putStrLn . pretty
 

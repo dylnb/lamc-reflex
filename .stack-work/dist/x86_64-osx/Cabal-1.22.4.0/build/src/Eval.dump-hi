@@ -1,0 +1,257 @@
+
+==================== FINAL INTERFACE ====================
+2015-11-03 20:02:50.002302 UTC
+
+interface lamc_5eVrUU1K4dW8f168hbG4XR:Eval 7102
+  interface hash: bc2f15f5fa033efe33d1a7f613859471
+  ABI hash: 168490057ebc2cd747c7bf7b4aa324bf
+  export-list hash: e0d9c6f5d6ad74dc9b29a5a133e853ed
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 56b9a755d22be00f2eba50f3628a69c7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Eval.eval
+  Eval.update
+  Eval.Env
+  Eval.Val{Eval.VFun Eval.VInt}
+module dependencies: DbExp
+package dependencies: array-0.5.1.0@array_E0sTtauuKsGDLZoT7lTbgZ
+                      base-4.8.1.0* bifunctors-5@bifun_6cWzSBWZD9ID5wcfOFIydn
+                      binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd
+                      bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva
+                      bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH
+                      bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh
+                      cereal-0.4.1.1@cerea_LMaR4P6lFvNJtmY00msKYH
+                      comonad-4.2.7.2@comon_EsayKmuIGPJJdbMoBEcxRq
+                      containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN
+                      deepseq-1.4.1.1@deeps_LbCWUlehDDeLxurARKDH5o
+                      distributive-0.4.4@distr_IiTFZxvjHzA0FvKz3AU35Q ghc-prim-0.4.0.0
+                      hashable-1.2.3.3@hasha_2GTZqecVp8NJZrNuKzGxfy
+                      hashable-extras-0.2.2@hasha_9lOVH88b48ZLAqTz1S5Of9
+                      integer-gmp-1.0.0.0 mtl-2.2.1@mtl_KMpng31YRYc5JfMWFZ3FCU
+                      prelude-extras-0.4.0.2@prelu_57eavILAbKD5CaKv31zEDY
+                      profunctors-5.1.1@profu_IRUD0QFY0OF0nZWAglFFc5
+                      semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO
+                      tagged-0.8.1@tagge_6Tf46oJAk552xT73wGffBW
+                      text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh
+                      time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH
+                      transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X
+                      unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a
+orphans: base-4.8.1.0:GHC.Base base-4.8.1.0:GHC.Float
+         binary-0.7.5.0@binar_IvYoLp9H6Xy3zEH13MmZwd:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6elQVSg5cWdFrvRnfxTUrH:Data.ByteString.Builder
+         hashable-1.2.3.3@hasha_2GTZqecVp8NJZrNuKzGxfy:Data.Hashable.Generic
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Lazy
+         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Show
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.Format.Parse
+         time-1.5.0.1@time_AXTdBF9VRQoBOqJT6qtmVH:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_3eG64VdP2vzGjP6wJiCp5X:Control.Monad.Trans.Error
+family instance modules: base-4.8.1.0:Control.Applicative
+                         base-4.8.1.0:Data.Either base-4.8.1.0:Data.Functor.Identity
+                         base-4.8.1.0:Data.Monoid base-4.8.1.0:Data.Type.Equality
+                         base-4.8.1.0:Data.Void base-4.8.1.0:GHC.Exts
+                         base-4.8.1.0:GHC.Generics
+                         bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Var
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.Get
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.Signed
+                         bytes-0.15.0.1@bytes_H8qcVNPPgeW3UxaWRJv4Oh:Data.Bytes.VarInt
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntMap.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.IntSet.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Map.Base
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Sequence
+                         containers-0.5.6.2@conta_LKCPrTJwOTOLk4OU37YmeN:Data.Set.Base
+                         semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO:Data.List.NonEmpty
+                         semigroups-0.16.2.2@semig_509rjK42Yeb8JAwFst5KmO:Data.Semigroup
+                         tagged-0.8.1@tagge_6Tf46oJAk552xT73wGffBW:Data.Tagged
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text
+                         text-1.2.1.3@text_1l1AN4I48k37RaQ6fm6CEh:Data.Text.Lazy
+                         unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a:Data.HashMap.Base
+                         unordered-containers-0.2.5.1@unord_7E41cj9RvqSJeZ4jSnbs1a:Data.HashSet
+import  -/  base-4.8.1.0:Data.Foldable 2e5acb797cfda6b3b7fabd7052abe290
+import  -/  base-4.8.1.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.1.0:Data.Tuple 012ad951a59a9d85fe1de36a2f012986
+import  -/  base-4.8.1.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.1.0:GHC.List f31ed8784b3e05f1397195751f7d74ea
+import  -/  base-4.8.1.0:GHC.Show b8c65ca3124f92a166c9f05120382442
+import  -/  base-4.8.1.0:Prelude 518f762991bc287d78f21a73c974da1f
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound 27948c3946c584a558a120b58a71cfbd
+import  -/  bound-1.0.6@bound_FIK0Q7alZKo32m6neuVHva:Bound.Scope 88a2159c4b1f5b479ccde978e658c7dc
+import  -/  DbExp 2c871b58ec3e6a5e18514b97f796835a
+  exports: 0363ee771a7cf6025c6cab77be821e4f
+  :@ 6f65d83743c99cfa22edcedb1d535c70
+  Exp a267a0ff637fbc7a6a2d5fbf58da6fe6
+  Lam 91e1fbff80a15e2def227d3e9e533387
+  N 275f1eb826fdeb512f033bdb1db55ddf
+  V 651af0adb322ea7a43972d4e01966a0f
+  nf c3bbf8beb9e98aaf1c156072c9db5fa6
+4c9c760f62b1d74e98376dbedec58350
+  $fShowVal :: GHC.Show.Show Eval.Val
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Eval.Val
+                  Eval.$fShowVal_$cshowsPrec
+                  Eval.$fShowVal_$cshow
+                  Eval.$fShowVal_$cshowList -}
+ecc399c158120c18621b43a2d089f971
+  $fShowVal1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "fun"#) -}
+4c9c760f62b1d74e98376dbedec58350
+  $fShowVal_$cshow :: Eval.Val -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Eval.Val ->
+                 case ds of wild {
+                   Eval.VInt i -> GHC.Show.$fShowInt_$cshow i
+                   Eval.VFun ds1 -> Eval.$fShowVal1 }) -}
+4c9c760f62b1d74e98376dbedec58350
+  $fShowVal_$cshowList :: [Eval.Val] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ls :: [Eval.Val] s :: GHC.Base.String ->
+                 GHC.Show.showList__
+                   @ Eval.Val
+                   (Eval.$fShowVal_$cshowsPrec GHC.Show.shows18)
+                   ls
+                   s) -}
+4c9c760f62b1d74e98376dbedec58350
+  $fShowVal_$cshowsPrec ::
+    GHC.Types.Int -> Eval.Val -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ w :: GHC.Types.Int w1 :: Eval.Val w2 :: GHC.Base.String ->
+                 Eval.$w$cshowsPrec w1 w2) -}
+4c9c760f62b1d74e98376dbedec58350
+  $w$cshowsPrec :: Eval.Val -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ w :: Eval.Val w1 :: GHC.Base.String ->
+                 case w of wild {
+                   Eval.VInt i
+                   -> case i of ww2 { GHC.Types.I# ww3 ->
+                      case GHC.Show.$wshowSignedInt
+                             0
+                             ww3
+                             (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                      GHC.Base.++
+                        @ GHC.Types.Char
+                        (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                        w1 } }
+                   Eval.VFun ds
+                   -> GHC.Base.++ @ GHC.Types.Char Eval.$fShowVal1 w1 }) -}
+a5cafafa722753491c5f1415aa463db7
+  $wupdate :: Eval.Env -> Eval.Val -> (# Eval.Env, GHC.Base.String #)
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: [0],
+     Unfolding: (\ w :: Eval.Env w1 :: Eval.Val ->
+                 let {
+                   freshvar :: GHC.Base.String
+                   = let {
+                       ds :: [GHC.Base.String]
+                       = GHC.Base.map
+                           @ (GHC.Base.String, Eval.Val)
+                           @ [GHC.Types.Char]
+                           (Data.Tuple.fst @ GHC.Base.String @ Eval.Val)
+                           w
+                     } in
+                     let {
+                       z :: [GHC.Types.Char]
+                       = letrec {
+                           go :: [GHC.Integer.Type.Integer] -> [GHC.Types.Char]
+                             {- Arity: 1, Strictness: <S,1*U> -}
+                           = \ ds1 :: [GHC.Integer.Type.Integer] ->
+                             case ds1 of wild {
+                               [] -> GHC.List.badHead @ [GHC.Types.Char]
+                               : y ys
+                               -> let {
+                                    lvl2 :: GHC.Base.String
+                                    = case GHC.Show.$w$cshowsPrec1
+                                             0
+                                             y
+                                             (GHC.Types.[]
+                                                @ GHC.Types.Char) of ww2 { (#,#) ww3 ww4 ->
+                                      GHC.Types.: @ GHC.Types.Char ww3 ww4 }
+                                  } in
+                                  let {
+                                    z1 :: [GHC.Types.Char] = go ys
+                                  } in
+                                  letrec {
+                                    go1 :: [GHC.Types.Char] -> [GHC.Types.Char]
+                                      {- Arity: 1, Strictness: <S,1*U> -}
+                                    = \ ds2 :: [GHC.Types.Char] ->
+                                      case ds2 of wild1 {
+                                        [] -> z1
+                                        : y1 ys1
+                                        -> let {
+                                             x :: [GHC.Types.Char]
+                                             = GHC.Types.: @ GHC.Types.Char y1 lvl2
+                                           } in
+                                           case GHC.List.elem
+                                                  @ GHC.Base.String
+                                                  GHC.Classes.$fEq[]_$s$fEq[]1
+                                                  x
+                                                  ds of wild2 {
+                                             GHC.Types.False -> x GHC.Types.True -> go1 ys1 } }
+                                  } in
+                                  go1 Eval.update3 }
+                         } in
+                         go Eval.update1
+                     } in
+                     letrec {
+                       go :: [GHC.Types.Char] -> [GHC.Types.Char]
+                         {- Arity: 1, Strictness: <S,1*U> -}
+                       = \ ds1 :: [GHC.Types.Char] ->
+                         case ds1 of wild {
+                           [] -> z
+                           : y ys
+                           -> let {
+                                x :: [GHC.Types.Char]
+                                = GHC.Types.: @ GHC.Types.Char y (GHC.Types.[] @ GHC.Types.Char)
+                              } in
+                              case GHC.List.elem
+                                     @ GHC.Base.String
+                                     GHC.Classes.$fEq[]_$s$fEq[]1
+                                     x
+                                     ds of wild1 {
+                                GHC.Types.False -> x GHC.Types.True -> go ys } }
+                     } in
+                     go Eval.update3
+                 } in
+                 (# GHC.Types.: @ (GHC.Base.String, Eval.Val) (freshvar, w1) w,
+                    freshvar #)) -}
+69d5757aa320f67f3e17386ab6f9a4b8
+  type Env = [(GHC.Base.String, Eval.Val)]
+4c9c760f62b1d74e98376dbedec58350
+  data Val = VInt GHC.Types.Int | VFun (Eval.Val -> Eval.Val)
+809b8b7c195010a886f2459150cf6e46
+  eval :: Eval.Env -> DbExp.Exp GHC.Base.String -> Eval.Val
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+eaadb0a84ace2a9dcbec5e79484bb9e7
+  update :: Eval.Env -> Eval.Val -> (Eval.Env, GHC.Base.String)
+  {- Arity: 2, Strictness: <L,U><L,U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: Eval.Env w1 :: Eval.Val ->
+                 case Eval.$wupdate w w1 of ww { (#,#) ww1 ww2 -> (ww1, ww2) }) -}
+da3a57ddfcbbaa484c865929500119f8
+  update1 :: [GHC.Integer.Type.Integer]
+  {- Unfolding: (case GHC.Enum.$wenumDeltaInteger
+                        Eval.update2
+                        Eval.update2 of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ GHC.Integer.Type.Integer ww1 ww2 }) -}
+335737bc64e2f0e501f892b6b8f52bbb
+  update2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (__integer 1) -}
+8487e65368df20f9e89ada3332058849
+  update3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Enum.eftChar 97 122) -}
+instance GHC.Show.Show [Eval.Val] = Eval.$fShowVal
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
