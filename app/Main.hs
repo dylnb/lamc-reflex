@@ -36,6 +36,9 @@ labelConstraints = extend (memoizedTC generateConstraints) . mu2cf
 
 labelNormals :: MuTree -> CfTree String
 labelNormals = extend (pretty . nf . cf2db) . mu2cf
+  -- where go cf = case unwrap cf of
+  --                 (ALex w) -> (pretty . nf . cf2db $ cf) ++ "\n" ++ w
+  --                 _          -> pretty . nf . cf2db $ cf
 
 labelMeanings :: MuTree -> CfTree Val
 labelMeanings = extend (eval defEnv . cf2db) . mu2cf

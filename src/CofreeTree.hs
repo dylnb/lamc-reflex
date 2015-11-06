@@ -35,12 +35,22 @@ app = (Mu .) . AApply
 type CfTree = Cofree AST
 type MuTree = Mu AST
 
-cf2tree :: Show a => CfTree a -> Tree String
-cf2tree (x :< f) = Node (show x) $
+cf2tree1 :: CfTree String -> Tree String
+cf2tree1 (x :< f) = Node x $
   case f of
-    AApply fun arg -> [cf2tree fun, cf2tree arg]
-    ALambda v body -> [Node ("λ" ++ v) [], cf2tree body]
+    AApply fun arg -> [cf2tree1 fun, cf2tree1 arg]
+    ALambda v body -> [Node ("λ" ++ v) [], cf2tree1 body]
+    _ -> []
+  
+cf2tree2 :: Show a => CfTree a -> Tree String
+cf2tree2 (x :< f) = Node (show x) $
+  case f of
+    AApply fun arg -> [cf2tree2 fun, cf2tree2 arg]
+    ALambda v body -> [Node ("λ" ++ v) [], cf2tree2 body]
     _ -> []
 
-showMe :: Show a => CfTree a -> IO ()
-showMe = putStrLn . drawVerticalTree . cf2tree
+showMe1 :: CfTree String -> IO ()
+showMe1 = putStrLn . drawVerticalTree . cf2tree1
+
+showMe2 :: Show a => CfTree a -> IO ()
+showMe2 = putStrLn . drawVerticalTree . cf2tree2
