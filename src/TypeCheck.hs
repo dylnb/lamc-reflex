@@ -22,7 +22,14 @@ data Type
   | TLambda Type Type
   | TString
 
-deriving instance Show Type
+instance Show Type where
+  show TNumber = "N"
+  show (TVar i) = "V" ++ show i
+  show (TLambda a b) =
+    case a of
+      TLambda _ _ -> "(" ++ show a ++ ")" ++ " -> " ++ show b
+      _ -> show a ++ " -> " ++ show b
+  show TString = "S"
 
 data Constraint = EqualityConstraint Type Type
 

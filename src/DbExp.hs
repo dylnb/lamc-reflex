@@ -11,6 +11,7 @@ import Prelude hiding (foldr,abs)
 import Prelude.Extras
 import Bound
 import Bound.Name
+import Bound.Scope (bindings)
 import System.Exit
 
 infixl 9 :@
@@ -23,28 +24,13 @@ data Exp a
   | Let [Scope (Name String Int) Exp a] (Scope (Name String Int) Exp a)
   deriving (Eq,Ord,Show,Read)
 
-lambda :: Eq a => String -> a -> Exp a -> Exp a
-lambda u v b = Lam (abstr u v b)
-  where abstr u v t = Scope (liftM k t)
-        k y = if y == v then B (Name u ()) else F (return v)
-    
--- -- | Abstraction, capturing named bound variables.
--- abstractName :: Monad f => (a -> Maybe b) -> f a -> Scope (Name a b) f a
--- abstractName f t = Scope (liftM k t) where
---   k a = case f a of
---     Just b  -> B (Name a b)
---     Nothing -> F (return a)
--- {-# INLINE abstractName #-}
+lambda :: String -> Exp String -> Exp String
+lambda u b = Lam (abstract1Name u b)
 
--- -- | Abstract over a single variable
--- abstract1Name :: (Monad f, Eq a) => a -> f a -> Scope (Name a ()) f a
--- abstract1Name a = abstractName (\b -> if a == b then Just () else Nothing)
--- {-# INLINE abstract1Name #-}
-
--- let_ :: Eq a => [(a,Exp a)] -> Exp a -> Exp a
--- let_ [] b = b
--- let_ bs b = Let (map (abstr . snd) bs) (abstr b)
---   where abstr = abstractName (`elemIndex` map fst bs)
+let_ :: [(String, Exp String)] -> Exp String -> Exp String
+let_ [] b = b
+let_ bs b = Let (map (abstr . snd) bs) (abstr b)
+  where abstr = abstractName (`elemIndex` map fst bs)
 
 instance Functor Exp  where fmap       = fmapDefault
 instance Foldable Exp where foldMap    = foldMapDefault
@@ -103,55 +89,10 @@ whnf (Let bs b) = whnf (inst b)
 {--}
 infixr 0 !
 (!) :: String -> Exp String -> Exp String
-x ! t = lambda x x t
-
-{--}
--- | Lennart Augustsson's example from "The Lambda Calculus Cooked 4 Ways"
---
--- Modified to use recursive let, because we can.
---
--- >>> nf cooked == true
--- True
+x ! t = lambda x t
 
 true :: Exp String
 true = "y" ! "n" ! V"y"
-
-{--
-cooked :: Exp a
-cooked = fromJust $ closed $ let_
-  [ ("False",  "f" ! "t" ! V"f")
-  , ("True",   "f" ! "t" ! V"t")
-  , ("if",     "b" ! "t" ! "f" ! V"b" :@ V"f" :@ V"t")
-  , ("Zero",   "z" ! "s" ! V"z")
-  , ("Succ",   "n" ! "z" ! "s" ! V"s" :@ V"n")
-  , ("one",    V"Succ" :@ V"Zero")
-  , ("two",    V"Succ" :@ V"one")
-  , ("three",  V"Succ" :@ V"two")
-  , ("isZero", "n" ! V"n" :@ V"True" :@ ("m" ! V"False"))
-  , ("const",  "x" ! "y" ! V"x")
-  , ("Pair",   "a" ! "b" ! "p" ! V"p" :@ V"a" :@ V"b")
-  , ("fst",    "ab" ! V"ab" :@ ("a" ! "b" ! V"a"))
-  , ("snd",    "ab" ! V"ab" :@ ("a" ! "b" ! V"b"))
-  -- we have a lambda calculus extended with recursive bindings, so we don't need to use fix
-  , ("add",    "x" ! "y" ! V"x" :@ V"y" :@ ("n" ! V"Succ" :@ (V"add" :@ V"n" :@ V"y")))
-  , ("mul",    "x" ! "y" ! V"x" :@ V"Zero" :@ ("n" ! V"add" :@ V"y" :@ (V"mul" :@ V"n" :@ V"y")))
-  , ("fac",    "x" ! V"x" :@ V"one" :@ ("n" ! V"mul" :@ V"x" :@ (V"fac" :@ V"n")))
-  , ("eqnat",  "x" ! "y" ! V"x" :@ (V"y" :@ V"True" :@ (V"const" :@ V"False")) :@ ("x1" ! V"y" :@ V"False" :@ ("y1" ! V"eqnat" :@ V"x1" :@ V"y1")))
-  , ("sumto",  "x" ! V"x" :@ V"Zero" :@ ("n" ! V"add" :@ V"x" :@ (V"sumto" :@ V"n")))
-  -- but we could if we wanted to
-  --  , ("fix",    "g" ! ("x" ! V"g":@ (V"x":@V"x")) :@ ("x" ! V"g":@ (V"x":@V"x")))
-  --  , ("add",    V"fix" :@ ("radd" ! "x" ! "y" ! V"x" :@ V"y" :@ ("n" ! V"Succ" :@ (V"radd" :@ V"n" :@ V"y"))))
-  --  , ("mul",    V"fix" :@ ("rmul" ! "x" ! "y" ! V"x" :@ V"Zero" :@ ("n" ! V"add" :@ V"y" :@ (V"rmul" :@ V"n" :@ V"y"))))
-  --  , ("fac",    V"fix" :@ ("rfac" ! "x" ! V"x" :@ V"one" :@ ("n" ! V"mul" :@ V"x" :@ (V"rfac" :@ V"n"))))
-  --  , ("eqnat",  V"fix" :@ ("reqnat" ! "x" ! "y" ! V"x" :@ (V"y" :@ V"True" :@ (V"const" :@ V"False")) :@ ("x1" ! V"y" :@ V"False" :@ ("y1" ! V"reqnat" :@ V"x1" :@ V"y1"))))
-  --  , ("sumto",  V"fix" :@ ("rsumto" ! "x" ! V"x" :@ V"Zero" :@ ("n" ! V"add" :@ V"x" :@ (V"rsumto" :@ V"n"))))
-  , ("n5",     V"add" :@ V"two" :@ V"three")
-  , ("n6",     V"add" :@ V"three" :@ V"three")
-  , ("n17",    V"add" :@ V"n6" :@ (V"add" :@ V"n6" :@ V"n5"))
-  , ("n37",    V"Succ" :@ (V"mul" :@ V"n6" :@ V"n6"))
-  , ("n703",   V"sumto" :@ V"n37")
-  , ("n720",   V"fac" :@ V"n6")
-  ] (V"eqnat" :@ V"n720" :@ (V"add" :@ V"n703" :@ V"n17"))
 
 fromLex :: Exp String -> Exp a
 fromLex exp = fromJust $ closed $ let_
@@ -197,7 +138,10 @@ prettyPrec vs     d n (x :@ y)   = showParen d $
     (Lam b) -> prettyPrec vs True n x . showChar ' ' . prettyPrec vs True n y
     _       -> prettyPrec vs False n x . showChar ' ' . prettyPrec vs True n y
 prettyPrec (v:vs) d n (Lam b)    = showParen d $ 
-  showString v . showString ". " . prettyPrec vs False n (instantiate1Name (V v) b)
+  showString u . showString ". " . prettyPrec vs False n (instantiate1Name (V u) b)
+  where u = case bindings b of
+              [] -> v
+              l  -> name $ head l
 prettyPrec vs     d n (Let bs b) = showParen d $ 
   showString "let" .  foldr (.) id (zipWith showBinding xs bs) .
   showString " in " . indent . prettyPrec ys False n (inst b)
@@ -213,3 +157,4 @@ pretty :: Exp String -> String
 pretty = prettyWith $ [ [i] | i <- ['a'..'z']] ++ [i : show j | j <- [1..], i <- ['a'..'z'] ]
 
 --}
+

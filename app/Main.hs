@@ -8,6 +8,7 @@ import Control.Comonad
 import Control.Comonad.Cofree
 import Control.Monad.State hiding (sequence)
 import qualified Data.Map as M
+import Data.Maybe (fromMaybe)
 
 mu2cf :: MuTree -> CfTree ()
 mu2cf (Mu f) = () :< fmap mu2cf f
@@ -20,28 +21,26 @@ cf2db cf =
     (AVar x) -> V x
     (ALex w) -> fromLex (V w)
     (AApply m n) -> cf2db m :@ cf2db n
-    (ALambda x body) -> lambda x (cf2db body)
+    (ALambda x body) -> x ! cf2db body
 
 mu2db :: MuTree -> Exp String
 mu2db = cf2db . mu2cf
 
-labelTypes :: MuTree -> Maybe (CfTree Type)
-labelTypes t = fmap (\subs -> fmap (substitute subs . fst) result) maybeSubs
+labelTypes :: MuTree -> IO ()
+labelTypes t = maybe (return ()) showMe2 $
+  fmap (\subs -> fmap (substitute subs . fst) r) maybeSubs
   where defTypeState = TypeState { memo = M.empty, varId = 0 }
-        result = evalState (sequence $ labelConstraints t) defTypeState
-        maybeSubs = solveConstraints . constraints $ snd (extract result)
+        r = evalState (sequence $ labelConstraints t) defTypeState
+        maybeSubs = solveConstraints . constraints $ snd (extract r)
 
 labelConstraints :: MuTree -> CfTree (TypeCheck (CfTree ()))
 labelConstraints = extend (memoizedTC generateConstraints) . mu2cf
 
-labelNormals :: MuTree -> CfTree String
-labelNormals = extend (pretty . nf . cf2db) . mu2cf
-  -- where go cf = case unwrap cf of
-  --                 (ALex w) -> (pretty . nf . cf2db $ cf) ++ "\n" ++ w
-  --                 _          -> pretty . nf . cf2db $ cf
+labelNormals :: MuTree -> IO ()
+labelNormals = showMe1 . extend (pretty . nf . cf2db) . mu2cf
 
-labelMeanings :: MuTree -> CfTree Val
-labelMeanings = extend (eval defEnv . cf2db) . mu2cf
+labelMeanings :: MuTree -> IO ()
+labelMeanings = showMe2 . extend (eval defEnv . cf2db) . mu2cf
   where defEnv =
           [ ("id", VFun id)
           , ("plus1", VFun $ \(VInt i) -> VInt (i+1))
