@@ -1,3 +1,5 @@
+{-# LANGUAGE FlexibleContexts #-}
+
 module Main where
 
 import CofreeTree as CF
@@ -8,7 +10,12 @@ import Control.Comonad
 import Control.Comonad.Cofree
 import Control.Monad.State hiding (sequence)
 import qualified Data.Map as M
-import Data.Maybe (fromMaybe)
+import Data.Maybe (fromMaybe, fromJust)
+import Control.Monad.Trans.Class
+import Control.Monad.Coroutine
+import Control.Monad.Coroutine.SuspensionFunctors
+import System.Console.Haskeline
+import Parsers
 
 mu2cf :: MuTree -> CfTree ()
 mu2cf (Mu f) = () :< fmap mu2cf f
@@ -96,3 +103,65 @@ main = do
   pp (mu2db comp)
 
 --}
+
+
+printer :: Show x => Coroutine (Await x) IO ()
+printer = await >> printer 
+
+g :: [Int] -> Coroutine (Await String) IO () -> IO ()
+g [] _ = putStrLn "done"
+g (i:is) printer = do
+  x <- getLine
+  if read x /= i
+    then g (i:is) printer
+    else do
+      putStrLn $ "Got it: " ++ x
+      p <- resume printer
+      case p of
+        Left (Await k) -> g is (k x)
+        Right result -> return result
+
+
+acc :: (Int -> Maybe String) -> CfTree () -> IO ()
+acc g cf = runInputT defaultSettings loop
+  where loop = do
+          let opts = enumerate g cf
+          liftIO $ showMe2 opts
+          Just x <- getInputLine "What next? "
+          let (a :@ b) = cf2db . fromJust $ nthNode (read x) opts 
+          outputStrLn $ pretty (nf a :@ nf b)
+          Just guess <- getInputLine "Reduce: "
+          let (Right p) = parseExp guess
+          outputStrLn . show $ p == nf (a :@ b)
+          outputStrLn $ pretty . nf $ (a :@ b) 
+
+test :: CfTree ()
+test = mu2cf $ app (lam "b" (app (app (CF.lex "if") (var "b")) (CF.lex "true"))) (CF.lex "false")  
+
+enumerate :: (Int -> Maybe String) -> CfTree () -> CfTree (Either Int String)
+enumerate g cf = evalState (sequence $ extend enum cf) 0
+  where enum :: CfTree () -> State Int (Either Int String)
+        enum (() :< ANumber i) = state $ \s -> (Right $ "n" ++ show i, s+1)
+        enum (() :< AVar x) = state $ \s -> (Right x, s+1)
+        enum (() :< ALex w) = state $ \s -> (Right $ pretty . nf $ fromLex (V w), s+1)
+        enum (() :< ALambda x b) = state $ \s ->
+          case g s of
+            Nothing -> (Left s, s+1)
+            Just t  -> (Right $ pretty . nf $ x ! cf2db b, s+1)
+        enum (() :< AApply a b) = state $ \s ->
+          case g s of                          
+            Nothing -> (Left s, s+1)           
+            Just t  -> (Right t, s+1)          
+
+labelNums :: CfTree a -> CfTree Int
+labelNums cf = evalState (sequence $ extend nums cf) 0
+  where nums _ = state $ \s -> (s, s+1)
+
+nthNode :: Int -> CfTree a -> Maybe (CfTree a)
+nthNode i cf = case iter cf 0 of {Left a -> Just a; Right _ -> Nothing}
+  where iter cf n
+          | n == i    = Left cf
+          | otherwise = case cf of
+                          (_ :< AApply a b) -> iter a (n+1) >>= iter b
+                          (_ :< ALambda v b) -> iter b (n+1)
+                          _ -> return n

@@ -2,10 +2,28 @@ module Parsers where
 
 import DbExp
 import CofreeTree
-import Text.ParserCombinators.Parsec
+import Text.Parsec
+import Control.Monad (liftM)
 
-dbterm = dblam
 
-dblam :: GenParser Char st (Exp String)
-dblam = char '\\' >> letter >>= \x -> char '.' >> spaces >> dbterm >>= \tm -> return (lambda [x] tm)
-        <|> (string "BODY" >> return (N 5))
+type ExpParser = Parsec String () (Exp String)
+
+plam = char '\\'
+pvar = liftM return letter
+pdot = (char '.' >> spaces) <|> skipMany1 space
+parens = between (char '(') (char ')')
+
+parseVar :: ExpParser
+parseVar = liftM V pvar
+
+parseAbs :: ExpParser
+parseAbs = plam >> pvar >>= \v -> pdot >> parseTerm >>= \tm -> return (lambda v tm)
+
+parseNonApp :: ExpParser
+parseNonApp = parens parseTerm <|> parseAbs <|> parseVar
+
+parseTerm :: ExpParser
+parseTerm = chainl1 parseNonApp (space >> return (:@))
+
+parseExp :: String -> Either ParseError (Exp String)
+parseExp = parse parseTerm "λ-calculus"

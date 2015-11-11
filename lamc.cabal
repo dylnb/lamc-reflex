@@ -31,6 +31,8 @@ library
                      , containers
                      , pretty-tree
                      , parsec
+                     , monad-coroutine
+                     , haskeline
   default-language:    Haskell2010
 
 executable lamc-exe
@@ -47,6 +49,9 @@ executable lamc-exe
                      , mtl
                      , containers
                      , pretty-tree
+                     , monad-coroutine
+                     , parsec
+                     , haskeline
   default-language:    Haskell2010
 
 test-suite lamc-test
