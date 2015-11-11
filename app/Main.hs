@@ -124,16 +124,24 @@ g (i:is) printer = do
 
 acc :: (Int -> Maybe String) -> CfTree () -> IO ()
 acc g cf = runInputT defaultSettings loop
-  where loop = do
-          let opts = enumerate g cf
-          liftIO $ showMe2 opts
-          Just x <- getInputLine "What next? "
-          let (a :@ b) = cf2db . fromJust $ nthNode (read x) opts 
-          outputStrLn $ pretty (nf a :@ nf b)
+  where loop = do let opts = enumerate g cf
+                  liftIO $ showMe2 opts
+                  Just x <- getInputLine "What next? "
+                  let (a :@ b) = cf2db . fromJust $ nthNode (read x) opts
+                  outputStrLn $ pretty (nf a :@ nf b)
+                  tryIt (read x) (a :@ b)
+        tryIt ind gold = do
           Just guess <- getInputLine "Reduce: "
-          let (Right p) = parseExp guess
-          outputStrLn . show $ p == nf (a :@ b)
-          outputStrLn $ pretty . nf $ (a :@ b) 
+          case parseExp guess of
+            Left s -> outputStrLn (show s)
+            Right p -> do
+              let correct = p == nf gold
+              outputStrLn (show correct)
+              if correct
+                then do Just s <- getInputLine "Continue? "
+                        let g' n = if n == ind then Just (pretty p) else g n
+                        unless (s == "no") $ liftIO (acc g' cf)
+                else tryIt ind gold
 
 test :: CfTree ()
 test = mu2cf $ app (lam "b" (app (app (CF.lex "if") (var "b")) (CF.lex "true"))) (CF.lex "false")  
