@@ -6,48 +6,41 @@ import CofreeTree as CF
 import DbExp
 import TypeCheck
 import Eval
+import Parsers
+import Lexicon
+
 import Control.Comonad
 import Control.Comonad.Cofree
 import Control.Monad.State hiding (sequence)
 import qualified Data.Map as M
 import Data.Maybe (fromMaybe, fromJust)
 import Control.Monad.Trans.Class
-import Control.Monad.Coroutine
-import Control.Monad.Coroutine.SuspensionFunctors
 import System.Console.Haskeline
-import Parsers
-
-mu2cf :: MuTree -> CfTree ()
-mu2cf (Mu f) = () :< fmap mu2cf f
 
 
 cf2db :: CfTree a -> Exp String
 cf2db cf =
   case unwrap cf of
-    (ANumber i) -> N i
-    (AVar x) -> V x
-    (ALex w) -> fromLex (V w)
-    (AApply m n) -> cf2db m :@ cf2db n
-    (ALambda x body) -> x ! cf2db body
+    ANumber i -> N i
+    AVar x -> V x
+    ALex w -> fromLex lexicon (V w)
+    AApply m n -> cf2db m :@ cf2db n
+    ALambda x body -> x ! cf2db body
 
-mu2db :: MuTree -> Exp String
-mu2db = cf2db . mu2cf
+labelTypes :: CfTree () -> IO ()
+labelTypes t = maybe (return ()) print $
+  fmap (\ss -> fmap (subst ss . fst) r) maybeSubs
+  where r = evalState (sequence $ labelConstraints t) (TypeState 0 M.empty)
+        maybeSubs = solveConsts . constraints $ snd (extract r)
 
-labelTypes :: MuTree -> IO ()
-labelTypes t = maybe (return ()) showMe2 $
-  fmap (\subs -> fmap (substitute subs . fst) r) maybeSubs
-  where defTypeState = TypeState { memo = M.empty, varId = 0 }
-        r = evalState (sequence $ labelConstraints t) defTypeState
-        maybeSubs = solveConstraints . constraints $ snd (extract r)
+labelConstraints :: CfTree () -> CfTree (TypeCheck (CfTree ()))
+labelConstraints = extend (memTC genConsts)
 
-labelConstraints :: MuTree -> CfTree (TypeCheck (CfTree ()))
-labelConstraints = extend (memoizedTC generateConstraints) . mu2cf
+labelNormals :: CfTree () -> IO ()
+labelNormals = print . extend (pretty . nf . cf2db)
 
-labelNormals :: MuTree -> IO ()
-labelNormals = showMe1 . extend (pretty . nf . cf2db) . mu2cf
-
-labelMeanings :: MuTree -> IO ()
-labelMeanings = showMe2 . extend (eval defEnv . cf2db) . mu2cf
+labelMeanings :: CfTree () -> IO ()
+labelMeanings = print . extend (eval defEnv . cf2db)
   where defEnv =
           [ ("id", VFun id)
           , ("plus1", VFun $ \(VInt i) -> VInt (i+1))
@@ -59,73 +52,22 @@ labelMeanings = showMe2 . extend (eval defEnv . cf2db) . mu2cf
                           VInt $ i + j)
           ]
 
-t1 :: MuTree
 t1 = app (var "k1") (var "plus1")
-
-t2 :: MuTree
 t2 = app (app (var "k2k5") (lam "x" (var "x"))) (lam "y" (var "z"))
-
--- recursive; blows up!
-add23 :: MuTree
 add23 = app (app (CF.lex "add") (CF.lex "two")) (CF.lex "three")
-
-iftt :: MuTree
 iftt = app (app (CF.lex "if") (CF.lex "True")) (CF.lex "True")
-
-comp :: MuTree
 comp = lam "f" (lam "g" (lam "x" (app (var "f") (app (var "g") (var "x")))))
-
-k3 :: MuTree
 k3 = lam "k" (num 3)
-
-ident :: MuTree
 ident = lam "x" (var "x")
-
-ex2 :: MuTree
 ex2 = app (app (app comp k3) ident) (num 7)
-
-ex3 :: MuTree
 ex3 = app (lam "f" (app (var "f") (var "f"))) (lam "x" (var "x"))
-
-ex4 :: MuTree
 ex4 = app (var "x") (var "x")
-
-main :: IO ()
-main = return ()
-
-{--
-pp :: Exp String -> IO ()
-pp = putStrLn . pretty
-
-main = do
-  pp (mu2db ident)
-  pp (mu2db ex3)
-  pp (mu2db comp)
-
---}
-
-
-printer :: Show x => Coroutine (Await x) IO ()
-printer = await >> printer 
-
-g :: [Int] -> Coroutine (Await String) IO () -> IO ()
-g [] _ = putStrLn "done"
-g (i:is) printer = do
-  x <- getLine
-  if read x /= i
-    then g (i:is) printer
-    else do
-      putStrLn $ "Got it: " ++ x
-      p <- resume printer
-      case p of
-        Left (Await k) -> g is (k x)
-        Right result -> return result
-
+test = app (lam "b" (app (app (CF.lex "if") (var "b")) (CF.lex "true"))) (CF.lex "false")  
 
 acc :: (Int -> Maybe String) -> CfTree () -> IO ()
 acc g cf = runInputT defaultSettings loop
   where loop = do let opts = enumerate g cf
-                  liftIO $ showMe2 opts
+                  outputStrLn $ show opts
                   Just x <- getInputLine "What next? "
                   let (a :@ b) = cf2db . fromJust $ nthNode (read x) opts
                   outputStrLn $ pretty (nf a :@ nf b)
@@ -143,27 +85,22 @@ acc g cf = runInputT defaultSettings loop
                         unless (s == "no") $ liftIO (acc g' cf)
                 else tryIt ind gold
 
-test :: CfTree ()
-test = mu2cf $ app (lam "b" (app (app (CF.lex "if") (var "b")) (CF.lex "true"))) (CF.lex "false")  
 
 enumerate :: (Int -> Maybe String) -> CfTree () -> CfTree (Either Int String)
 enumerate g cf = evalState (sequence $ extend enum cf) 0
   where enum :: CfTree () -> State Int (Either Int String)
         enum (() :< ANumber i) = state $ \s -> (Right $ "n" ++ show i, s+1)
         enum (() :< AVar x) = state $ \s -> (Right x, s+1)
-        enum (() :< ALex w) = state $ \s -> (Right $ pretty . nf $ fromLex (V w), s+1)
+        enum (() :< ALex w) = state $ \s ->
+          (Right $ pretty . nf $ fromLex lexicon (V w), s+1)
         enum (() :< ALambda x b) = state $ \s ->
-          case g s of
+          case g (s+1) of
             Nothing -> (Left s, s+1)
             Just t  -> (Right $ pretty . nf $ x ! cf2db b, s+1)
         enum (() :< AApply a b) = state $ \s ->
           case g s of                          
             Nothing -> (Left s, s+1)           
             Just t  -> (Right t, s+1)          
-
-labelNums :: CfTree a -> CfTree Int
-labelNums cf = evalState (sequence $ extend nums cf) 0
-  where nums _ = state $ \s -> (s, s+1)
 
 nthNode :: Int -> CfTree a -> Maybe (CfTree a)
 nthNode i cf = case iter cf 0 of {Left a -> Just a; Right _ -> Nothing}
@@ -173,3 +110,7 @@ nthNode i cf = case iter cf 0 of {Left a -> Just a; Right _ -> Nothing}
                           (_ :< AApply a b) -> iter a (n+1) >>= iter b
                           (_ :< ALambda v b) -> iter b (n+1)
                           _ -> return n
+
+main :: IO ()
+main = acc (const Nothing) test 
+

@@ -1,6 +1,3 @@
-{-# LANGUAGE DeriveFoldable #-}
-{-# LANGUAGE DeriveFunctor #-}
-{-# LANGUAGE DeriveTraversable #-}
 {-# LANGUAGE StandaloneDeriving #-}
 
 module TypeCheck where
@@ -20,43 +17,30 @@ data Type
   = TNumber
   | TVar Int
   | TLambda Type Type
-  | TString
 
 instance Show Type where
   show TNumber = "N"
   show (TVar i) = "V" ++ show i
-  show (TLambda a b) =
-    case a of
-      TLambda _ _ -> "(" ++ show a ++ ")" ++ " -> " ++ show b
-      _ -> show a ++ " -> " ++ show b
-  show TString = "S"
+  show (TLambda a b) = case a of
+    TLambda _ _ -> "(" ++ show a ++ ")" ++ " -> " ++ show b
+    _ -> show a ++ " -> " ++ show b
 
-data Constraint = EqualityConstraint Type Type
+data Const = EqConst Type Type
 
-deriving instance Show Constraint
+deriving instance Show Const
 
-data TypeResult = TypeResult {
-      constraints :: [Constraint],
-      assumptions :: M.Map String [Type]
-    }
+data TypeResult
+  = TypeResult { constraints :: [Const], assumptions :: M.Map String [Type] }
 
 deriving instance Show TypeResult
 
 instance Monoid TypeResult where
-    mempty = TypeResult {
-               constraints = mempty,
-               assumptions = mempty
-             }
-    mappend a b = TypeResult {
-                             constraints = constraints a `mappend` constraints b,
-                             assumptions = assumptions a `mappend` assumptions b
-                           }
+  mempty = TypeResult mempty mempty
+  mappend a b =
+    TypeResult (constraints a `mappend` constraints b)
+               (assumptions a `mappend` assumptions b)
 
-data TypeState t m = TypeState {
-      varId :: Int,
-      memo :: M.Map t m
-    }
-
+data TypeState t m = TypeState { varId :: Int, memo :: M.Map t m }
 type TypeCheck t = State (TypeState t (Type, TypeResult)) (Type, TypeResult)
 
 freshVarId :: State (TypeState t m) Type
@@ -65,62 +49,50 @@ freshVarId = do
   modify $ \s -> s { varId = succ v }
   return $ TVar v
 
-memoizedTC :: Ord c => (c -> TypeCheck c) -> c -> TypeCheck c
-memoizedTC f c = gets memo >>= maybe memoize return . M.lookup c where
-    memoize = do
-      r <- f c
-      modify $ \s -> s { memo = M.insert c r $ memo s }
-      return r
+memTC :: Ord c => (c -> TypeCheck c) -> c -> TypeCheck c
+memTC f c = gets memo >>= maybe memoize return . M.lookup c
+  where memoize = do
+          r <- f c
+          modify $ \s -> s { memo = M.insert c r $ memo s }
+          return r
 
-generateConstraints :: Cofree AST () -> TypeCheck (Cofree AST ())
-generateConstraints (() :< ANumber _) = return (TNumber, mempty)
-generateConstraints (() :< ALex _) = return (TString, mempty)
-generateConstraints (() :< AVar s) = do
+genConsts :: Cofree AST () -> TypeCheck (Cofree AST ())
+genConsts (() :< ANumber _) = return (TNumber, mempty)
+genConsts (() :< ALex _) = return (TVar 1, mempty) -- needs to written!
+genConsts (() :< AVar s) =
+  freshVarId >>= \var -> return (var, TypeResult [] (M.singleton s [var]))
+genConsts (() :< ALambda s b) = do
   var <- freshVarId
-  return (var, TypeResult {
-                   constraints = [],
-                   assumptions = M.singleton s [var]
-                 })
-generateConstraints (() :< ALambda s b) = do
-  var <- freshVarId
-  br <- memoizedTC generateConstraints b
-  let cs = maybe [] (map $ EqualityConstraint var) (M.lookup s . assumptions $ snd br)
+  br <- memTC genConsts b
+  let cs = maybe [] (map $ EqConst var) (M.lookup s . assumptions $ snd br)
       as = M.delete s . assumptions $ snd br
-  return (TLambda var (fst br), TypeResult {
-                        constraints = constraints (snd br) `mappend` cs,
-                        assumptions = as
-                      })
-generateConstraints (() :< AApply a b) = do
+  return (TLambda var (fst br), TypeResult (constraints (snd br) `mappend` cs) as)
+genConsts (() :< AApply a b) = do
   var <- freshVarId
-  ar <- memoizedTC generateConstraints a
-  br <- memoizedTC generateConstraints b
-  return (var, snd ar `mappend` snd br `mappend` TypeResult {
-                   constraints = [EqualityConstraint (fst ar) $ TLambda (fst br) var],
-                   assumptions = mempty
-                 })
+  ar <- memTC genConsts a
+  br <- memTC genConsts b
+  let cs = TypeResult [EqConst (fst ar) $ TLambda (fst br) var] mempty
+  return (var, snd ar `mappend` snd br `mappend` cs)
 
-solveConstraints :: [Constraint] -> Maybe (M.Map Int Type)
-solveConstraints =
-    foldl (\b a -> liftM2 mappend (solve b a) b) $ Just M.empty
-          where solve maybeSubs (EqualityConstraint a b) = do
-                  subs <- maybeSubs
-                  mostGeneralUnifier (substitute subs a) (substitute subs b)
+solveConsts :: [Const] -> Maybe (M.Map Int Type)
+solveConsts = foldl (\b a -> liftM2 mappend (solve b a) b) $ Just M.empty
+  where solve maybeSubs (EqConst a b) =
+          maybeSubs >>= \ss -> unify (subst ss a) (subst ss b)
 
-mostGeneralUnifier :: Type -> Type -> Maybe (M.Map Int Type)
-mostGeneralUnifier (TVar i) b = Just $ M.singleton i b
-mostGeneralUnifier a (TVar i) = Just $ M.singleton i a
-mostGeneralUnifier TNumber TNumber = Just M.empty
-mostGeneralUnifier TString TString = Just M.empty
-mostGeneralUnifier (TLambda a b) (TLambda c d) = do
-    s1 <- mostGeneralUnifier a c
-    liftM2 mappend (mostGeneralUnifier (substitute s1 b) (substitute s1 d)) $ Just s1
-mostGeneralUnifier _ _ = Nothing
+unify :: Type -> Type -> Maybe (M.Map Int Type)
+unify (TVar i) b = Just $ M.singleton i b
+unify a (TVar i) = Just $ M.singleton i a
+unify TNumber TNumber = Just M.empty
+unify (TLambda a b) (TLambda c d) = do
+  s1 <- unify a c
+  liftM2 mappend (unify (subst s1 b) (subst s1 d)) $ Just s1
+unify _ _ = Nothing
 
-substitute :: M.Map Int Type -> Type -> Type
-substitute subs v@(TVar i) = -- maybe v (substitute subs) $ M.lookup i subs
-  case M.lookup i subs of
-    Just (TVar j) -> if i == j then v else substitute subs (TVar j)
-    Just t -> substitute subs t
+subst :: M.Map Int Type -> Type -> Type
+subst ss v@(TVar i) =
+  case M.lookup i ss of
+    Just (TVar j) -> if i == j then v else subst ss (TVar j)
+    Just t -> subst ss t
     Nothing -> v
-substitute subs (TLambda a b) = TLambda (substitute subs a) (substitute subs b)
-substitute _ t = t
+subst ss (TLambda a b) = TLambda (subst ss a) (subst ss b)
+subst _ t = t

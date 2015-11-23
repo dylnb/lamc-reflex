@@ -1,11 +1,11 @@
-{-# LANGUAGE DeriveFoldable #-}
-{-# LANGUAGE DeriveFunctor #-}
-{-# LANGUAGE DeriveTraversable #-}
+{-# LANGUAGE DeriveFoldable, DeriveFunctor, DeriveTraversable #-}
 {-# LANGUAGE StandaloneDeriving #-}
+{-# LANGUAGE FlexibleInstances #-}
 
 module CofreeTree where
 
 import Control.Comonad.Cofree
+import Eval
 import Data.Tree
 import Data.Tree.Pretty
 
@@ -23,34 +23,24 @@ deriving instance Traversable AST
 deriving instance Eq a => Eq (AST a)
 deriving instance Ord a => Ord (AST a)
 
-newtype Mu f = Mu (f (Mu f))
-
-num = Mu . ANumber
-var = Mu . AVar
-lex = Mu . ALex
-lam = (Mu .) . ALambda
-app = (Mu .) . AApply
-
+num n = () :< ANumber n
+var v = () :< AVar v
+lex w = () :< ALex w
+lam v b = () :< ALambda v b
+app f x = () :< AApply f x
 
 type CfTree = Cofree AST
-type MuTree = Mu AST
 
-cf2tree1 :: CfTree String -> Tree String
-cf2tree1 (x :< f) = Node x $
-  case f of
-    AApply fun arg -> [cf2tree1 fun, cf2tree1 arg]
-    ALambda v body -> [Node ("λ" ++ v) [], cf2tree1 body]
-    _ -> []
-  
-cf2tree2 :: Show a => CfTree a -> Tree String
-cf2tree2 (x :< f) = Node (show x) $
-  case f of
-    AApply fun arg -> [cf2tree2 fun, cf2tree2 arg]
-    ALambda v body -> [Node ("λ" ++ v) [], cf2tree2 body]
-    _ -> []
+instance {-# OVERLAPPING #-} Show (CfTree String) where
+  show = drawVerticalTree . cf2tree1
+    where cf2tree1 (x :< f) = Node x $ case f of
+            AApply fun arg -> [cf2tree1 fun, cf2tree1 arg]
+            ALambda v body -> [Node ("\\" ++ v) [], cf2tree1 body]
+            _ -> []
 
-showMe1 :: CfTree String -> IO ()
-showMe1 = putStrLn . drawVerticalTree . cf2tree1
-
-showMe2 :: Show a => CfTree a -> IO ()
-showMe2 = putStrLn . drawVerticalTree . cf2tree2
+instance {-# OVERLAPPING #-} Show a => Show (CfTree a) where
+  show = drawVerticalTree . cf2tree2
+    where cf2tree2 (x :< f) = Node (show x) $ case f of
+            AApply fun arg -> [cf2tree2 fun, cf2tree2 arg]
+            ALambda v body -> [Node ("\\" ++ v) [], cf2tree2 body]
+            _ -> []
