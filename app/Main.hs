@@ -18,12 +18,12 @@ import Control.Monad.Trans.Class
 import System.Console.Haskeline
 
 
-cf2db :: CfTree a -> Exp String
+cf2db :: CfTree a -> Exp Prim String
 cf2db cf =
   case unwrap cf of
     ANumber i -> N i
     AVar x -> V x
-    ALex w -> fromLex lexicon (V w)
+    ALex w -> fromLex arith (V w)
     AApply m n -> cf2db m :@ cf2db n
     ALambda x body -> x ! cf2db body
 
@@ -40,22 +40,25 @@ labelNormals :: CfTree () -> IO ()
 labelNormals = print . extend (pretty . nf . cf2db)
 
 labelMeanings :: CfTree () -> IO ()
-labelMeanings = print . extend (eval defEnv . cf2db)
-  where defEnv =
-          [ ("id", VFun id)
-          , ("plus1", VFun $ \(VInt i) -> VInt (i+1))
-          , ("k1", VFun $ \(VFun g) -> g (VInt 1))
-          , ("k2k5", VFun $ \(VFun g) ->
-                        VFun $ \(VFun h) ->
-                          let VInt i = g (VInt 2)
-                              VInt j = h (VInt 5) in
-                          VInt $ i + j)
-          ]
+labelMeanings = print . extend (eval interp [] . cf2db)
+  -- where defEnv =
+  --         [ ("id", VFun id)
+  --         , ("plus1", VFun $ \(VInt i) -> VInt (i+1))
+  --         , ("k1", VFun $ \(VFun g) -> g (VInt 1))
+  --         , ("k2k5", VFun $ \(VFun g) ->
+  --                       VFun $ \(VFun h) ->
+  --                         let VInt i = g (VInt 2)
+  --                             VInt j = h (VInt 5) in
+  --                         VInt $ i + j)
+  --         , ("comp", VFun $ \(VFun f) ->
+  --                      VFun $ \(VFun g) ->
+  --                        VFun $ \vx -> f (g vx))
+  --         ]
 
 t1 = app (var "k1") (var "plus1")
 t2 = app (app (var "k2k5") (lam "x" (var "x"))) (lam "y" (var "z"))
 add23 = app (app (CF.lex "add") (CF.lex "two")) (CF.lex "three")
-iftt = app (app (CF.lex "if") (CF.lex "True")) (CF.lex "True")
+iftt = app (app (app (CF.lex "if") (CF.lex "true")) (num 4)) (num 7)
 comp = lam "f" (lam "g" (lam "x" (app (var "f") (app (var "g") (var "x")))))
 k3 = lam "k" (num 3)
 ident = lam "x" (var "x")
@@ -92,7 +95,7 @@ enumerate g cf = evalState (sequence $ extend enum cf) 0
         enum (() :< ANumber i) = state $ \s -> (Right $ "n" ++ show i, s+1)
         enum (() :< AVar x) = state $ \s -> (Right x, s+1)
         enum (() :< ALex w) = state $ \s ->
-          (Right $ pretty . nf $ fromLex lexicon (V w), s+1)
+          (Right $ pretty . nf $ fromLex arith (V w), s+1)
         enum (() :< ALambda x b) = state $ \s ->
           case g (s+1) of
             Nothing -> (Left s, s+1)
@@ -113,4 +116,3 @@ nthNode i cf = case iter cf 0 of {Left a -> Just a; Right _ -> Nothing}
 
 main :: IO ()
 main = acc (const Nothing) test 
-

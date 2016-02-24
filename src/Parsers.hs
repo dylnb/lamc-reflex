@@ -5,24 +5,24 @@ import CofreeTree
 import Text.Parsec
 
 
-type ExpParser = Parsec String () (Exp String)
+type ExpParser e = Parsec String () (Exp e String)
 
 plam = char '\\'
 pvar = return <$> letter
 pdot = (char '.' >> spaces) <|> skipMany1 space
 parens = between (char '(') (char ')')
 
-parseVar :: ExpParser
+parseVar :: ExpParser e
 parseVar = V <$> pvar
 
-parseAbs :: ExpParser
+parseAbs :: ExpParser e
 parseAbs = plam >> pvar >>= \v -> pdot >> parseTerm >>= \tm -> return (lambda v tm)
 
-parseNonApp :: ExpParser
+parseNonApp :: ExpParser e
 parseNonApp = parens parseTerm <|> parseAbs <|> parseVar
 
-parseTerm :: ExpParser
+parseTerm :: ExpParser e
 parseTerm = chainl1 parseNonApp (space >> return (:@))
 
-parseExp :: String -> Either ParseError (Exp String)
+parseExp :: String -> Either ParseError (Exp e String)
 parseExp = parse parseTerm "λ-calculus"

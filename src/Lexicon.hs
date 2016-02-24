@@ -1,13 +1,19 @@
 module Lexicon where
 
 import DbExp
+import PHOAS
 
-lexicon :: [(String, Exp String)]
-lexicon =
-  [ ("false",  "y" ! "n" ! V"n")
-  , ("true",   "y" ! "n" ! V"y")
-  , ("if",     "b" ! "y" ! "n" ! V"b" :@ V"y" :@ V"n")
-  , ("and",    "u" ! "v" ! V"u" :@ V"v" :@ V"false")
+data Prim
+  = Plus
+  | Times
+  deriving (Eq,Show)
+
+church :: [(String, Exp Prim String)]
+church =
+  [ ("false",  "y" ! "n" ! V"n") --, lp $ \y -> lp $ \n -> vp n)
+  , ("true",   "y" ! "n" ! V"y") --, lp $ \y -> lp $ \n -> vp y)
+  , ("if",     "b" ! "y" ! "n" ! V"b" :@ V"y" :@ V"n") --, lp $ \b -> vp b)
+  , ("and",    "u" ! "v" ! V"u" :@ V"v" :@ V"false")--, lp (\u -> lp (\v -> vp u `ap` vp v `ap` )))
   , ("or",     "u" ! "v" ! V"u" :@ V"true" :@ V"v")
   , ("not",    "u" ! "y" ! "n" ! V"u" :@ V"n" :@ V"y")
   , ("zero",   "s" ! "z" ! V"z")
@@ -34,4 +40,13 @@ lexicon =
   , ("n37",    V"succ" :@ (V"mul" :@ V"n6" :@ V"n6"))
   , ("n703",   V"sumto" :@ V"n37")
   , ("n720",   V"fac" :@ V"n6")
+  ]
+
+arith :: [(String, Exp Prim String)]
+arith =
+  [ ("a0", N 0)
+  , ("a1", N 1)
+  , ("a5", N 5)
+  , ("a7", N 7)
+  , ("ascc", "n" ! Ext Plus :@ V"n" :@ V"a1")
   ]

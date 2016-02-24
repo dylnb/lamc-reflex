@@ -21,6 +21,9 @@ library
                      , DbExp
                      , TypeCheck
                      , Parsers
+                     , Lexicon
+                     , PHOAS
+                     , HOAS
   build-depends:       base >= 4.7 && < 5
                      , bound
                      , prelude-extras

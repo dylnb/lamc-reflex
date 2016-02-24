@@ -16,54 +16,57 @@ import System.Exit
 
 infixl 9 :@
 
-data Exp a
+data Exp e a
   = N Int
   | V a
-  | Exp a :@ Exp a
-  | Lam (Scope (Name String ()) Exp a)
-  | Let [Scope (Name String Int) Exp a] (Scope (Name String Int) Exp a)
+  | Exp e a :@ Exp e a
+  | Lam (Scope (Name String ()) (Exp e) a)
+  | Let [Scope (Name String Int) (Exp e) a] (Scope (Name String Int) (Exp e) a)
+  | Ext e
   deriving (Eq,Ord,Show,Read)
 
-lambda :: String -> Exp String -> Exp String
+lambda :: String -> Exp e String -> Exp e String
 lambda u b = Lam (abstract1Name u b)
 
-let_ :: [(String, Exp String)] -> Exp String -> Exp String
+let_ :: [(String, Exp e String)] -> Exp e String -> Exp e String
 let_ [] b = b
 let_ bs b = Let (map (abstr . snd) bs) (abstr b)
   where abstr = abstractName (`elemIndex` map fst bs)
 
-instance Functor Exp  where fmap       = fmapDefault
-instance Foldable Exp where foldMap    = foldMapDefault
+instance Functor (Exp e) where fmap       = fmapDefault
+instance Foldable (Exp e) where foldMap    = foldMapDefault
 
--- deriving instance Functor Exp
+-- deriving instance Functor (Exp e)
 
-instance Applicative Exp where
+instance Applicative (Exp e) where
   pure  = V
   (<*>) = ap
 
-instance Traversable Exp where
+instance Traversable (Exp e) where
   traverse f (N i)      = pure (N i)
   traverse f (V a)      = V <$> f a
   traverse f (x :@ y)   = (:@) <$> traverse f x <*> traverse f y
   traverse f (Lam e)    = Lam <$> traverse f e
   traverse f (Let bs b) = Let <$> traverse (traverse f) bs <*> traverse f b
+  traverse f (Ext e)    = pure (Ext e)
 
-instance Monad Exp where
+instance Monad (Exp e) where
   return = V
   N i      >>= f = N i
   V a      >>= f = f a
   (x :@ y) >>= f = (x >>= f) :@ (y >>= f)
   Lam e    >>= f = Lam (e >>>= f)
   Let bs b >>= f = Let (map (>>>= f) bs) (b >>>= f)
+  Ext e    >>= f = Ext e
 
 -- these 4 classes are needed to help Eq, Ord, Show and Read pass through Scope
-instance Eq1 Exp      where (==#)      = (==)
-instance Ord1 Exp     where compare1   = compare
-instance Show1 Exp    where showsPrec1 = showsPrec
-instance Read1 Exp    where readsPrec1 = readsPrec
+instance Eq e => Eq1 (Exp e)               where (==#)      = (==)
+instance (Eq e, Ord e) => Ord1 (Exp e)     where compare1   = compare
+instance (Eq e, Show e) => Show1 (Exp e)   where showsPrec1 = showsPrec
+instance (Eq e, Read e) => Read1 (Exp e)   where readsPrec1 = readsPrec
 
 {--}
-nf :: Exp a -> Exp a
+nf :: Exp e a -> Exp e a
 nf e@N{}   = e
 nf e@V{}   = e
 nf (Lam b) = Lam $ toScope $ nf $ fromScope b
@@ -73,9 +76,10 @@ nf (f :@ a) = case whnf f of
 nf (Let bs b) = nf (inst b)
   where es = map inst bs
         inst = instantiateName (es !!)
+nf e@Ext{}   = e
 
 {--}
-whnf :: Exp a -> Exp a
+whnf :: Exp e a -> Exp e a
 whnf e@N{}   = e
 whnf e@V{}   = e
 whnf e@Lam{} = e
@@ -85,19 +89,20 @@ whnf (f :@ a) = case whnf f of
 whnf (Let bs b) = whnf (inst b)
   where es = map inst bs
         inst = instantiateName (es !!)
+whnf e@Ext{}   = e
 
 {--}
 infixr 0 !
-(!) :: String -> Exp String -> Exp String
+(!) :: String -> Exp e String -> Exp e String
 x ! t = lambda x t
 
-fromLex :: [(String, Exp String)] -> Exp String -> Exp a
-fromLex lexicon = fromJust . closed . let_ lexicon
+fromLex :: [(String, Exp e String)] -> Exp e String -> Exp e a
+fromLex lex = fromJust . closed . let_ lex
 
 
 -- TODO: use a real pretty printer
 
-prettyPrec :: [String] -> Bool -> Int -> Exp String -> ShowS
+prettyPrec :: Show e => [String] -> Bool -> Int -> Exp e String -> ShowS
 prettyPrec _      d n (N i)      = showString (show i)
 prettyPrec _      d n (V a)      = showString a
 prettyPrec vs     d n (x :@ y)   = showParen d $ 
@@ -116,11 +121,12 @@ prettyPrec vs     d n (Let bs b) = showParen d $
         inst = instantiateName (\n -> V (xs !! n))
         indent = showString ('\n' : replicate (n + 4) ' ')
         showBinding x b = indent . showString x . showString " = " . prettyPrec ys False (n + 4) (inst b)
+prettyPrec _      d n (Ext e) = showString (show e)
 
-prettyWith :: [String] -> Exp String -> String
+prettyWith :: Show e => [String] -> Exp e String -> String
 prettyWith vs t = prettyPrec (filter (`notElem` toList t) vs) False 0 t ""
 
-pretty :: Exp String -> String
+pretty :: Show e => Exp e String -> String
 pretty = prettyWith $ [ [i] | i <- ['a'..'z']] ++ [i : show j | j <- [1..], i <- ['a'..'z'] ]
 
 --}
