@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+set -e
+
+unset STACK_YAML
+source "ghcjsi-setup"
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+CONFIG="$1"
+case "$CONFIG" in
+    old)
+        export STACK_YAML="$DIR/stack-ghcjs-old-base.yaml"
+        ;;
+
+    ghcjsi)
+        repo_branch="ghcjsi"
+        repo_url="https://github.com/ghcjs/ghcjs.git"
+        patch_path="$DIR/ghcjs-vanilla.patch"
+        clone_path="ghcjs-vanilla"
+        ghcjs_name="ghcjs-0.2.0.20151007"
+        ghc_name="ghc-7.10.2"
+
+        setup_compiler $repo_url $repo_branch $clone_path $patch_path $ghcjs_name $ghc_name
+        export STACK_YAML=stack-ghcjsi-improved-base.yaml
+        ;;
+
+    ghcjsi-fork)
+        repo_branch="nbo_freeze"
+        repo_url="https://github.com/NewByteOrder/ghcjs.git"
+        patch_path="$DIR/ghcjs-fork.patch"
+        clone_path="ghcjs-fork"
+        ghcjs_name="ghcjs-0.2.0.20160201"
+        ghc_name="ghc-7.10.2"
+
+        setup_compiler $repo_url $repo_branch $clone_path $patch_path $ghcjs_name $ghc_name
+        export STACK_YAML="$DIR/stack-ghcjsi-fork.yaml"
+        ;;
+
+    *)
+        export STACK_YAML="$DIR/stack-ghcjs-improved-base.yaml"
+        ;;
+esac
+
+if [ ! -d reflex-todomvc ]; then
+   git clone -b ghcjs-improved-base https://github.com/ryantrinkle/reflex-todomvc.git
+   (cd reflex-todomvc; npm install socket.io@1.3.7)
+fi
+
+stack setup
+stack build
+
+local_install_root=$(stack path --local-install-root)
+echo "open in your browser: $local_install_root/bin/reflex-todomvc.jsexe/index.html"
+
