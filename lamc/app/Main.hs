@@ -1,4 +1,5 @@
 {-# LANGUAGE FlexibleContexts, RecursiveDo, ScopedTypeVariables #-}
+{-# LANGUAGE TemplateHaskell #-}
 
 module Main where
 
@@ -17,6 +18,7 @@ import Data.Maybe (fromMaybe, fromJust)
 import Control.Monad.Trans.Class
 
 import Reflex.Dom
+import Data.FileEmbed
 
 cf2db :: CfTree a -> Exp String
 cf2db cf =
@@ -121,22 +123,23 @@ nthNode i cf = case iter cf 0 of {Left a -> Just a; Right _ -> Nothing}
 
 main :: IO ()
 -- main = acc (const Nothing) test 
-main = mainWidget $ el "div" $ do
-  activeFilter <- controls 
-  let nodeCompute filter = case filter of {Types -> labelTypes; Terms -> labelNormals}
-  newTerm <- termEntry
-  dynTree <- holdDyn ident newTerm
-  -- el "pre" $ display =<< mapDyn (extend (pretty . nf . cf2db)) dynTree
-  el "pre" $ do
-    labelFunc <- mapDyn nodeCompute activeFilter
-    t <- combineDyn id labelFunc dynTree
-    dynText t
-  return ()
+main = mainWidgetWithCss $(embedFile "static/lamc.css") $
+  divClass "page-wrap" $
+    divClass "column-main" $ do
+      activeFilter <- controls 
+      let nodeCompute filter = case filter of {Types -> labelTypes; Terms -> labelNormals}
+      newTerm <- termEntry
+      dynTree <- holdDyn ident newTerm
+      -- el "pre" $ display =<< mapDyn (extend (pretty . nf . cf2db)) dynTree
+      el "pre" $ do
+        labelFunc <- mapDyn nodeCompute activeFilter
+        dynText =<< combineDyn id labelFunc dynTree
+      return ()
 
 data Filter = Types | Terms deriving (Show,Eq)
 
 controls :: MonadWidget t m => m (Dynamic t Filter)
-controls = do
+controls = divClass "controls" $ do
   elAttr "ul" ("class" =: "filters") $ do
     rec activeFilter <- holdDyn Terms setFilter
         typesButton <- el "li" $ do
@@ -152,14 +155,16 @@ controls = do
     return activeFilter
 
 termEntry :: MonadWidget t m => m (Event t (CfTree ()))
-termEntry = el "div" $ do
+termEntry = divClass "sh" $ do
+  let termBoxAttrs = ["placeholder" =: "Enter a term", "name" =: "newTerm", "id" =: "query"]
   rec let newValueEntered = ffilter (==keycodeEnter) (_textInput_keypress termBox)
-      termBox <- textInput $ def & setValue .~ fmap (const "") newValueEntered
-                                 & attributes .~ constDyn (mconcat [ "placeholder" =: "Term?"
-                                                                   , "name" =: "newTerm" ])
+      termBox <- divClass "query" $
+        textInput $ def & setValue .~ fmap (const "") newValueEntered
+                        & attributes .~ constDyn (mconcat termBoxAttrs)
   let newValue = tag (current $ _textInput_value termBox) newValueEntered
       newTerm = fmapMaybe checkTerm newValue
-  el "pre" $ dynText =<< holdDyn "Term?" (fmap fringe newTerm)
+  elAttr "pre" ("class" =: "curterm") $
+    dynText =<< holdDyn "Showing: \\x. x" (fmap (("Showing: " ++) . fringe) newTerm)
   el "br" (return ())
   return newTerm
   where checkTerm t = lookup t demoTerms `mplus` either (const Nothing) Just (parseCf t)

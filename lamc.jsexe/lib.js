@@ -1759,6 +1759,551 @@ function h$rand() {
 /* wchar_t uses ISO/IEC 10646 (2nd ed., published 2011-03-15) /
    Unicode 6.0.  */
 /* We do not support C11 <threads.h>.  */
+/* include/HsBaseConfig.h.  Generated from HsBaseConfig.h.in by configure.  */
+/* include/HsBaseConfig.h.in.  Generated from configure.ac by autoheader.  */
+/* The value of E2BIG. */
+/* The value of EACCES. */
+/* The value of EADDRINUSE. */
+/* The value of EADDRNOTAVAIL. */
+/* The value of EADV. */
+/* The value of EAFNOSUPPORT. */
+/* The value of EAGAIN. */
+/* The value of EALREADY. */
+/* The value of EBADF. */
+/* The value of EBADMSG. */
+/* The value of EBADRPC. */
+/* The value of EBUSY. */
+/* The value of ECHILD. */
+/* The value of ECOMM. */
+/* The value of ECONNABORTED. */
+/* The value of ECONNREFUSED. */
+/* The value of ECONNRESET. */
+/* The value of EDEADLK. */
+/* The value of EDESTADDRREQ. */
+/* The value of EDIRTY. */
+/* The value of EDOM. */
+/* The value of EDQUOT. */
+/* The value of EEXIST. */
+/* The value of EFAULT. */
+/* The value of EFBIG. */
+/* The value of EFTYPE. */
+/* The value of EHOSTDOWN. */
+/* The value of EHOSTUNREACH. */
+/* The value of EIDRM. */
+/* The value of EILSEQ. */
+/* The value of EINPROGRESS. */
+/* The value of EINTR. */
+/* The value of EINVAL. */
+/* The value of EIO. */
+/* The value of EISCONN. */
+/* The value of EISDIR. */
+/* The value of ELOOP. */
+/* The value of EMFILE. */
+/* The value of EMLINK. */
+/* The value of EMSGSIZE. */
+/* The value of EMULTIHOP. */
+/* The value of ENAMETOOLONG. */
+/* The value of ENETDOWN. */
+/* The value of ENETRESET. */
+/* The value of ENETUNREACH. */
+/* The value of ENFILE. */
+/* The value of ENOBUFS. */
+/* The value of ENOCIGAR. */
+/* The value of ENODATA. */
+/* The value of ENODEV. */
+/* The value of ENOENT. */
+/* The value of ENOEXEC. */
+/* The value of ENOLCK. */
+/* The value of ENOLINK. */
+/* The value of ENOMEM. */
+/* The value of ENOMSG. */
+/* The value of ENONET. */
+/* The value of ENOPROTOOPT. */
+/* The value of ENOSPC. */
+/* The value of ENOSR. */
+/* The value of ENOSTR. */
+/* The value of ENOSYS. */
+/* The value of ENOTBLK. */
+/* The value of ENOTCONN. */
+/* The value of ENOTDIR. */
+/* The value of ENOTEMPTY. */
+/* The value of ENOTSOCK. */
+/* The value of ENOTSUP. */
+/* The value of ENOTTY. */
+/* The value of ENXIO. */
+/* The value of EOPNOTSUPP. */
+/* The value of EPERM. */
+/* The value of EPFNOSUPPORT. */
+/* The value of EPIPE. */
+/* The value of EPROCLIM. */
+/* The value of EPROCUNAVAIL. */
+/* The value of EPROGMISMATCH. */
+/* The value of EPROGUNAVAIL. */
+/* The value of EPROTO. */
+/* The value of EPROTONOSUPPORT. */
+/* The value of EPROTOTYPE. */
+/* The value of ERANGE. */
+/* The value of EREMCHG. */
+/* The value of EREMOTE. */
+/* The value of EROFS. */
+/* The value of ERPCMISMATCH. */
+/* The value of ERREMOTE. */
+/* The value of ESHUTDOWN. */
+/* The value of ESOCKTNOSUPPORT. */
+/* The value of ESPIPE. */
+/* The value of ESRCH. */
+/* The value of ESRMNT. */
+/* The value of ESTALE. */
+/* The value of ETIME. */
+/* The value of ETIMEDOUT. */
+/* The value of ETOOMANYREFS. */
+/* The value of ETXTBSY. */
+/* The value of EUSERS. */
+/* The value of EWOULDBLOCK. */
+/* The value of EXDEV. */
+/* The value of O_BINARY. */
+/* The value of SIGINT. */
+/* Define to 1 if you have the `clock_gettime' function. */
+/* #undef HAVE_CLOCK_GETTIME */
+/* Define to 1 if you have the <ctype.h> header file. */
+/* Define if you have epoll support. */
+/* #undef HAVE_EPOLL */
+/* Define to 1 if you have the `epoll_ctl' function. */
+/* #undef HAVE_EPOLL_CTL */
+/* Define to 1 if you have the <errno.h> header file. */
+/* Define to 1 if you have the `eventfd' function. */
+/* #undef HAVE_EVENTFD */
+/* Define to 1 if you have the <fcntl.h> header file. */
+/* Define to 1 if you have the `ftruncate' function. */
+/* Define to 1 if you have the `getclock' function. */
+/* #undef HAVE_GETCLOCK */
+/* Define to 1 if you have the `getrusage' function. */
+/* Define to 1 if you have the <inttypes.h> header file. */
+/* Define to 1 if you have the `iswspace' function. */
+/* Define to 1 if you have the `kevent' function. */
+/* Define to 1 if you have the `kevent64' function. */
+/* Define if you have kqueue support. */
+/* Define to 1 if you have the <langinfo.h> header file. */
+/* Define to 1 if you have libcharset. */
+/* Define to 1 if you have the `rt' library (-lrt). */
+/* #undef HAVE_LIBRT */
+/* Define to 1 if you have the <limits.h> header file. */
+/* Define to 1 if the system has the type `long long'. */
+/* Define to 1 if you have the `lstat' function. */
+/* Define to 1 if you have the <memory.h> header file. */
+/* Define if you have poll support. */
+/* Define to 1 if you have the <poll.h> header file. */
+/* Define to 1 if you have the <signal.h> header file. */
+/* Define to 1 if you have the <stdint.h> header file. */
+/* Define to 1 if you have the <stdlib.h> header file. */
+/* Define to 1 if you have the <strings.h> header file. */
+/* Define to 1 if you have the <string.h> header file. */
+/* Define to 1 if you have the <sys/epoll.h> header file. */
+/* #undef HAVE_SYS_EPOLL_H */
+/* Define to 1 if you have the <sys/eventfd.h> header file. */
+/* #undef HAVE_SYS_EVENTFD_H */
+/* Define to 1 if you have the <sys/event.h> header file. */
+/* Define to 1 if you have the <sys/resource.h> header file. */
+/* Define to 1 if you have the <sys/select.h> header file. */
+/* Define to 1 if you have the <sys/stat.h> header file. */
+/* Define to 1 if you have the <sys/syscall.h> header file. */
+/* Define to 1 if you have the <sys/timeb.h> header file. */
+/* Define to 1 if you have the <sys/timers.h> header file. */
+/* #undef HAVE_SYS_TIMERS_H */
+/* Define to 1 if you have the <sys/times.h> header file. */
+/* Define to 1 if you have the <sys/time.h> header file. */
+/* Define to 1 if you have the <sys/types.h> header file. */
+/* Define to 1 if you have the <sys/utsname.h> header file. */
+/* Define to 1 if you have the <sys/wait.h> header file. */
+/* Define to 1 if you have the <termios.h> header file. */
+/* Define to 1 if you have the `times' function. */
+/* Define to 1 if you have the <time.h> header file. */
+/* Define to 1 if you have the <unistd.h> header file. */
+/* Define to 1 if you have the <utime.h> header file. */
+/* Define to 1 if you have the <wctype.h> header file. */
+/* Define to 1 if you have the <windows.h> header file. */
+/* #undef HAVE_WINDOWS_H */
+/* Define to 1 if you have the <winsock.h> header file. */
+/* #undef HAVE_WINSOCK_H */
+/* Define to 1 if you have the `_chsize' function. */
+/* #undef HAVE__CHSIZE */
+/* Define to Haskell type for cc_t */
+/* Define to Haskell type for char */
+/* Define to Haskell type for clock_t */
+/* Define to Haskell type for dev_t */
+/* Define to Haskell type for double */
+/* Define to Haskell type for float */
+/* Define to Haskell type for gid_t */
+/* Define to Haskell type for ino_t */
+/* Define to Haskell type for int */
+/* Define to Haskell type for intmax_t */
+/* Define to Haskell type for intptr_t */
+/* Define to Haskell type for long */
+/* Define to Haskell type for long long */
+/* Define to Haskell type for mode_t */
+/* Define to Haskell type for nlink_t */
+/* Define to Haskell type for off_t */
+/* Define to Haskell type for pid_t */
+/* Define to Haskell type for ptrdiff_t */
+/* Define to Haskell type for rlim_t */
+/* Define to Haskell type for short */
+/* Define to Haskell type for signed char */
+/* Define to Haskell type for sig_atomic_t */
+/* Define to Haskell type for size_t */
+/* Define to Haskell type for speed_t */
+/* Define to Haskell type for ssize_t */
+/* Define to Haskell type for suseconds_t */
+/* Define to Haskell type for tcflag_t */
+/* Define to Haskell type for time_t */
+/* Define to Haskell type for uid_t */
+/* Define to Haskell type for uintmax_t */
+/* Define to Haskell type for uintptr_t */
+/* Define to Haskell type for unsigned char */
+/* Define to Haskell type for unsigned int */
+/* Define to Haskell type for unsigned long */
+/* Define to Haskell type for unsigned long long */
+/* Define to Haskell type for unsigned short */
+/* Define to Haskell type for useconds_t */
+/* Define to Haskell type for wchar_t */
+/* Define to the address where bug reports for this package should be sent. */
+/* Define to the full name of this package. */
+/* Define to the full name and version of this package. */
+/* Define to the one symbol short name of this package. */
+/* Define to the home page for this package. */
+/* Define to the version of this package. */
+/* The size of `kev.filter', as computed by sizeof. */
+/* The size of `kev.flags', as computed by sizeof. */
+/* The size of `struct MD5Context', as computed by sizeof. */
+/* Define to 1 if you have the ANSI C header files. */
+/* Number of bits in a file offset, on hosts where this is settable. */
+/* #undef _FILE_OFFSET_BITS */
+/* Define for large files, on AIX-style hosts. */
+/* #undef _LARGE_FILES */
+// get/set permissions for file
+// set errno and return -1 on error
+// masks: 1 - read
+//        2 - write
+//        4 - exe
+//        8 - search
+function h$directory_getPermissions(file, c) {
+    ;
+    if(h$isNode) {
+        h$fs.stat(file, function(err, fs) {
+            if(err) {
+                h$handleErrnoC(err, -1, 0, c);
+            } else {
+                var m = fs.mode;
+                var r = (m&4) || (m&32) || (m&256);
+                var w = (m&2) || (m&16) || (m&128);
+                var x = (m&1) || (m&8) || (m&64);
+                var exe = x; // fixme?
+                var search = x; // fixme?
+                if(process.platform == 'win32') exe = true;
+                c((r?1:0)|(w?2:0)|(exe?4:0)|(search?8:0));
+            }
+        });
+    } else
+        h$unsupported(-1, c);
+}
+function h$directory_setPermissions(file, perms, c) {
+    ;
+    if(h$isNode) {
+        h$fs.stat(file, function(err, fs) {
+            if(err) {
+                h$handleErrnoC(err, -1, 0, c);
+            } else {
+                var r = perms & 1;
+                var w = perms & 2;
+                var x = perms & 4;
+                var search = perms & 8;
+                var m = fs.mode;
+                m = r ? (m | 292) : (m & ~292);
+                m = w ? (m | 146) : (m & ~146);
+                m = (x || search) ? (m | 73) : (m & ~73);
+                h$fs.chmod(file, function(err) {
+                    h$handleErrnoC(err, -1, 0, c);
+                });
+            }
+        });
+    } else
+        h$unsupported(-1, c);
+}
+function h$directory_copyPermissions(file1, file2, c) {
+    ;
+    if(h$isNode) {
+        h$fs.stat(file1, function(err1, fs) {
+            if(err1) {
+                h$handleErrnoC(err1, -1, 0, c);
+            } else {
+                h$fs.chmod(file2, fs.mode, function(err2) {
+                    h$handleErrnoC(err2, -1, 0, c);
+                });
+            }
+        });
+    } else
+        h$unsupported(-1, c);
+}
+function h$directory_createDirectory(dir, c) {
+    ;
+    if(h$isNode) {
+        h$fs.mkdir(dir, function(err) {
+            h$handleErrnoC(err,-1,0,c);
+        });
+    } else
+        h$unsupported(-1, c);
+}
+function h$directory_removeDirectory(dir, c) {
+    ;
+    if(h$isNode) {
+        h$fs.rmdir(dir, function(err) {
+            h$handleErrnoC(err,-1,0,c);
+        });
+    } else
+        h$unsupported(-1, c);
+}
+function h$directory_removeFile(file, c) {
+    ;
+    if(h$isNode) {
+        h$fs.unlink(file, function(err) {
+            h$handleErrnoC(err,-1,0,c);
+        });
+    } else
+        h$unsupported(-1, c);
+}
+function h$directory_renameDirectory(dir1, dir2, c) {
+    ;
+    if(h$isNode) {
+        h$fs.rename(dir1, dir2, function(err) {
+            h$handleErrnoC(err,-1,0,c);
+        });
+    } else
+        h$unsupported(-1, c);
+}
+function h$directory_renameFile(file1, file2, c) {
+    ;
+    if(h$isNode) {
+        h$fs.rename(file1, file2, function(err) {
+            h$handleErrnoC(err,-1,0,c);
+        });
+    } else
+        h$unsupported(-1, c);
+}
+function h$directory_canonicalizePath(path) {
+    ;
+    if(h$isNode) {
+        return h$path.normalize(path);
+    } else
+        return path;
+}
+function h$directory_findExecutables(name, c) {
+    ;
+    if(h$isNode) {
+        var result = [];
+        var pathSep = process.platform === 'win32'?';':':';
+        var parts = process.env['PATH'].split(pathSep);
+        var exts = []; // process.platform === 'win32'?process.env['PATHEXT'].split(pathSep):[];
+        exts.push(null);
+        files = [];
+        result = [];
+        for(var i=0;i<parts.length;i++) {
+            for(var j=0;j<exts.length;j++) {
+                files.push(parts[i] + h$path.sep + name + (exts[j]?(exts[j]):""));
+            }
+        }
+        var tryFile = function(n) {
+            if(n >= files.length) {
+                c(result);
+            } else {
+                ;
+                h$fs.stat(files[n], function(err, fs) {
+                    if(!err && ((fs.mode & 73) || process.platform === 'win32')) result.push(files[n]);
+                    tryFile(n+1);
+                });
+            }
+        }
+        tryFile(0);
+    } else
+        c([]);
+}
+function h$directory_getDirectoryContents(dir,c) {
+    ;
+    if(h$isNode) {
+        h$fs.readdir(dir, function(err, d) {
+            h$handleErrnoC(err, null, d, c);
+        });
+    } else
+        h$unsupported(null, c);
+}
+function h$directory_getCurrentDirectory() {
+    ;
+    if(h$isNode) {
+        return h$handleErrno(null, function() {
+            return process.cwd();
+        });
+    } else
+        return "/";
+}
+function h$directory_setCurrentDirectory(dir) {
+    ;
+    if(h$isNode) {
+        return h$handleErrnoS(-1, 0, function() {
+            return process.chdir(dir);
+        });
+    } else
+        return h$unsupported(-1);
+}
+function h$directory_getHomeDirectory(dir) {
+    ;
+    if(h$isNode) {
+        return process.env['HOME'] ||
+            process.env['HOMEPATH'] ||
+            process.env['USERPROFILE'];
+    } else
+        return "/"
+}
+function h$directory_getAppUserDataDirectory(appName) {
+    ;
+    if(h$isNode) {
+        if(process.env['APPDATA'])
+            return process.env['APPDATA'] + h$path.sep + appName;
+        if(process.env['HOME'])
+            return process.env['HOME'] + h$path.sep + "." + appName;
+        ;
+        return "/";
+    } else
+        return "/";
+}
+function h$directory_getUserDocumentsDirectory(appName) {
+    ;
+    if(h$isNode) {
+        if(process.env['HOME'])
+            return process.env['HOME'];
+        // fixme handle Windows
+        ;
+        return "/";
+    } else
+        return "/";
+}
+function h$directory_getTemporaryDirectory() {
+    ;
+    if(h$isNode) {
+        return h$handleErrno(null, function() {
+            return h$os.tmpdir();
+        });
+    } else
+        return "/";
+}
+function h$directory_exeExtension() {
+    ;
+    if(h$isNode) {
+        return (h$os.platform() === 'windows') ? 'exe' : '';
+    } else
+        return '';
+}
+function h$directory_getFileStatus(file, c) {
+    ;
+    if(h$isNode) {
+        h$fs.stat(file, function(err, s) {
+            h$handleErrnoC(err, null, s, c);
+        });
+    } else
+        h$unsupported(null, c);
+}
+function h$directory_getFileOrSymlinkStatus(file, c) {
+    ;
+    if(h$isNode) {
+        h$fs.lstat(file, function(err, s) {
+            h$handleErrnoC(err, null, s, c);
+        });
+    } else
+        h$unsupported(null, c);
+}
+function h$directory_getFileStatusModificationTime(fs) {
+    ;
+    return fs.mtime.getTime();
+}
+function h$directory_getFileStatusIsDirectory(fs) {
+    ;
+    return fs.isDirectory();
+}
+// fixme this doesn't really belong here
+function h$chmod(path_d, path_o, m) {
+    if(h$isNode) {
+        var path = h$decodeUtf8z(path_d, path_o);
+        ;
+        h$fs.chmodSync(path, m);
+        return 0;
+    } else
+        return h$unsupported(-1);
+}
+/* Copyright (C) 1991-2014 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+/* This header is separate from features.h so that the compiler can
+   include it implicitly at the start of every compilation.  It must
+   not itself include <features.h> or any other header that includes
+   <features.h> because the implicit include comes before any feature
+   test macros that may be defined in a source file before it first
+   explicitly includes a system header.  GCC knows the name of this
+   header in order to preinclude it.  */
+/* glibc's intent is to support the IEC 559 math functionality, real
+   and complex.  If the GCC (4.9 and later) predefined macros
+   specifying compiler intent are available, use them to determine
+   whether the overall intent is to support these features; otherwise,
+   presume an older compiler has intent to support these features and
+   define these macros by default.  */
+/* wchar_t uses ISO/IEC 10646 (2nd ed., published 2011-03-15) /
+   Unicode 6.0.  */
+/* We do not support C11 <threads.h>.  */
+function h$filepath_isWindows() {
+    if(h$isNode && process.platform === 'win32') return true;
+  return false;
+}
+/* Copyright (C) 1991-2014 Free Software Foundation, Inc.
+   This file is part of the GNU C Library.
+
+   The GNU C Library is free software; you can redistribute it and/or
+   modify it under the terms of the GNU Lesser General Public
+   License as published by the Free Software Foundation; either
+   version 2.1 of the License, or (at your option) any later version.
+
+   The GNU C Library is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with the GNU C Library; if not, see
+   <http://www.gnu.org/licenses/>.  */
+/* This header is separate from features.h so that the compiler can
+   include it implicitly at the start of every compilation.  It must
+   not itself include <features.h> or any other header that includes
+   <features.h> because the implicit include comes before any feature
+   test macros that may be defined in a source file before it first
+   explicitly includes a system header.  GCC knows the name of this
+   header in order to preinclude it.  */
+/* glibc's intent is to support the IEC 559 math functionality, real
+   and complex.  If the GCC (4.9 and later) predefined macros
+   specifying compiler intent are available, use them to determine
+   whether the overall intent is to support these features; otherwise,
+   presume an older compiler has intent to support these features and
+   define these macros by default.  */
+/* wchar_t uses ISO/IEC 10646 (2nd ed., published 2011-03-15) /
+   Unicode 6.0.  */
+/* We do not support C11 <threads.h>.  */
 function h$ghcjs_currentWindow() {
   return window;
 };
