@@ -1,76 +1,11 @@
-Poly
-====
+repl for displaying tree-like derivations of lambda terms with type and/or
+normal-form annotations.
 
-A simple ML dialect with definitions, let polymorphism and a fixpoint operator.
-Uses syntax directed HM type inference.
+nearly all of the type inference and repl code is from [write you a
+haskell](https://github.com/sdiehl/write-you-a-haskell/tree/master/chapter7/poly_constraints).
 
-To compile and run:
+the cofree technique for annotations is from [this blog
+post](https://brianmckenna.org/blog/type_annotation_cofree).
 
-```shell
-$ cabal run
-```
-
-Usage:
-
-```ocaml
-Poly> let i x = x;
-i : forall a. a -> a
-
-Poly> i 3
-3
-
-Poly> :type i
-i : forall a. a -> a
-
-Poly> :type let k x y = x;
-k : forall a b. a -> b -> a
-
-Poly> :type let s f g x = f x (g x)
-s : forall a b c. ((a -> b) -> c -> a) -> (a -> b) -> c -> b
-
-Poly> :type let on g f = \x y -> g (f x) (f y)
-on : forall a b c. (a -> a -> b) -> (c -> a) -> c -> c -> b
-
-Poly> :type let let_bound = i (i i) (i 3)
-let_bound : Int
-
-Poly> :type let compose f g = \x -> f (g x)
-compose : forall a b c. (a -> b) -> (c -> a) -> c -> b
-
-Poly> let rec factorial n = 
-  if (n == 0) 
-  then 1
-  else (n * (factorial (n-1)));
-```
-
-Notes
-=====
-
-Top level let declarations are syntactic sugar for nested lambda. For example: 
-
-```ocaml
-let add x y = x + y;
-```
-
-Is semantically equivalent to:
-
-```ocaml
-let add = \x -> \y -> x + y;
-```
-
-Top level Let-rec declarations are syntactic sugar for use of the ``fix``
-operator. For example:
-
-```ocaml
-let rec factorial n = if (n == 0) then 1 else (n * (factorial (n-1)));
-```
-Is semantically equivalent to:
-
-```ocaml
-let factorial = fix (\factorial n -> if (n == 0) then 1 else (n * (factorial (n-1))));
-```
-
-License
-=======
-
-Released under MIT license.
+and the de bruijn encoding and normalizing routine come basically straight from
+the examples in the [bound](http://hackage.haskell.org/package/bound) library.
