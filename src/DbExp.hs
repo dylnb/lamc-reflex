@@ -19,7 +19,11 @@ infixl 9 :@
 data L
   = LI Integer
   | LB Bool
-  deriving (Show, Eq, Ord, Read)
+  deriving (Eq, Ord, Read)
+
+instance Show L where
+  show (LI n) = show n
+  show (LB b) = show b
 
 data Exp a
   = L L

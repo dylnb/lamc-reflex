@@ -8,10 +8,6 @@ module Infer (
   Subst(..),
   inferTop,
   constraintsExpr,
-  infer,
-  infer',
-  runInfer,
-  apply
 ) where
 
 import Env
@@ -112,13 +108,17 @@ inferExpr env ex = case runInfer env (infer ex) of
     Right subst -> Right $ closeOver $ apply subst ty
 
 -- | Return the internal constraints used in solving for the type of an expression
-constraintsExpr :: Env -> CfExpr () -> Either TypeError ([Constraint], Subst, Type, Scheme)
-constraintsExpr env ex = case runInfer env (infer ex) of
+constraintsExpr ::
+  Env -> CfExpr () ->
+  Either TypeError ([Constraint], Subst, CfExpr Type, CfExpr Type, Type, Scheme)
+constraintsExpr env ex = case runInfer env (infer' ex) of
   Left err -> Left err
-  Right (ty, cs) -> case runSolve cs of
+  Right (tytree, cs) -> case runSolve cs of
     Left err -> Left err
-    Right subst -> Right $ (cs, subst, ty, sc)
+    Right subst -> Right (cs, subst, tytree, tytree_subst, ty, sc)
       where
+        tytree_subst = fmap (apply subst) tytree
+        ty = extract tytree
         sc = closeOver $ apply subst ty
 
 -- | Canonicalize and return the polymorphic toplevel type.
@@ -188,23 +188,24 @@ infer' expr = case unwrap expr of
     return $ tv :< App (t1 :< e1') (t2 :< e2')
 
 infer :: CfExpr () -> Infer Type
-infer expr = case unwrap expr of
-  Lit (LInt _)  -> return $ typeInt
-  Lit (LBool _) -> return $ typeBool
+infer expr = fmap extract $ infer' expr
+-- infer expr = case unwrap expr of
+--   Lit (LInt _)  -> return $ typeInt
+--   Lit (LBool _) -> return $ typeBool
 
-  Var x -> lookupEnv x
+--   Var x -> lookupEnv x
 
-  Lam x e -> do
-    tv <- fresh
-    t <- inEnv (x, Forall [] tv) (infer e)
-    return (tv `TArr` t)
+--   Lam x e -> do
+--     tv <- fresh
+--     t <- inEnv (x, Forall [] tv) (infer e)
+--     return (tv `TArr` t)
 
-  App e1 e2 -> do
-    t1 <- infer e1
-    t2 <- infer e2
-    tv <- fresh
-    uni t1 (t2 `TArr` tv)
-    return tv
+--   App e1 e2 -> do
+--     t1 <- infer e1
+--     t2 <- infer e2
+--     tv <- fresh
+--     uni t1 (t2 `TArr` tv)
+--     return tv
 
   -- Let x e1 e2 -> do
   --   env <- ask

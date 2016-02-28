@@ -115,11 +115,13 @@ ppexpr = render . ppr 0
 
 ppexpr' :: Pretty a => CfExpr a -> String
 ppexpr' = drawVerticalTree . cf2tree
-  where cf2tree expr = case unwrap expr of
-          App fun arg -> Node (render . ppr 0 $ extract expr) [cf2tree fun, cf2tree arg]
-          Lam v body  -> Node (render . ppr 0 $ extract expr) [Node ("\\" ++ v) [], cf2tree body]
-          Lit w       -> Node (show w ++ ": " ++ render (ppr 0 $ extract expr)) []
-          Var v       -> Node (v ++ ": " ++ render (ppr 0 $ extract expr)) []
+  where
+    cf2tree expr =
+      case unwrap expr of
+        App fun arg -> Node (render . ppr 0 $ extract expr) [cf2tree fun, cf2tree arg]
+        Lam v body  -> Node (render . ppr 0 $ extract expr) [Node ("\\" ++ v) [], cf2tree body]
+        Lit w       -> Node (render (ppr 0 w) ++ ": " ++ render (ppr 0 $ extract expr)) []
+        Var v       -> Node (v ++ ": " ++ render (ppr 0 $ extract expr)) []
 
 ppsignature :: (String, Scheme) -> String
 ppsignature (a, b) = a ++ " : " ++ ppscheme b

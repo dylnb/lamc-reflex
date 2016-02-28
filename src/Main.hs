@@ -117,38 +117,34 @@ typeof args = do
 quit :: a -> Repl ()
 quit _ = liftIO $ exitSuccess
 
+-- :tree command
 tree :: [String] -> Repl ()
 tree args = do
   st <- get
   let arg = unwords args
+  exec False (L.pack arg)
   mod <- hoistErr $ parseModule "<stdin>" (L.pack arg)
-  case lookup "it" mod of
-    Nothing -> return ()
-    Just ex -> do
-      (cs, subst, ty, sc) <- hoistErr $ constraintsExpr (tyctx st) ex
-      (tytree, _) <- hoistErr $ runInfer (tyctx st) (infer' ex)
-      liftIO $ putStrLn $ ppexpr' $ fmap (apply subst) tytree
+  let Just ex = lookup "it" mod
+  (_, _, _, tt_subs, _, _) <- hoistErr $ constraintsExpr (tyctx st) ex
+  liftIO $ putStrLn $ ppexpr' $ tt_subs
 
+-- :terms command
 terms :: [String] -> Repl ()
 terms args = do
   st <- get
   let arg = unwords args
+  exec False (L.pack arg)
   mod <- hoistErr $ parseModule "<stdin>" (L.pack arg)
-  case lookup "it" mod of
-    Nothing -> return ()
-    Just ex -> do
-      (cs, subst, ty, sc) <- hoistErr $ constraintsExpr (tyctx st) ex
-      liftIO $ putStrLn $ ppexpr' $ extend (nf . cf2db) ex
-      -- liftIO $ putStrLn $ ppexpr' $ fmap (apply subst) tytree
-
-cf2db :: CfExpr a -> Exp String
-cf2db cf =
-  case unwrap cf of
-    Lit (LInt n) -> L (LI n)
-    Lit (LBool b) -> L (LB b)
-    Var x -> V x
-    App m n -> cf2db m :@ cf2db n
-    Lam x body -> x ! cf2db body
+  let Just ex = lookup "it" mod
+  liftIO $ putStrLn $ ppexpr' $ extend (nf . cf2db) ex
+  where
+    cf2db cf =
+      case unwrap cf of
+        Lit (LInt n) -> L (LI n)
+        Lit (LBool b) -> L (LB b)
+        Var x -> V x
+        App m n -> cf2db m :@ cf2db n
+        Lam x body -> x ! cf2db body
 
 
 -------------------------------------------------------------------------------
