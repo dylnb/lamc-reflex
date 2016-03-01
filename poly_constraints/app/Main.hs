@@ -5,6 +5,9 @@
 {-# LANGUAGE RecursiveDo #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE CPP                      #-}
+{-# LANGUAGE ForeignFunctionInterface #-}
+{-# LANGUAGE JavaScriptFFI            #-}
 
 module Main where
 
@@ -35,6 +38,8 @@ import System.Console.Repline
 import Reflex.Dom
 import Data.FileEmbed
 
+foreign import javascript unsafe "(new Date())['getTime']()"
+  getTime :: IO Double
 
 {--
 main :: IO ()
@@ -68,6 +73,11 @@ main = mainWidgetWithCss $(embedFile "static/lamc.css") $
       el "pre" $ do
         labelFunc <- mapDyn nodeCompute activeFilter
         dynText =<< combineDyn id labelFunc dynTree
+      el "br" (return ())
+      el "div" $ do
+        e <- button "Time?" 
+        t <- performEvent $ fmap (const $ liftIO getTime) e
+        display =<< holdDyn 0 t
       return ()
 
 data Filter = Types | Terms deriving (Show,Eq)
