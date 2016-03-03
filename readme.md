@@ -1,6 +1,8 @@
 using stack, ghcjs, and reflex-frp to support a simple app that displays
 normalization and type-inference over lambda terms
 
+stack setup from [try-stack-reflex](https://github.com/luigy/try-stack-reflex)
+
 type inference from [write you a haskell](http://dev.stephendiehl.com/fun/)
 
 normalization routine from examples in the [bound

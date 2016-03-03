@@ -37,6 +37,7 @@ library
     , pretty-tree
     , bound
     , prelude-extras
+    , ghcjs-base
     , reflex
     , reflex-dom
     , file-embed
@@ -59,6 +60,7 @@ executable poly
     , pretty-tree
     , bound
     , prelude-extras
+    , ghcjs-base
     , reflex
     , reflex-dom
     , file-embed

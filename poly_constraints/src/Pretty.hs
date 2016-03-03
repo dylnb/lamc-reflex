@@ -11,7 +11,9 @@ module Pretty (
   ppscheme,
   ppsubst,
   ppsignature,
-  pptype
+  pptype,
+  pp,
+  Pretty(..)
 ) where
 
 import Env
@@ -156,3 +158,6 @@ ppconstraints = render . ppr 0
 
 ppsubst :: Subst -> String
 ppsubst = render . ppr 0
+
+pp :: Pretty a => a -> String
+pp = render . ppr 0
