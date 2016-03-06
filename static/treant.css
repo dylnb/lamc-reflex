@@ -8,7 +8,10 @@
 .Treant .collapsed .collapse-switch { background-color: #868DEE; }
 .Treant > .node img { border: none; float: left; }
 
-.chart { height: 600px; width: 900px; margin: 5px; margin: 15px auto; border: 3px solid #DDD; border-radius: 3px; }
+.chart {
+  height: 100px; width: 100%; margin: 5px; margin: 15px auto;
+  /* border: 3px solid #DDD; border-radius: 3px; */
+}
 
 .tree-draw {
     font-size: 12px;
@@ -19,7 +22,7 @@
 .tree-draw.root:hover { background: url('trophy.png') right 0 no-repeat; }
 .tree-draw.root .node-name { padding-left: 10px; margin-top: 1px; display: block; }
 
-.tree-draw .node-name { padding: 2px; white-space: pre; color: #00AFF0; }
+.tree-draw .node-name { padding: 2px; white-space: pre; color: #0286B7; }
 .tree-draw .node-desc { padding: 2px; color: #999; }
 
 .tree-draw.terminal .node-title,

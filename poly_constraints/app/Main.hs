@@ -28,7 +28,9 @@ import qualified Data.Text.Lazy.IO as L
 
 import Control.Monad.Identity
 import Control.Monad.State.Strict
+import Control.Monad.Writer
 import Control.Comonad (extend)
+import Control.Concurrent (threadDelay, forkIO)
 
 import Data.List (isPrefixOf, foldl')
 
@@ -36,18 +38,23 @@ import System.Exit
 import System.Environment
 import System.Console.Repline
 
+import GHCJS.DOM.Document (getElementById)
+import GHCJS.DOM.EventM (on)
+import GHCJS.DOM.Element (click)
+import Reflex.Host.Class
 import Reflex.Dom
+import Reflex.Dom.Class
 import Data.FileEmbed
 
 import Data.JSString (JSString, pack)
 import qualified JavaScript.JSON.Types.Internal as JS
 import JavaScript.JSON.Types.Class
 
-foreign import javascript unsafe "(new Date())['getTime']()"
-  getTime :: IO Double
-
 foreign import javascript unsafe
-  "document.getElementById('tree').innerHTML=''; new Treant($1);"
+  "var t = document.getElementById('tree');\
+   t.innerHTML = '';\
+   new Treant($1);\
+   t.style.height = t.scrollHeight + 50 + 'px';"
   treant :: JS.Value -> IO ()
 
 ov = JS.objectValue . JS.object
@@ -55,58 +62,64 @@ sv = JS.stringValue . pack
 av = JS.arrayValue . JS.arrayValueList
 dv = JS.doubleValue
 
-testTree :: JS.Value
-testTree =
-  ov [ ("chart", ov [("container", sv "#tree")])
-     , ("nodeStructure"
-       , ov [ ("text", ov [("name", sv "Parent node")])
-            , ("children"
-              , av [ ov [("text", ov [("name", sv "First child")])]
-                   , ov [("text", ov [("name", sv "Second child")])]
-                   ]
-              ) 
-            ]
-       )
-     ]
-
 dispTree :: Pretty a => CfExpr a -> JS.Value
-dispTree cf =
-  ov [ ("chart"
-       , ov [ ("container", sv "#tree")
-            , ("levelSeparation", dv 20)
-            , ("siblingSeparation", dv 15)
-            , ("subTreeSeparation", dv 15)
-            , ("node", ov [("HTMLclass", sv "tree-draw")])
-            , ("connectors"
-              , ov [ ("type", sv "straight")
-                   , ("style", ov [("stroke-width", dv 2), ("stroke", sv "#ccc")])
-                   ]
-              )
-            ]
-       )
-     , ("nodeStructure", go cf)
-     ]
-  where go expr = case unwrap expr of
-          App fun arg -> ov [ ("text", ov [("name", sv . pp $ extract expr)])
-                            , ("children", av [go fun, go arg])
-                            ]
-          Lam v body  -> ov [ ("text", ov [("name", sv . pp $ extract expr)])
-                            , ("children"
-                              , av [ ov [("text", ov [("name", sv $ "\\" ++ v)])]
-                                   , go body
-                                   ]
-                              )
-                            ]
-          Lit w       -> ov [("text"
-                             , ov [("name"
-                                   , sv $ pp w ++ ": " ++ pp (extract expr)
-                                   )]
-                             )]
-          Var v       -> ov [("text"
-                             , ov [("name"
-                                   , sv $ v ++ ": " ++ pp (extract expr)
-                                   )]
-                             )]
+dispTree cf = ov [("chart", chartConfig), ("nodeStructure", fst $ buildTreeObj cf 0)]
+  where connectConfig =
+          ov [ ("type", sv "straight")
+             , ("style", ov [("stroke-width", dv 2), ("stroke", sv "#ccc")])
+             ]
+        chartConfig =
+          ov [ ("container", sv "#tree")
+             , ("levelSeparation", dv 20)
+             , ("siblingSeparation", dv 15)
+             , ("subTreeSeparation", dv 15)
+             , ("scrollBar", sv "None")
+             , ("node", ov [("HTMLclass", sv "tree-draw")])
+             , ("connectors", connectConfig)
+             ]
+
+buildTreeObj :: Pretty a => CfExpr a -> Int -> (JS.Value, Int)
+buildTreeObj expr n = case unwrap expr of
+  App fun arg ->
+    let (funObj, f) = buildTreeObj fun n
+        (argObj, a) = buildTreeObj arg (f+1)
+        thisObj =
+          ov [ ("text", ov [("name", sv . pp $ extract expr)])
+             , ("HTMLid", sv $ "node-" ++ show f)
+             , ("HTMLclass", sv "branch")
+             , ("children", av [funObj, argObj])
+             ]
+    in (thisObj, a)
+  Lam v body  ->
+    let (bodyObj, b) = buildTreeObj body (n+2)
+        thisObj =
+          ov [ ("text", ov [("name", sv . pp $ extract expr)])
+             , ("HTMLid", sv $ "node-" ++ show (n+1))
+             , ("HTMLclass",sv "branch")
+             , ("children"
+               , av [ ov [ ("text", ov [("name", sv $ "\\" ++ v)])
+                         , ("HTMLid", sv $ "node-" ++ show n)
+                         , ("HTMLclass", sv "leaf")
+                         ]
+                    , bodyObj
+                    ]
+               )
+             ]
+    in (thisObj, b)
+  Lit w ->
+    let thisObj =
+          ov [ ("text", ov [("name", sv $ pp w ++ ": " ++ pp (extract expr))])
+             , ("HTMLid", sv $ "node-" ++ show n)
+             , ("HTMLclass", sv "leaf")
+             ]
+    in (thisObj, n+1)
+  Var v ->
+    let thisObj =
+          ov [ ("text", ov [("name", sv $ v ++ ": " ++ pp (extract expr))])
+             , ("HTMLid", sv $ "node-" ++ show n)
+             , ("HTMLclass", sv "leaf")
+             ]
+    in (thisObj, n+1)
 
 {--
 main :: IO ()
@@ -123,13 +136,18 @@ headSection = do
   stylesheet "../static/lamc.css"
   stylesheet "../static/treant.css"
 
+fragmentSection = do
+  el "h3" $ text "Fragment"
+  el "br" $ return ()
+  forM demoTerms $ \(name, term) -> el "pre" (text $ name ++ ": " ++ pp term)
+
 {--}
 main :: IO ()
 main = mainWidgetWithHead headSection $ do
   divClass "page-wrap" $ do
-    divClass "column-main" $ do
+    divClass "column-left" fragmentSection
+    (newTerm, dynTree) <- divClass "column-main" $ do
       activeFilter <- controls 
-      elAttr "div" ("id" =: "tree" <> "class" =: "chart") (return ())
       let nodeCompute filter ex =
             case filter of
               Types -> 
@@ -137,28 +155,51 @@ main = mainWidgetWithHead headSection $ do
                   in dispTree tt_subs
               Terms -> 
                   dispTree $ extend (nf . cf2db) ex
-                  where
-                    cf2db cf =
-                      case unwrap cf of
-                        Lit (LInt n) -> L (LI n)
-                        Lit (LBool b) -> L (LB b)
-                        Var x -> V x
-                        App m n -> cf2db m :@ cf2db n
-                        Lam x body -> x ! cf2db body
       newTerm <- termEntry
+      elAttr "div" ("id" =: "tree" <> "class" =: "chart") (return ())
       dynTree <- holdDyn ident newTerm
       labelFunc <- mapDyn nodeCompute activeFilter
       t <- combineDyn id labelFunc dynTree
       performEvent_ $ fmap (liftIO . treant) (updated t)
-      -- dynText t
-      -- el "br" (return ())
-      -- el "div" $ do
-      --   e <- button "Time?" 
-      --   t <- performEvent $ fmap (const $ liftIO getTime) e
-      --   display =<< holdDyn 0 t
-      -- el "br" (return ())
-      -- elAttr "div" ("id" =: "tree" <> "class" =: "chart") (return ())
-      -- button "Tree?" >>= performEvent_ . fmap (const $ liftIO $ treant testTree)
+      return (newTerm, dynTree)
+    divClass "column-right" $ do
+      el "h3" $ text "Reductions"
+      el "br" $ return ()
+      lagTerm <- delay 1 newTerm
+      let eme = fmap (mapClicks . numNodes) lagTerm
+      de <- widgetHold (return never) eme 
+      dynIndex <- holdDyn Nothing (switch $ current de)
+      dynSteps <- combineDyn stepsAt dynIndex dynTree
+      el "pre" (dynText =<< mapDyn (unlines . map pp) dynSteps)
+  post <- getPostBuild >>= delay 1
+  let idTree = dispTree $ extend (nf . cf2db) ident
+  performEvent_ $ fmap (const $ liftIO $ treant $ idTree) post
+
+
+stepsAt :: (Maybe Int) -> CfExpr () -> [Exp String]
+stepsAt Nothing _ = []
+stepsAt (Just n) cf = (\(x,w) -> w ++ [x]) $ runWriter $ steps
+  where steps = case unwrap (extend cf2db target) of
+          App f x -> nfTrace (\x -> tell [x]) $ nf (extract f) :@ nf (extract x)
+          Lam v b -> nfTrace (\x -> tell [x]) $ v ! nf (extract b)
+          _       -> nfTrace (\x -> tell [x]) $ cf2db target
+        target = either id (error "gah") $ go cf 0
+        go expr i = case unwrap expr of
+          App fun arg ->
+            go fun i >>= \i' -> if i' == n then Left expr else go arg (i'+1)
+          Lam v body ->
+            go (var v) i >>= \i' -> if i' == n then Left expr else go body (i'+1)
+          _ -> 
+            if i == n then Left expr else return (i+1)
+
+mapClicks :: MonadWidget t m => Int -> m (Event t (Maybe Int))
+mapClicks n = fmap leftmost es
+  where es = forM [0..n-1] $ \i -> do
+               doc <- askDocument
+               ex <- getElementById doc $ "node-" ++ show i
+               case ex of
+                 Just e -> wrapDomEvent e (`on` click) (return $ Just i)
+                 Nothing -> return never
 
 data Filter = Types | Terms deriving (Show,Eq)
 
@@ -209,5 +250,12 @@ demoTerms =
   , ("ex3", ex3)
   , ("ex4", ex4)
   ]
+
+cf2db cf = case unwrap cf of
+  Lit (LInt n) -> L (LI n)
+  Lit (LBool b) -> L (LB b)
+  Var x -> V x
+  App m n -> cf2db m :@ cf2db n
+  Lam x body -> x ! cf2db body
 
 --}

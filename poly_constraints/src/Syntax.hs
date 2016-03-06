@@ -51,6 +51,10 @@ extract = CM.extract
 unwrap :: CfExpr a -> Expr (CfExpr a)
 unwrap = CF.unwrap
 
+numNodes :: CfExpr a -> Int
+numNodes (_ :< App f x) = numNodes f + numNodes x + 1
+numNodes (_ :< Lam v b) = numNodes b + 2
+numNodes _ = 1
 
 -- instance {-# OVERLAPPING #-} Show (CfTree String) where
 --   show = drawVerticalTree . cf2tree1

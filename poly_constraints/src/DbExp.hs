@@ -1,6 +1,6 @@
 module DbExp where
 
-import Data.List (elemIndex)
+import Data.List (elemIndex, last)
 import Data.Foldable hiding (notElem)
 import Data.Maybe (fromJust)
 import Data.Traversable
@@ -71,6 +71,9 @@ instance Ord1 Exp     where compare1   = compare
 instance Show1 Exp    where showsPrec1 = showsPrec
 instance Read1 Exp    where readsPrec1 = readsPrec
 
+csubst :: Monad m => (Exp a -> m ()) -> Exp a -> Exp a -> m (Exp a)
+csubst k a f@(Lam b) = k (f :@ a) >> return (instantiate1Name a b)
+
 {--}
 nf :: Exp a -> Exp a
 nf e@L{}   = e
@@ -84,6 +87,22 @@ nf (Let bs b) = nf (inst b)
         inst = instantiateName (es !!)
 
 {--}
+nfTrace :: Monad m => (Exp a -> m ()) -> Exp a -> m (Exp a)
+nfTrace k e@L{}   = return e
+nfTrace k e@V{}   = return e
+nfTrace k (Lam b) = (Lam . toScope) <$> nfTrace (k . Lam . toScope) (fromScope b)
+nfTrace k (f :@ a) =
+  let tracedF = whnfTrace (k . (:@ a)) f
+      test = \exp -> case exp of
+        Lam b -> csubst k a (Lam b) >>= nfTrace k
+        f' -> liftM2 (:@) (nfTrace k f') (nfTrace k a)
+  in tracedF >>= test
+-- nfTrace (Let bs b) = nf (inst b)
+--   where es = map inst bs
+--         inst = instantiateName (es !!)
+
+  
+{--}
 whnf :: Exp a -> Exp a
 whnf e@L{}   = e
 whnf e@V{}   = e
@@ -94,6 +113,20 @@ whnf (f :@ a) = case whnf f of
 whnf (Let bs b) = whnf (inst b)
   where es = map inst bs
         inst = instantiateName (es !!)
+
+whnfTrace :: Monad m => (Exp a -> m ()) -> Exp a -> m (Exp a)
+whnfTrace k e@L{}   = return e
+whnfTrace k e@V{}   = return e
+whnfTrace k e@Lam{} = return e
+whnfTrace k (f :@ a) =
+  let tracedF = whnfTrace (k . (:@ a)) f
+      test = \exp -> case exp of
+        Lam b -> csubst k a (Lam b) >>= whnfTrace k 
+        f'    -> return (f' :@ a)
+  in tracedF >>= test
+-- whnfSteps (Let bs b) = whnf (inst b)
+--   where es = map inst bs
+--         inst = instantiateName (es !!)
 
 {--}
 infixr 0 !

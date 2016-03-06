@@ -302,13 +302,30 @@ body {
   text-align: right;
 }
 
+.column-left {
+  width: 20%;
+  margin-left: 5%;
+  float: left;
+  text-align: left;
+  overflow: auto;
+}
+
 .column-main {
-  max-width: 36rem;
+  width: 50%;
   max-height: 700px;
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  float: left;
   text-align: center;
+}
+
+.column-right {
+  width: 20%;
+  margin-right: 5%;
+  float: left;
+  text-align: left;
+  overflow: auto;
 }
 
 .parse-msg, .lfs {
@@ -381,7 +398,7 @@ ul.stack-list {
 }
 
 #query {
-  width: 94%;
+  width: 93%;
 }
 
 .dom {

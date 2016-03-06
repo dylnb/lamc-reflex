@@ -15,7 +15,7 @@ packages:
 extra-deps:
 - repline-0.1.4.0
 - pretty-tree-0.1.0.0
-- ghcjs-dom-0.2.3.0
+- ghcjs-dom-0.2.3.1
 - ref-tf-0.4
 - reflex-0.3.2
 - these-0.6.1.0
