@@ -10,7 +10,6 @@
 TAGS
 cabal-dev/
 cabal.sandbox.config
-dist/
 tags
 /_release/
 .vagrant/
