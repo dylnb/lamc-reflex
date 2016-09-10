@@ -2,17 +2,17 @@
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TypeSynonymInstances #-}
-{-# LANGUAGE RecursiveDo #-}
-{-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE CPP                      #-}
-{-# LANGUAGE ForeignFunctionInterface #-}
-{-# LANGUAGE JavaScriptFFI            #-}
-{-# LANGUAGE DefaultSignatures #-}
+-- {-# LANGUAGE RecursiveDo #-}
+-- {-# LANGUAGE ScopedTypeVariables #-}
+-- {-# LANGUAGE TemplateHaskell #-}
+-- {-# LANGUAGE CPP                      #-}
+-- {-# LANGUAGE ForeignFunctionInterface #-}
+-- {-# LANGUAGE JavaScriptFFI            #-}
+-- {-# LANGUAGE DefaultSignatures #-}
 
 module Main where
 
-import Repl hiding (main)
+-- import Repl hiding (main)
 import Syntax
 import Infer
 import Parser
@@ -30,26 +30,32 @@ import Control.Monad.Identity
 import Control.Monad.State.Strict
 import Control.Monad.Writer
 import Control.Comonad (extend)
-import Control.Concurrent (threadDelay, forkIO)
+-- import Control.Concurrent (threadDelay, forkIO)
 
 import Data.List (isPrefixOf, foldl')
 
-import System.Exit
-import System.Environment
-import System.Console.Repline
+-- import System.Exit
+-- import System.Environment
+-- import System.Console.Repline
 
-import GHCJS.DOM.Document (getElementById)
-import GHCJS.DOM.EventM (on)
-import GHCJS.DOM.Element (click)
-import Reflex.Host.Class
-import Reflex.Dom
-import Reflex.Dom.Class
-import Data.FileEmbed
+-- import GHCJS.DOM.Document (getElementById)
+-- import GHCJS.DOM.EventM (on)
+-- import GHCJS.DOM.Element (click)
+-- import Reflex.Host.Class
+-- import Reflex.Dom
+-- import Reflex.Dom.Class
+-- import Data.FileEmbed
+--
+-- import Data.JSString (JSString, pack)
+-- import qualified JavaScript.JSON.Types.Internal as JS
+-- import JavaScript.JSON.Types.Class
 
-import Data.JSString (JSString, pack)
-import qualified JavaScript.JSON.Types.Internal as JS
-import JavaScript.JSON.Types.Class
+{--}
+main :: IO ()
+main = return ()
+--}
 
+{--
 foreign import javascript unsafe
   "var t = document.getElementById('tree');\
    t.innerHTML = '';\
@@ -120,12 +126,10 @@ buildTreeObj expr n = case unwrap expr of
              , ("HTMLclass", sv "leaf")
              ]
     in (thisObj, n+1)
-
-{--
-main :: IO ()
-main = return ()
 --}
 
+
+{--
 stylesheet :: MonadWidget t m => String -> m ()
 stylesheet s = elAttr "link" (Map.fromList [("rel", "stylesheet"), ("href", s)]) $ return ()
 
@@ -140,8 +144,9 @@ fragmentSection = do
   el "h3" $ text "Fragment"
   el "br" $ return ()
   forM demoTerms $ \(name, term) -> el "pre" (text $ name ++ ": " ++ pp term)
+--}
 
-{--}
+{--
 main :: IO ()
 main = mainWidgetWithHead headSection $ do
   divClass "page-wrap" $ do
@@ -174,8 +179,9 @@ main = mainWidgetWithHead headSection $ do
   post <- getPostBuild >>= delay 1
   let idTree = dispTree $ extend (nf . cf2db) ident
   performEvent_ $ fmap (const $ liftIO $ treant $ idTree) post
+--}
 
-
+{--
 stepsAt :: (Maybe Int) -> CfExpr () -> [Exp String]
 stepsAt Nothing _ = []
 stepsAt (Just n) cf = (\(x,w) -> w ++ [x]) $ runWriter $ steps
@@ -233,6 +239,7 @@ termEntry = divClass "sh" $ do
   el "br" (return ())
   return newTerm
   where checkTerm t = lookup t demoTerms `mplus` either (const Nothing) Just (parseExpr (L.pack t))
+--}
 
 comp = lam "f" (lam "g" (lam "x" (app (var "f") (app (var "g") (var "x")))))
 k3 = lam "k" (lit $ LInt 3)

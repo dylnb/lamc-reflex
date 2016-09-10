@@ -1,4 +1,4 @@
-name:                poly
+name:                lamc
 version:             0.1.0.0
 license:             MIT
 license-file:        LICENSE
@@ -21,7 +21,6 @@ library
     , Type
     , Env
     , DbExp
-    , Repl
 
   build-depends:
       base          >= 4.6   && <4.9
@@ -31,23 +30,17 @@ library
     , containers    >= 0.5   && <0.6
     , mtl           >= 2.2   && <2.3
     , transformers  >= 0.4.2 && <0.5
-    , repline       >= 0.1.2.0
     , free
     , comonad
     , pretty-tree
     , bound
     , prelude-extras
-    , ghcjs-base
-    , ghcjs-dom
-    , reflex
-    , reflex-dom
-    , file-embed
   default-language:    Haskell2010
 
 
-executable poly
+executable lamc-exe
   build-depends:       
-      poly
+      lamc
     , base          >= 4.6   && <4.9
     , pretty        >= 1.1   && <1.2
     , parsec        >= 3.1   && <3.2
@@ -55,17 +48,11 @@ executable poly
     , containers    >= 0.5   && <0.6
     , mtl           >= 2.2   && <2.3
     , transformers  >= 0.4.2 && <0.5
-    , repline       >= 0.1.2.0
     , free
     , comonad
     , pretty-tree
     , bound
     , prelude-extras
-    , ghcjs-base
-    , ghcjs-dom
-    , reflex
-    , reflex-dom
-    , file-embed
 
   default-language:    Haskell2010
   hs-source-dirs:      app
